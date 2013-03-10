@@ -1,0 +1,36 @@
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	chp = cherry-pick
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	l = "!source ~/.githelpers && pretty_git_log"
+	la = !git l --all
+	r = !git l -30
+	ra = !git r --all
+[apply]
+	whitespace = fix
+[branch]
+	autosetuprebase = always
+	autosetupmerge = true
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+[color "branch"]
+	current = green reverse
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore
+	whitespace = trailing-space,space-before-tab
+	autocrlf = false
+[github]
+	user = <%= node['elephant']['git']['github']['user'] %>
+	token = <%= node['elephant']['git']['github']['token'] %>
+[user]
+	name = <%= node['elephant']['git']['name'] %>
+	email = <%= node['elephant']['git']['email'] %>
+[push]
+	default = upstream
