@@ -1,0 +1,17 @@
+[
+  {"keys": ["ctrl+shift+'"], "command": "toggle_quotes"},
+  {"keys": ["super+shift+t"], "command": "show_overlay", "args": {"overlay": "goto", "text": "@"}},
+  {"keys": ["super+l"], "command": "show_overlay", "args": {"overlay": "goto", "text": ":"}},
+  {"keys": ["super+r"], "command": "show_overlay", "args": {"overlay": "command_palette"}},
+  {"keys": ["super+alt+r"], "command": "run_all_ruby_test"},
+  {"keys": ["super+alt+c"], "command": "coffee"},
+  {"keys": ["tab"], "command": "alternative_autocomplete", "args": {"default": "\t"}, "context": [{"key": "num_selections", "operator": "equal", "operand": 1}]},
+  {"keys": ["shift+tab"], "command": "alternative_autocomplete", "args": {"cycle": "previous"}, "context": [{"key": "num_selections", "operator": "equal", "operand": 1}]},
+  {"keys": ["tab"], "command": "indent", "context": [{"key": "text", "operator": "regex_contains", "operand": "\n"}]},
+  {"keys": ["shift+tab"], "command": "unindent", "context": [{"key": "text", "operator": "regex_contains", "operand": "\n"}]},
+  {"keys": ["ctrl+k", "ctrl+f"], "command": "indentxml"},
+  {"keys": ["ctrl+alt+super+p"], "command": "markdown_preview", "args": {"target": "browser"}},
+  {"keys": ["super+shift+,"], "command": "erb"},
+  {"keys": ["super+shift+."], "command": "erb"},
+  {"keys": ["shift+super+h"], "command": "hex_to_rgba"}
+]
