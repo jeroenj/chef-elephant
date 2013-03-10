@@ -1,0 +1,1 @@
+default['elephant']['homebrew']['packages'] = []
