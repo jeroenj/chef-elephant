@@ -20,3 +20,7 @@ end
     owner node['elephant']['user']
   end
 end
+
+execute 'Set default shell to zsh' do
+  command 'chsh -s /bin/zsh'
+end
