@@ -1,0 +1,10 @@
+---
+gem: --no-ri --no-rdoc
+:sources:
+- https://rubygems.org
+- http://private.gems.openminds.be
+:backtrace: false
+:benchmark: false
+:verbose: true
+:bulk_threshold: 1000
+:update_sources: true
