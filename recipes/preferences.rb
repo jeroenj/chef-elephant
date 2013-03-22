@@ -1,3 +1,3 @@
-execute "Show library" do
-  command "chflags nohidden ~/Library/"
+execute 'Show library' do
+  command 'chflags nohidden ~/Library/'
 end
