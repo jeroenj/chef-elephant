@@ -22,17 +22,17 @@ default['mac_os_x']['settings']['clock'] = {
 
 default['mac_os_x']['settings']['dock'] = {
   'domain' => 'com.apple.dock',
+  'largesize' => 80,
   'showhidden' => true,
-  'tilesize' => 48,
-  'largesize' => 80
+  'tilesize' => 48
 }
 
 default['mac_os_x']['settings']['finder'] = {
   'domain' => 'com.apple.finder',
-  'WarnOnEmptyTrash' => false,
-  'ShowStatusBar' => true,
+  'FXDefaultSearchScope' => 'SCcf',
   'NewWindowTarget' => 'PfHm',
-  'FXDefaultSearchScope' => 'SCcf'
+  'ShowStatusBar' => true,
+  'WarnOnEmptyTrash' => false
 }
 
 default['mac_os_x']['settings']['itunes'] = {
@@ -42,16 +42,16 @@ default['mac_os_x']['settings']['itunes'] = {
 
 default['mac_os_x']['settings']['mail'] = {
   'domain' => '/Users/jeroen/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist',
+  'AutoReplyFormat' => true,
+  'EnableContactPhotos' => true,
+  'EnableToCCInMessageList' => true,
   'IndexJunk' => true,
   'JunkMailBehavior' => 2,
+  'NumberOfSnippetLines' => 0,
   'PollTime' => 1,
-  'EnableToCCInMessageList' => true,
-  'EnableContactPhotos' => true,
   'ShouldShowUnreadMessagesInBold' => true,
   'SuppressDeliveryFailure' => 1,
-  'AutoReplyFormat' => true,
-  'ThreadingDefault' => false,
-  'NumberOfSnippetLines' => 0
+  'ThreadingDefault' => false
 }
 
 default['mac_os_x']['settings']['safari'] = {
@@ -85,8 +85,8 @@ default['mac_os_x']['settings']['time_machine'] = {
 
 default['mac_os_x']['settings']['trackpad'] = {
   'domain' => 'com.apple.driver.AppleBluetoothMultitouch.trackpad',
-  'TrackpadThreeFingerHorizSwipeGesture' => 0,
   'Clicking' => true,
-  'TrackpadThreeFingerVertSwipeGesture' => 0,
-  'TrackpadFourFingerPinchGesture' => 2
+  'TrackpadFourFingerPinchGesture' => 2,
+  'TrackpadThreeFingerHorizSwipeGesture' => 0,
+  'TrackpadThreeFingerVertSwipeGesture' => 0
 }
