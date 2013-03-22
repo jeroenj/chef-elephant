@@ -56,9 +56,15 @@ default['mac_os_x']['settings']['mail'] = {
 
 default['mac_os_x']['settings']['safari'] = {
   'domain' => 'com.apple.safari',
+  'AutoFillPasswords' => false,
+  'AutoOpenSafeDownloads' => false,
+  'DownloadsClearingPolicy' => 1,
+  'HistoryAgeInDaysLimit' => 365000,
+  'HomePage' => '',
   'IncludeDevelopMenu' => true,
-  'HomePage' => 'https://www.google.be/',
-  'AutoOpenSafeDownloads' => false
+  'NewWindowBehavior' => 4,
+  'SendDoNotTrackHTTPHeader' => true,
+  'TabCreationPolicy' => 2
 }
 
 default['mac_os_x']['settings']['screensaver'] = {
