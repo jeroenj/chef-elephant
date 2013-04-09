@@ -14,7 +14,7 @@ cookbook_file "#{ENV['HOME']}/.oh-my-zsh/themes/jeroen.zsh-theme" do
   owner node['elephant']['user']
 end
 
-%w[aliases exports projects rails].each do |file|
+%w[aliases exports projects rails ruby].each do |file|
   cookbook_file "#{ENV['HOME']}/.oh-my-zsh/custom/#{file}.zsh" do
     source "oh_my_zsh/#{file}.zsh"
     owner node['elephant']['user']
