@@ -1,4 +1,4 @@
-PROJECT_PATHS=(~/Development/RoR ~/Development/ruby ~/Development/iOS ~/Development/python ~/Development/javascript ~/Development/RoR/Thinx ~/Development/MacRuby ~/Development/RubyMotion ~/Development/general ~/Development/chef ~/Development/vagrant)
+PROJECT_PATHS=(~/Development/*/)
 
 function project () {
   cmd="cd"
