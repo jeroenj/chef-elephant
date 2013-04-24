@@ -1,5 +1,5 @@
 dmg_package 'VirtualBox' do
-  source "http://download.virtualbox.org/virtualbox/#{node['elephant']['virtualbox']['version'].split('-').first}/VirtualBox-#{node['elephant']['virtualbox']['version']}-OSX.dmg"
+  source node['elephant']['virtualbox']['url']
   checksum node['elephant']['virtualbox']['checksum']
   owner node['elephant']['user']
   type 'pkg'
