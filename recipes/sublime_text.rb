@@ -18,6 +18,11 @@ end
   end
 end
 
+cookbook_file ::File.expand_path('Settings/Session.sublime_session', settings_path) do
+  source "sublime_text/Session.sublime_session"
+  owner node['elephant']['user']
+end
+
 remote_file ::File.expand_path("Installed Packages/Package Control.sublime-package", settings_path) do
   source 'http://sublime.wbond.net/Package%20Control.sublime-package'
   owner node['elephant']['user']
