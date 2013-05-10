@@ -3,7 +3,6 @@ default['elephant']['1password']['checksum'] = '56aef138f06fc92d641c424742bc4088
 
 default['mac_os_x']['settings']['1password'] = {
   'domain' => 'ws.agile.1password',
-  'user' => node['elephant']['user'],
   'AgileKeychainLockTimeout' => 1,
   'AGUpdateFrequency' => 1,
   'autosave' => true,

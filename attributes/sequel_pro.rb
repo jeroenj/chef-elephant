@@ -3,7 +3,6 @@ default['elephant']['sequel_pro']['checksum'] = '256873df2bdaebad9997acb21824287
 
 default['mac_os_x']['settings']['sequel_pro'] = {
   'domain' => 'com.sequelpro.SequelPro',
-  'user' => node['elephant']['user'],
   'SUEnableAutomaticChecks' => true,
   'CustomQueryAutoUppercaseKeywords' => true,
   'SUEnableAutomaticChecks' => true,

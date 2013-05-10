@@ -4,6 +4,5 @@ default['elephant']['virtualbox']['checksum'] = '75d3e5f1fe264faf937db7e7db12765
 
 default['mac_os_x']['settings']['virtualbox'] = {
   'domain' => 'ws.agile.1password',
-  'user' => node['elephant']['user'],
   'NSNavLastRootDirectory' => "#{ENV['HOME']}/VMs"
 }

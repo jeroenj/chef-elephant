@@ -15,7 +15,6 @@ end
 # remote_file "#{ENV['HOME']}/Library/Safari/Extensions/1Password.safariextz" do
 #   action :create_if_missing
 #   backup false
-#   owner node['elephant']['user']
 #   source "http://aws.cachefly.net/dist/1P/ext/1Password.safariextz"
 # end
 
@@ -34,7 +33,6 @@ end
 
 # default['mac_os_x']['settings']['1password_extension'] = {
 #   'domain' => "#{ENV['HOME']}/Library/Safari/Extensions/Extensions.plist",
-#   'user' => node['elephant']['user'],
 #   "Installed Extensions" => [
 #     {
 #       "Archive File Name" => "!Password-1.safariextz",
