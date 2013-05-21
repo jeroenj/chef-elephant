@@ -9,10 +9,6 @@ alias rst='touch tmp/restart.txt'
 
 alias uninstall_all_gems='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
 
-# TextMate
-alias mte='mt'
-alias mt='mate .'
-
 # Sublime
 # alias s='subl .'
 
