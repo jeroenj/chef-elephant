@@ -20,8 +20,6 @@ ZSH_THEME="jeroen"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(brew gem git knife osx rvm sublime terminalapp)
+plugins=(brew gem git knife osx sublime terminalapp)
 
 source $ZSH/oh-my-zsh.sh
-
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
