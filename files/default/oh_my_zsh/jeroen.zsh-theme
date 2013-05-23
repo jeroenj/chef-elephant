@@ -1,5 +1,5 @@
 PROMPT='%{$fg_bold[cyan]%}%~$(parse_git_dirty)$(git_prompt_info)%{$reset_color%} '
-RPROMPT='%{$fg[red]%}$(~/.rvm/bin/rvm-prompt)%{$reset_color%}'
+RPROMPT='%{$fg[red]%}$(ruby-version)%{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" "
 ZSH_THEME_GIT_PROMPT_SUFFIX=""

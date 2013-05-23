@@ -7,3 +7,12 @@ function update-global-gem() {
     gem install $name
   done
 }
+
+function ruby-version() {
+  ruby_string=($(ruby -v))
+  if [[ $ruby_string =~ ^ruby\ ([1-2]\.[0-9]\.[0-9](p[0-9]{3})?).*$ ]]; then
+    echo $match[1]
+  else
+    echo $ruby_string
+  fi
+}
