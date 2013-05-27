@@ -14,6 +14,12 @@ if node[:recipes].include?('elephant::oh_my_zsh')
   template "#{ENV['HOME']}/.oh-my-zsh/custom/chruby.zsh" do
     source 'ruby/chruby.zsh.erb'
   end
+
+  if node[:recipes].include?('elephant::pow')
+    cookbook_file "#{ENV['HOME']}/.powconfig" do
+      source 'ruby/powconfig'
+    end
+  end
 end
 
 %w[gemrc].each do |file|
