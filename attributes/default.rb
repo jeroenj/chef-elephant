@@ -1,1 +1,1 @@
-default['elephant']['homebrew']['packages'] = []
+default[:elephant][:homebrew][:packages] = []

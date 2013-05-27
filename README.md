@@ -22,19 +22,19 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['elephant']['user']</tt></td>
+    <td><tt>[:elephant][:user]</tt></td>
     <td>String</td>
     <td>The user that owns installed packages</td>
     <td><tt>nil</tt></td>
   </tr>
   <tr>
-    <td><tt>['elephant']['hostname']</tt></td>
+    <td><tt>[:elephant][:hostname]</tt></td>
     <td>String</td>
     <td>The hostname for the machine you're setting up</td>
     <td><tt>nil</tt></td>
   </tr>
   <tr>
-    <td><tt>['elephant']['homebrew']['packages']</tt></td>
+    <td><tt>[:elephant][:homebrew][:packages]</tt></td>
     <td>Array</td>
     <td></td>
     <td><tt>nil</tt></td>

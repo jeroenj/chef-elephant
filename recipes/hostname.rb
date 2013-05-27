@@ -1,4 +1,4 @@
-hostname = node['elephant']['hostname']
+hostname = node[:elephant][:hostname]
 
 log "My hostname: #{hostname}"
 

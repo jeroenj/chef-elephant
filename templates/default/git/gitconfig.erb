@@ -27,10 +27,10 @@
 	whitespace = trailing-space,space-before-tab
 	autocrlf = false
 [github]
-	user = <%= node['elephant']['git']['github']['user'] %>
-	token = <%= node['elephant']['git']['github']['token'] %>
+	user = <%= node[:elephant][:git][:github][:user] %>
+	token = <%= node[:elephant][:git][:github][:token] %>
 [user]
-	name = <%= node['elephant']['git']['name'] %>
-	email = <%= node['elephant']['git']['email'] %>
+	name = <%= node[:elephant][:git][:name] %>
+	email = <%= node[:elephant][:git][:email] %>
 [push]
 	default = upstream

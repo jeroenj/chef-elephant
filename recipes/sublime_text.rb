@@ -1,7 +1,7 @@
 dmg_package 'Sublime Text 2' do
-  dmg_name "Sublime Text #{node['elephant']['sublime_text']['version']}"
-  source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node['elephant']['sublime_text']['version']}.dmg"
-  checksum node['elephant']['sublime_text']['checksum']
+  dmg_name "Sublime Text #{node[:elephant][:sublime_text][:version]}"
+  source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node[:elephant][:sublime_text][:version]}.dmg"
+  checksum node[:elephant][:sublime_text][:checksum]
 end
 
 settings_path = "#{ENV['HOME']}/Library/Application Support/Sublime Text 2"
@@ -25,15 +25,15 @@ remote_file ::File.expand_path("Installed Packages/Package Control.sublime-packa
   :create_if_missing
 end
 
-if license = node['elephant']['sublime_text']['license']
+if license = node[:elephant][:sublime_text][:license]
   file ::File.expand_path('Settings/License.sublime_license', settings_path) do
     content license
   end
 end
 
-node['elephant']['sublime_text']['packages'].each do |package|
-  git ::File.expand_path("Packages/#{package['name']}", settings_path) do
-    repository package['source']
+node[:elephant][:sublime_text][:packages].each do |package|
+  git ::File.expand_path("Packages/#{package[:name]}", settings_path) do
+    repository package[:source]
     action :sync
   end
 end

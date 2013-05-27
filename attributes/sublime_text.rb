@@ -1,7 +1,7 @@
-default['elephant']['sublime_text']['version'] = '2.0.1'
-default['elephant']['sublime_text']['checksum'] = 'b5f91ee4f62d36c0490c021d5fb134b9e7cb3936'
+default[:elephant][:sublime_text][:version] = '2.0.1'
+default[:elephant][:sublime_text][:checksum] = 'b5f91ee4f62d36c0490c021d5fb134b9e7cb3936'
 
-default['elephant']['sublime_text']['packages'] = [
+default[:elephant][:sublime_text][:packages] = [
   {'name' => 'CoffeeScript', 'source' => 'https://github.com/Xavura/CoffeeScript-Sublime-Plugin'},
   {'name' => 'CSV', 'source' => 'https://github.com/ericmartel/Sublime-Text-2-CSV-Plugin'},
   {'name' => 'ERB Insert and Toggle Commands', 'source' => 'https://github.com/eddorre/SublimeERB'},
