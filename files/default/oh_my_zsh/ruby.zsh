@@ -9,10 +9,5 @@ function update-global-gem() {
 }
 
 function ruby-version() {
-  ruby_string=($(ruby -v))
-  if [[ $ruby_string =~ ^ruby\ ([1-2]\.[0-9]\.[0-9](p[0-9]{3})?).*$ ]]; then
-    echo $match[1]
-  else
-    echo $ruby_string
-  fi
+  ruby -e 'puts "#{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"'
 }
