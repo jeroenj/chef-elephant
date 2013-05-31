@@ -1,0 +1,20 @@
+default[:mac_os_x][:settings][:reeder] = {
+  'domain' => '/Users/jeroen/Library/Containers/com.reederapp.mac/Data/Library/Preferences/com.reederapp.mac.plist',
+  'SyncInterval' => 5,
+  'ServiceBlogDisabled' => true,
+  'ServiceBrowserShowInToolbar' => true,
+  'ServiceDeliciousShowInToolbar' => true,
+  'ServiceEvernoteDisabled' => true,
+  'ServiceGoogleMobilizerDisabled' => true,
+  'ServiceInstapaperDisabled' => true,
+  'ServiceInstapaperMobilizerDisabled' => true,
+  'ServicePinboardDisabled' => true,
+  'ServiceQuoteFmReadLaterDisabled' => true,
+  'ServiceQuoteFmReadLaterDisabled' => true,
+  'ServiceQuoteFmRecommendDisabled' => true,
+  'ServiceReadabilityDisabled' => true,
+  'ServiceReadabilityShowInToolbar' => false,
+  'ServiceReadItLaterShowInToolbar' => true,
+  'ServiceSafariReadingListDisabled' => true,
+  'ServiceZootoolDisabled' => true
+}
