@@ -1,4 +1,4 @@
-default[:mac_os_x][:settings][:reeder] = {
+default[:elephant][:settings][:reeder] = {
   'domain' => '/Users/jeroen/Library/Containers/com.reederapp.mac/Data/Library/Preferences/com.reederapp.mac.plist',
   'SyncInterval' => 5,
   'ServiceBlogDisabled' => true,
