@@ -1,4 +1,4 @@
-default[:mac_os_x][:settings][:gitx] = {
+default[:elephant][:settings][:gitx] = {
   'domain' => 'nl.frim.GitX',
   'PBShowOpenPanelOnLaunch' => false,
   'PBRefreshAutomatically' => false,

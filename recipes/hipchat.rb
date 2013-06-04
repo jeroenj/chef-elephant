@@ -1,3 +1,5 @@
+# include elephant::settings at the end of the run list to include settings
+
 remote_file "#{Chef::Config[:file_cache_path]}/#{node[:elephant][:hipchat][:file]}" do
   checksum node[:elephant][:hipchat][:checksum]
   source "http://downloads.hipchat.com.s3.amazonaws.com/mac-beta/#{node[:elephant][:hipchat][:file]}"
