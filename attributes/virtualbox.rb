@@ -3,6 +3,6 @@ default[:elephant][:virtualbox][:url] = "http://download.virtualbox.org/virtualb
 default[:elephant][:virtualbox][:checksum] = '75d3e5f1fe264faf937db7e7db12765cd643f6eaac18cbb44801a0108196b32a'
 
 default[:elephant][:settings][:virtualbox] = {
-  'domain' => 'ws.agile.1password',
+  'domain' => 'org.virtualbox.app.VirtualBox',
   'NSNavLastRootDirectory' => "#{ENV['HOME']}/VMs"
 }
