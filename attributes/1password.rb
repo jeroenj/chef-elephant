@@ -1,4 +1,4 @@
-default[:mac_os_x][:settings][:'1password'] = {
+default[:elephant][:settings][:'1password'] = {
   'domain' => '/Users/jeroen/Library/Containers/com.agilebits.onepassword-osx/Data/Library/Preferences/com.agilebits.onepassword-osx.plist',
   'DisplaySidebarPasswords' => true,
   'EnableUniversalUnlock' => true,
@@ -14,7 +14,7 @@ default[:mac_os_x][:settings][:'1password'] = {
   'PassType' => 'Random'
 }
 
-default[:mac_os_x][:settings][:'1password_helper'] = {
+default[:elephant][:settings][:'1password_helper'] = {
   'domain' => '/Users/jeroen/Library/Containers/com.agilebits.onepassword-osx-helper/Data/Library/Preferences/com.agilebits.onepassword-osx-helper.plist',
   'ShowStatusItem' => false
 }
