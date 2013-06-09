@@ -1,4 +1,4 @@
-default[:mac_os_x][:settings][:safari] = {
+default[:elephant][:settings][:safari] = {
   'domain' => 'com.apple.safari',
   'AutoFillPasswords' => false,
   'AutoOpenSafeDownloads' => false,
