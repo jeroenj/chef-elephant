@@ -1,2 +1,2 @@
-# Not supported for now since it seems impossible to add nested array/dictionaries using defaults
+# include elephant::settings at the end of the run list to include settings
 
