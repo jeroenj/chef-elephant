@@ -16,14 +16,6 @@ default[:mac_os_x][:settings][:dock] = {
   'tilesize' => 48
 }
 
-default[:mac_os_x][:settings][:finder] = {
-  'domain' => 'com.apple.finder',
-  'FXDefaultSearchScope' => 'SCcf',
-  'NewWindowTarget' => 'PfHm',
-  'ShowStatusBar' => true,
-  'WarnOnEmptyTrash' => false
-}
-
 default[:mac_os_x][:settings][:screensaver] = {
   'domain' => 'com.apple.screensaver',
   'askForPasswordDelay' => 3600
