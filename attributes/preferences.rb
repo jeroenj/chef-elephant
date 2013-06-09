@@ -21,12 +21,6 @@ default[:mac_os_x][:settings][:screensaver] = {
   'askForPasswordDelay' => 3600
 }
 
-default[:mac_os_x][:settings][:terminal] = {
-  'domain' => 'com.apple.terminal',
-  'Default Window Wettings' => 'Pro',
-  'Startup Window Wettings' => 'Pro'
-}
-
 default[:mac_os_x][:settings][:time_machine] = {
   'domain' => 'com.apple.systempreferences',
   'TMShowUnsupportedNetworkVolumes' => true
