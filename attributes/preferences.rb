@@ -4,12 +4,6 @@ default[:mac_os_x][:settings][:global] = {
 }
 
 
-default[:mac_os_x][:settings][:calendar] = {
-  'domain' => 'com.apple.iCal',
-  'Disable shared calendar alerts' => true,
-  'Show Week Numbers' => true
-}
-
 default[:mac_os_x][:settings][:clock] = {
   'domain' => 'com.apple.menuextra.clock',
   'DateFormat' => 'EEE d MMM  HH:mm'
