@@ -1,8 +1,3 @@
-default[:mac_os_x][:settings][:firewall] = {
-  'domain' => '/Library/Preferences/com.apple.alf',
-  'globalstate' => 1
-}
-
 default[:mac_os_x][:settings][:global] = {
   'domain' => 'NSGlobalDomain',
   'NSDocumentSaveNewDocumentsToCloud' => false
