@@ -24,11 +24,6 @@ default[:mac_os_x][:settings][:finder] = {
   'WarnOnEmptyTrash' => false
 }
 
-default[:mac_os_x][:settings][:itunes] = {
-  'domain' => 'com.apple.iTunes',
-  'play-songs-while-importing' => false
-}
-
 default[:mac_os_x][:settings][:mail] = {
   'domain' => '/Users/jeroen/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist',
   'AutoReplyFormat' => true,
