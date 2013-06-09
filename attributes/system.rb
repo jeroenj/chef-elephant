@@ -3,7 +3,6 @@ default[:mac_os_x][:settings][:global] = {
   'NSDocumentSaveNewDocumentsToCloud' => false
 }
 
-
 default[:mac_os_x][:settings][:clock] = {
   'domain' => 'com.apple.menuextra.clock',
   'DateFormat' => 'EEE d MMM  HH:mm'
@@ -33,5 +32,3 @@ default[:mac_os_x][:settings][:trackpad] = {
   'TrackpadThreeFingerHorizSwipeGesture' => 0,
   'TrackpadThreeFingerVertSwipeGesture' => 0
 }
-
-
