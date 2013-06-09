@@ -1,4 +1,4 @@
-default[:mac_os_x][:settings][:mail] = {
+default[:elephant][:settings][:mail] = {
   'domain' => '/Users/jeroen/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist',
   'AutoReplyFormat' => true,
   'EnableContactPhotos' => true,
