@@ -1,9 +1,11 @@
-%w[gitconfig githelpers].each do |file|
-  template "#{ENV['HOME']}/.#{file}" do
-    source "git/#{file}.erb"
-  end
-end
-
 cookbook_file "#{ENV['HOME']}/.gitignore" do
   source 'git/gitignore'
+end
+
+cookbook_file "#{ENV['HOME']}/.oh-my-zsh/custom/git.zsh" do
+  source 'git/git.zsh'
+end
+
+template "#{ENV['HOME']}/.gitconfig" do
+  source 'git/gitconfig.erb'
 end
