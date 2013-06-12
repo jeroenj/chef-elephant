@@ -1,0 +1,15 @@
+Host *
+  ForwardAgent yes
+  KeepAlive yes
+  ServerAliveInterval 60
+  ServerAliveCountMax 5
+
+<% node[:elephant][:ssh][:hosts].each do |host| %>
+Host <%= host[:host] %>
+User <%= host[:user] %>
+HostName <%= host[:host_name] %>
+<% if host[:port] %>
+Port <%= host[:port] %>
+<% end %>
+
+<% end %>
