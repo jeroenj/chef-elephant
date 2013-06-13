@@ -1,0 +1,16 @@
+require 'rubygems'
+require 'irb/ext/save-history'
+require 'irb/completion'
+
+IRB.conf[:AUTO_INDENT] = true
+IRB.conf[:SAVE_HISTORY] = 2000
+IRB.conf[:EVAL_HISTORY] = 200
+
+if defined?(Rails) && Rails.version.match(/^(2\.|3\.0)\.*/)
+  # Log SQL for pre rails-3.1 apps
+  ActiveRecord::Base.logger = Logger.new STDOUT
+end
+
+require 'pry'
+Pry.start
+exit

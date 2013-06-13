@@ -28,7 +28,7 @@ if node[:recipes].include?('elephant::oh_my_zsh')
   end
 end
 
-%w[gemrc].each do |file|
+%w[gemrc irbrc].each do |file|
   cookbook_file "#{ENV['HOME']}/.#{file}" do
     source "ruby/#{file}"
   end
