@@ -8,8 +8,6 @@ node[:elephant][:ruby][:rubies].each do |ruby|
     prefix_path path
 
     case ruby
-    when /.*-railsexpress/
-      definition File.expand_path(File.join(__FILE__, '../../files/default/ruby/ruby_railsexpress'))
     when /.*1\.8\.7.*/
       environment 'CONFIGURE_OPTS' => '--without-tk'
     end
