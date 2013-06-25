@@ -1,16 +1,14 @@
 package 'chruby'
-package 'ruby-build'
+package 'ruby-install'
 
 node[:elephant][:ruby][:rubies].each do |ruby|
   path = ::File.join node[:elephant][:ruby][:path], "ruby-#{ruby}"
 
-  ruby_build_ruby ruby do
-    prefix_path path
+  cmd = "ruby-install -i #{path} ruby #{ruby}"
+  cmd += " -- --without-tk" if ruby =~ /.*1\.8\.7.*/
 
-    case ruby
-    when /.*1\.8\.7.*/
-      environment 'CONFIGURE_OPTS' => '--without-tk'
-    end
+  execute cmd do
+    not_if{::File.exists? path}
   end
 end
 
