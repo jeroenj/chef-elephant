@@ -14,6 +14,11 @@
 * CMD + shift + S => archive
 * Customize toolbar
 
+### Safari
+* Set top sites
+* Hide bookmarks bar
+* Customize toolbar
+
 ## Third party apps
 
 ### Alfred
