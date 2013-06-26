@@ -1,11 +1,17 @@
 # TODO
 
-## Alfred
+## System
+
+## System apps
+
+## Third party apps
+
+### Alfred
 * change keyboard shortcut to CMD + space
 
-## AppCleaner
+### AppCleaner
 * SmartDelete
 
-## Cheatsheet
+### Cheatsheet
 * enable access for assistive devices in System Preferences - Accessibility
 * enable as login item
