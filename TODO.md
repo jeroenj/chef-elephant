@@ -63,6 +63,11 @@
 * Disable dismiss main window
 * Launch on login
 
+### Drobo Dashboard
+* Preferences are forgotten
+* remove `~/.Drobo_Dashboard_installer_os_version_check_log.txt`
+* http://support.drobo.com/app/answers/detail/a_id/624 to fix java process issue
+
 ### Google Chrome
 * Preferences
 
