@@ -1,5 +1,8 @@
 # TODO
 
+## Alfred
+* change keyboard shortcut to CMD + space
+
 ## AppCleaner
 * SmartDelete
 
