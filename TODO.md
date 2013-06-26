@@ -2,6 +2,16 @@
 
 ## System
 
+## Screensaver
+* `'idleTime' => 300`
+* Select screensaver:
+```
+'muduleDict' =>
+  'moduleName': 'Flurry',
+  'path': '/System/Library/Screen Savers/Flurry.saver',
+  'type': 0`
+```
+
 ## System apps
 
 ### Mail
