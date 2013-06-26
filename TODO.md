@@ -65,3 +65,6 @@
 ### Tunnelblick
 * Preferences
 * Configs
+
+### VLC
+* Preferences
