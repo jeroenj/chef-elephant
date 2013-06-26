@@ -2,7 +2,7 @@
 
 ## System
 
-## Screensaver
+### Screensaver
 * `'idleTime' => 300`
 * Select screensaver:
 ```
