@@ -41,6 +41,19 @@
 * enable access for assistive devices in System Preferences - Accessibility
 * enable as login item
 
+### Dash
+* Docsets:
+  * Bootstrap
+  * Ruby
+  * Ruby_2 (ruby2)
+  * Ruby_on_Rails
+  * RubyMotion
+  * Ruby on Rails 2.3 (rails2) (https://raw.github.com/jipumarino/rails-2.3-docset/master/feed/Rails2.3.xml)
+* HUD
+* Disable menu bar icon
+* Disable dismiss main window
+* Launch on login
+
 ### Skype
 * Disable tour
 * Disable dial pad
