@@ -30,3 +30,7 @@
 ### Cheatsheet
 * enable access for assistive devices in System Preferences - Accessibility
 * enable as login item
+
+### Skype
+* Disable tour
+* Disable dial pad
