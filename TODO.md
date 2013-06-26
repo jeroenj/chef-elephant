@@ -29,6 +29,10 @@
 * Hide bookmarks bar
 * Customize toolbar
 
+### Terminal
+* Preferences
+* ALT + backspace
+
 ## Third party apps
 
 ### Alfred
