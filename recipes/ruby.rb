@@ -4,7 +4,7 @@ package 'ruby-install'
 node[:elephant][:ruby][:rubies].each do |ruby|
   path = ::File.join node[:elephant][:ruby][:path], "ruby-#{ruby}"
 
-  cmd = "ruby-install -i #{path} ruby #{ruby}"
+  cmd = "ruby-install --install-dir #{path} ruby #{ruby}"
   cmd += " -- --without-tk" if ruby =~ /.*1\.8\.7.*/
 
   execute cmd do
