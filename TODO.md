@@ -63,6 +63,9 @@
 * Disable dismiss main window
 * Launch on login
 
+### Google Chrome
+* Preferences
+
 ### Skype
 * Disable tour
 * Disable dial pad
