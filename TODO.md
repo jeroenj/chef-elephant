@@ -35,6 +35,11 @@
 
 ## Third party apps
 
+### 1Password
+* Install Safari Extension
+* Install Chrome Extension
+* Extension preferences
+
 ### Alfred
 * change keyboard shortcut to CMD + space
 
