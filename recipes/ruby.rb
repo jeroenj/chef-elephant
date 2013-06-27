@@ -12,6 +12,15 @@ node[:elephant][:ruby][:rubies].each do |ruby|
   end
 end
 
+pow_installed = ::File.exists? '/usr/local/bin/pow'
+package 'pow'
+unless pow_installed
+  execute 'sudo pow --install-system'
+  execute 'pow --install-local'
+  execute 'sudo launchctl load -w /Library/LaunchDaemons/cx.pow.firewall.plist'
+  execute 'launchctl load -w ~/Library/LaunchAgents/cx.pow.powd.plist'
+end
+
 if node[:recipes].include?('elephant::oh_my_zsh')
   template "#{ENV['HOME']}/.oh-my-zsh/custom/chruby.zsh" do
     source 'ruby/chruby.zsh.erb'
