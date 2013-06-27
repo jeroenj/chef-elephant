@@ -5,27 +5,12 @@ node[:elephant][:ruby][:rubies].each do |ruby|
   name = "ruby-#{ruby}"
   path = ::File.join node[:elephant][:ruby][:path], name
 
-  cmd = "ruby-install --install-dir #{path} ruby #{ruby}"
+  cmd = "ruby-install --install-dir #{path} --src-dir /tmp ruby #{ruby}"
   cmd += " -- --without-tk" if ruby =~ /.*1\.8\.7.*/
 
   execute cmd do
     not_if{::File.exists? path}
   end
-
-  file "#{ENV['HOME']}/src/#{name}.tar.bz2" do
-    action :delete
-  end
-
-  directory "#{ENV['HOME']}/src/#{name}" do
-    recursive true
-    action :delete
-  end
-end
-
-directory "#{ENV['HOME']}/src" do
-  action :delete
-  recursive true
-  only_if{Dir["#{ENV['HOME']}/src/*"].empty?}
 end
 
 if node[:recipes].include?('elephant::oh_my_zsh')
