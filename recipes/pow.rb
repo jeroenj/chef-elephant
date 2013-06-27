@@ -1,9 +1,10 @@
-remote_file "#{Chef::Config[:file_cache_path]}/pow_install.sh" do
-  checksum '00cbe8ef05690826c85ba98fc09ebe70f7608853c6f85dcdec61135bafdcbb00'
-  source 'http://get.pow.cx'
-  mode '0755'
-end
+pow_installed = ::File.exists? '/usr/local/bin/pow'
 
-execute 'Install pow' do
-  command "#{Chef::Config[:file_cache_path]}/pow_install.sh"
+package 'pow'
+
+unless pow_installed
+  execute 'sudo pow --install-system'
+  execute 'pow --install-local'
+  execute 'sudo launchctl load -w /Library/LaunchDaemons/cx.pow.firewall.plist'
+  execute 'launchctl load -w ~/Library/LaunchAgents/cx.pow.powd.plist'
 end
