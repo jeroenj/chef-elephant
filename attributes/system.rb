@@ -23,6 +23,11 @@ default[:mac_os_x][:settings][:keyboard] = {
   'InitialKeyRepeat' => 15
 }
 
+default[:mac_os_x][:settings][:light_sensor] = {
+  'domain' => '/Library/Preferences/com.apple.iokit.AmbientLightSensor',
+  'Automatic Display Enabled' => false
+}
+
 default[:mac_os_x][:settings][:login] = {
   'domain' => '/Library/Preferences/com.apple.loginwindow',
   'GuestEnabled' => true
