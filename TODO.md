@@ -19,6 +19,9 @@
   'type': 0`
 ```
 
+### Various
+* Notification settings
+
 ### Keyboard Shortcuts
 * Disable F11/F12
 * Disable ^ up/down
