@@ -12,6 +12,7 @@ default[:mac_os_x][:settings][:dock] = {
   'domain' => 'com.apple.dock',
   'largesize' => 80,
   'magnification' => true,
+  'minimize-to-application' => true,
   'showhidden' => true,
   'tilesize' => 48
 }
