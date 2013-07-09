@@ -63,6 +63,9 @@
 * Disable dismiss main window
 * Launch on login
 
+### Divvy
+* Set "Enable access for assistive devices" in Universal Access in System Preferences
+
 ### Drobo Dashboard
 * Preferences are forgotten
 * remove `~/.Drobo_Dashboard_installer_os_version_check_log.txt`
