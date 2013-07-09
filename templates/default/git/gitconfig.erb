@@ -4,7 +4,9 @@
 	ci = commit
 	chp = cherry-pick
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	l = "!source ~/.githelpers && pretty_git_log"
+  <% if node[:recipes].include?('elephant::oh_my_zsh') %>
+	l = "!source ~/.oh-my-zsh/custom/git.zsh && pretty_git_log"
+  <% end %>
 	la = !git l --all
 	r = !git l -30
 	ra = !git r --all
