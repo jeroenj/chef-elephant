@@ -2,6 +2,9 @@
 
 ## System
 
+### Dock
+* Only restart Dock if actual changes happened in Dock settings
+
 ### Screensaver
 * `'idleTime' => 300`
 * Select screensaver:
