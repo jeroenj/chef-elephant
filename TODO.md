@@ -12,6 +12,20 @@
   'type': 0`
 ```
 
+### Keyboard Shortcuts
+* Disable F11/F12
+* Disable ^ up/down
+* Enable ^1 to switch to desktop 1
+* Disable spotlight shortcuts
+* Add Skype shortcuts:
+  * Close Window: CMD+W
+  * Close Conversation: CMD+SHIFT+W
+  * Previous Conversation: CMD+SHIFT+[
+  * Next Conversation: CMD+SHIFT+]
+* Add Mail shortcuts:
+  * Send: CMD + enter
+  * Archive: CMD + shift + S
+
 ## System apps
 
 ### Mail
@@ -20,8 +34,6 @@
 * Signatures
 * Inbox notifications: VIP Inbox
 * Dock count: VIP Inbox
-* CMD + enter => send
-* CMD + shift + S => archive
 * Customize toolbar
 
 ### Safari
