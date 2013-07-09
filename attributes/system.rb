@@ -15,6 +15,12 @@ default[:mac_os_x][:settings][:dock] = {
   'tilesize' => 48
 }
 
+default[:mac_os_x][:settings][:keyboard] = {
+  'domain' => '.GlobalPreferences',
+  'KeyRepeat' => 2,
+  'InitialKeyRepeat' => 15
+}
+
 default[:mac_os_x][:settings][:screensaver] = {
   'domain' => 'com.apple.screensaver',
   'askForPasswordDelay' => 3600
