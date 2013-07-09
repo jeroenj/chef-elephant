@@ -11,6 +11,7 @@ default[:mac_os_x][:settings][:clock] = {
 default[:mac_os_x][:settings][:dock] = {
   'domain' => 'com.apple.dock',
   'largesize' => 80,
+  'magnification' => true,
   'showhidden' => true,
   'tilesize' => 48
 }
