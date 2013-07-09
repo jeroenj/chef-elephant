@@ -19,9 +19,6 @@
   'type': 0`
 ```
 
-### Various
-* Notification settings
-
 ### Keyboard Shortcuts
 * Disable F11/F12
 * Disable ^ up/down
@@ -118,3 +115,48 @@
 ## Configs
 ### oh-my-zsh
 * Only try to set default shell to zsh if it isn't already
+
+## Various
+* Notification settings
+
+* Audio Hijack Pro
+* Charles
+* Cloud
+* Color Picker Pro
+* Cyberduck
+* Firefox
+* Fission
+* iDentify
+* iPhone Explorer
+* iStat Server
+* KBC online 4 Business
+* Logitech Harmony
+* Max
+* Mou
+* Plex
+* Plex Media Server
+* Preen
+* Rowmote Helper
+* SABnzbd+
+* Sketch
+* Skype
+* Spotify
+* TeamViewer
+* TotalFinder
+* Transmission
+
+* Growl
+* Osfoora
+* Pixelmator
+* Renamer
+* Skitch
+* SoundCloud
+* SpriteRight
+* The Unarchiver
+
+* TextEdit
+* Time Machine
+
+* Google Sketchup
+
+* Fonts
