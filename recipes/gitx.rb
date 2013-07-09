@@ -11,3 +11,7 @@ execute 'Install GitX' do
   cwd '/Applications'
   not_if { ::File.directory?('/Applications/GitX.app') }
 end
+
+link '/usr/local/bin/gitx' do
+  to '/Applications/Gitx.app/Contents/resources/gitx'
+end
