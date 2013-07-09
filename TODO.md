@@ -5,6 +5,10 @@
 ### Dock
 * Only restart Dock if actual changes happened in Dock settings
 
+### Language & Text
+* Languages order
+* Region: change Numbers (decimal point and comma separator)
+
 ### Screensaver
 * `'idleTime' => 300`
 * Select screensaver:
