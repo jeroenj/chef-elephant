@@ -23,6 +23,11 @@ default[:mac_os_x][:settings][:keyboard] = {
   'InitialKeyRepeat' => 15
 }
 
+default[:mac_os_x][:settings][:login] = {
+  'domain' => '/Library/Preferences/com.apple.loginwindow',
+  'GuestEnabled' => true
+}
+
 default[:mac_os_x][:settings][:screensaver] = {
   'domain' => 'com.apple.screensaver',
   'askForPasswordDelay' => 3600
