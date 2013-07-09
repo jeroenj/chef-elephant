@@ -8,6 +8,20 @@ settings_path = "#{ENV['HOME']}/Library/Application Support/Sublime Text 2"
 
 link '/usr/bin/subl' do
   to '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'
+  owner 'root'
+end
+
+directory settings_path do
+  recursive true
+end
+directory "#{settings_path}/Packages/User" do
+  recursive true
+end
+directory "#{settings_path}/Settings" do
+  recursive true
+end
+directory "#{settings_path}/Installed Packages" do
+  recursive true
 end
 
 ['Preferences.sublime-settings', 'Default (OSX).sublime-keymap'].each do |file|
