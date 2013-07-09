@@ -50,6 +50,11 @@
 * Set top sites
 * Hide bookmarks bar
 * Customize toolbar
+* Extensions
+  * Invisible Status Bar
+  * AdBlock
+  * Pocket
+  * Delicious
 
 ### Terminal
 * Preferences
