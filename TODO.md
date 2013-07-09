@@ -71,10 +71,6 @@
 ### Google Chrome
 * Preferences
 
-### Skype
-* Disable tour
-* Disable dial pad
-
 ### Tunnelblick
 * Preferences
 * Configs
