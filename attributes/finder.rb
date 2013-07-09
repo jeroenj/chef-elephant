@@ -1,4 +1,4 @@
-default[:settings][:settings][:finder] = {
+default[:elephant][:settings][:finder] = {
   'domain' => 'com.apple.finder',
   'FXDefaultSearchScope' => 'SCcf',
   'NewWindowTarget' => 'PfHm',
