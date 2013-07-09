@@ -31,6 +31,9 @@
 
 ## System apps
 
+### Finder
+* Only restart Finder if actual changes happened in Finder settings
+
 ### Mail
 * `'DefaultViewState': {'FavoritesBarVisible' => false}`
 * Enable rules
