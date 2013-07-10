@@ -3,7 +3,7 @@ template "#{ENV['HOME']}/.ssh/config" do
 end
 
 private_key = node[:elephant][:ssh][:private_key]
-public_key = node[:elephant][:ssh][:private_key]
+public_key = node[:elephant][:ssh][:public_key]
 
 if private_key && public_key
   file "#{ENV['HOME']}/.ssh/id_rsa" do
