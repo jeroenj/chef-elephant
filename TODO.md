@@ -47,7 +47,6 @@
 * Customize toolbar
 
 ### Safari
-* Set top sites
 * Hide bookmarks bar
 * Customize toolbar
 * Extensions
