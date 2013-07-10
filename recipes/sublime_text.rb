@@ -24,7 +24,7 @@ directory "#{settings_path}/Installed Packages" do
   recursive true
 end
 
-['Preferences.sublime-settings', 'Default (OSX).sublime-keymap'].each do |file|
+['Preferences.sublime-settings', 'Default (OSX).sublime-keymap', 'RubyTest.sublime-settings'].each do |file|
   cookbook_file ::File.expand_path("Packages/User/#{file}", settings_path) do
     source "sublime_text/#{file}"
   end
