@@ -84,10 +84,6 @@
   * Ruby_on_Rails
   * RubyMotion
   * Ruby on Rails 2.3 (rails2) (https://raw.github.com/jipumarino/rails-2.3-docset/master/feed/Rails2.3.xml)
-* HUD
-* Disable menu bar icon
-* Disable dismiss main window
-* Launch on login
 
 ### Divvy
 * Set "Enable access for assistive devices" in Universal Access in System Preferences
