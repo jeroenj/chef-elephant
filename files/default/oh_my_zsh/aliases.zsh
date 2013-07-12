@@ -10,6 +10,9 @@ alias uninstall_all_gems='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
 # Zeus
 alias zrake='zeus rake'
 
+# Foreman
+alias fm='foreman start -f Procfile.dev'
+
 # MySQL
 alias mysql_start='launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
 alias mysql_stop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
