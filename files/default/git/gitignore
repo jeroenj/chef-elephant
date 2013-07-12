@@ -1,10 +1,10 @@
 .DS_Store
-tmp/restart.txt
-.ruby-version
-.ruby-gemset
 .powrc
-zeus.json
-custom_plan.rb
 .repl_history
+.ruby-gemset
+.ruby-version
 build
+custom_plan.rb
 Procfile.dev
+tmp/restart.txt
+zeus.json
