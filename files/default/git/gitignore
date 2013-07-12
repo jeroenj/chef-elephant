@@ -7,3 +7,4 @@ zeus.json
 custom_plan.rb
 .repl_history
 build
+Procfile.dev
