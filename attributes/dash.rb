@@ -5,6 +5,5 @@ default[:elephant][:settings][:dash] = {
   'DHNotificationNestedResultTip' => true,
   'DHNotificationProfiles' => true,
   'DHNotificationTableOfContentsTip' => true,
-  'didFirstRun' => true,
-  'shouldStartAtLogin' => true
+  'didFirstRun' => true
 }
