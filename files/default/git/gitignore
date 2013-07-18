@@ -5,6 +5,7 @@
 .ruby-version
 build
 custom_plan.rb
+log
 Procfile.dev
 tmp/restart.txt
 zeus.json
