@@ -3,7 +3,7 @@ default[:elephant][:settings][:'1password'] = {
   'DisplaySidebarPasswords' => true,
   'EnableUniversalUnlock' => true,
   'KeepHelperRunning' => true,
-  'LockTimeout' => 10,
+  'LockTimeout' => 5,
   'NSOutlineView Items AWSsourceListOutlineView' => %w[tags vault folders],
   'PassGenAllowRepeats' => false,
   'PassGenAvoidAmbiguous' => true,
@@ -16,5 +16,9 @@ default[:elephant][:settings][:'1password'] = {
 
 default[:elephant][:settings][:'1password_helper'] = {
   'domain' => "#{ENV['HOME']}/Library/Containers/com.agilebits.onepassword-osx-helper/Data/Library/Preferences/com.agilebits.onepassword-osx-helper.plist",
+  'LockOnIdle' => true,
+  'LockOnScreenSaver' => true,
+  'LockOnSleep' => true,
+  'LockTimeout' => 5,
   'ShowStatusItem' => false
 }
