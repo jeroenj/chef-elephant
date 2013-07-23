@@ -5,5 +5,6 @@ default[:elephant][:settings][:hipchat] = {
   'domain' => 'com.hipchat.HipChat',
   'notifyForPrivate' => true,
   'notifyForPrivateRoom' => false,
-  'SUEnableAutomaticChecks' => true,
+  'showToasters' => false,
+  'SUEnableAutomaticChecks' => true
 }
