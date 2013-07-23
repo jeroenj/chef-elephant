@@ -156,3 +156,8 @@
 * Google Sketchup
 
 * Fonts
+
+## Chef
+* Automatically add elephant::settings at the end of the run list when needed
+* Debug timeout issues. Currently the timeout is set to 10 minutes, but sometimes compiling a package exeeds that time.
+* Debug why installing a lot of packages after each other takes such a long time. Note: during that time Dropbox was syncing and using 100% CPU.
