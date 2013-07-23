@@ -11,10 +11,14 @@ cookbook_file "#{ENV['HOME']}/.oh-my-zsh/themes/jeroen.zsh-theme" do
   source 'oh_my_zsh/jeroen.zsh-theme'
 end
 
-%w[aliases exports projects rails ruby].each do |file|
+%w[aliases exports rails ruby].each do |file|
   cookbook_file "#{ENV['HOME']}/.oh-my-zsh/custom/#{file}.zsh" do
     source "oh_my_zsh/#{file}.zsh"
   end
+end
+
+template "#{ENV['HOME']}/.oh-my-zsh/custom/projects.zsh" do
+  source 'oh_my_zsh/projects.zsh.erb'
 end
 
 execute 'Set default shell to zsh' do
