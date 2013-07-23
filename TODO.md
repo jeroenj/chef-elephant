@@ -33,6 +33,9 @@
   * Send: CMD + enter
   * Archive: CMD + shift + S
 
+### Preferences
+* Click in the scrollbar to: Jump to the spot that's clicked
+
 ## System apps
 
 ### Finder
