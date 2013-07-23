@@ -1,13 +1,13 @@
 # include elephant::settings at the end of the run list to include settings
 
-remote_file "#{Chef::Config[:file_cache_path]}/#{node[:elephant][:hipchat][:file]}" do
+remote_file "#{Chef::Config[:file_cache_path]}/hipchat_#{node[:elephant][:hipchat][:version]}.zip" do
   checksum node[:elephant][:hipchat][:checksum]
-  source "http://downloads.hipchat.com.s3.amazonaws.com/mac-beta/#{node[:elephant][:hipchat][:file]}"
+  source default[:elephant][:hipchat][:url]
   not_if { ::File.directory?('/Applications/HipChat.app') }
 end
 
 execute 'Install 1Password' do
-  command "unzip #{Chef::Config[:file_cache_path]}/#{node[:elephant][:hipchat][:file]}"
+  command "unzip #{Chef::Config[:file_cache_path]}/hipchat_#{node[:elephant][:hipchat][:version]}.zip"
   cwd '/Applications'
   not_if { ::File.directory?('/Applications/HipChat.app') }
 end
