@@ -57,6 +57,7 @@
   * AdBlock
   * Pocket
   * Delicious
+* Set list of allowed java applets
 
 ### Terminal
 * Preferences
