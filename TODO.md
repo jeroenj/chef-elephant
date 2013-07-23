@@ -132,7 +132,6 @@
 * Rowmote Helper
 * SABnzbd+
 * Sketch
-* Skype
 * Spotify
 * TeamViewer
 * TotalFinder
