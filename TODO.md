@@ -116,7 +116,6 @@
 
 * Audio Hijack Pro
 * Charles
-* Cloud
 * Color Picker Pro
 * Cyberduck
 * Firefox
