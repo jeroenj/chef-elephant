@@ -1,5 +1,5 @@
 default[:elephant][:settings][:mail] = {
-  'domain' => '/Users/jeroen/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist',
+  'domain' => "#{ENV['HOME']}/Library/Containers/com.apple.mail/Data/Library/Preferences/com.apple.mail.plist",
   'AutoReplyFormat' => true,
   'EnableContactPhotos' => true,
   'EnableToCCInMessageList' => true,
