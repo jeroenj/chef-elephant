@@ -9,7 +9,7 @@
   "run_single_cucumber_command": "cucumber {relative_path} -l{line_number}",
 
   "run_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}; else rspec {relative_path}; fi",
-  "run_single_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}; else rspec {relative_path}:{line_number}; fi",
+  "run_single_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}:{line_number}; else rspec {relative_path}:{line_number}; fi",
 
   "ruby_unit_folder": "test",
   "ruby_cucumber_folder": "features",
