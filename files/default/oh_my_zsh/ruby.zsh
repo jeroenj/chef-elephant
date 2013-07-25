@@ -11,16 +11,3 @@ function update-global-gem() {
 function ruby-version() {
   ruby -e 'puts "#{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"'
 }
-
-function fast-rspec() {
-  args=$1
-  if [ -e .zeus.sock ]; then
-    zeus rspec $args
-  else;
-    if [ -e .zeus.sock ]; then
-      bundle exec rspec $args
-    else;
-      rspec $args
-    fi
-  fi
-}
