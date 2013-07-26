@@ -119,7 +119,6 @@
 * Notification settings
 
 * Audio Hijack Pro
-* Charles
 * Color Picker Pro
 * Cyberduck
 * Firefox
@@ -136,7 +135,6 @@
 * Rowmote Helper
 * SABnzbd+
 * Sketch
-* Spotify
 * TeamViewer
 * TotalFinder
 * Transmission
