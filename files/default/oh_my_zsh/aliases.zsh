@@ -16,3 +16,6 @@ alias fm='foreman start -f Procfile.dev'
 # MySQL
 alias mysql_start='launchctl load -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
 alias mysql_stop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.plist'
+
+# dig
+alias dog='dig +short'
