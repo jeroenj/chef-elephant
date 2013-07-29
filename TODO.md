@@ -136,7 +136,6 @@
 * Sketch
 * TeamViewer
 * TotalFinder
-* Transmission
 
 * Growl
 * Osfoora
