@@ -1,4 +1,4 @@
 dmg_package 'Skype' do
-  source "http://download.skype.com/macosx/Skype_#{node[:elephant][:skype][:version]}.dmg"
+  source node[:elephant][:skype][:url]
   checksum node[:elephant][:skype][:checksum]
 end
