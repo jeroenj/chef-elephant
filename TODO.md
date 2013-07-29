@@ -127,7 +127,6 @@
 * iPhone Explorer
 * iStat Server
 * KBC online 4 Business
-* Max
 * Mou
 * Plex
 * Plex Media Server
