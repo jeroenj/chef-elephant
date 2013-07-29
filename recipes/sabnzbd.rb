@@ -1,7 +1,7 @@
 # dmg_package 'SABnzbd' do
-#   source node[:elephant][:sabnzbdplus][:url]
-#   checksum node[:elephant][:sabnzbdplus][:checksum]
-#   volumes_dir "SABnzbd-#{node[:elephant][:sabnzbdplus][:version]}/OS X 10.8 (Mountain Lion)"
+#   source node[:elephant][:sabnzbd][:url]
+#   checksum node[:elephant][:sabnzbd][:checksum]
+#   volumes_dir "SABnzbd-#{node[:elephant][:sabnzbd][:version]}/OS X 10.8 (Mountain Lion)"
 # end
 
 # Since the app is inside a folder in the dmg we can not use the dmg_package lwrp.
@@ -10,14 +10,14 @@
 # ignore_failure was not a noption for dmg_package either, since it fails from one
 # of its sub lwrp's: the shellout to detach the image failed.
 
-volumes_dir = "/Volumes/SABnzbd-#{node[:elephant][:sabnzbdplus][:version]}"
+volumes_dir = "/Volumes/SABnzbd-#{node[:elephant][:sabnzbd][:version]}"
 app_path = '/Applications/SABnzbd.app'
 
-dmg_file = "#{Chef::Config[:file_cache_path]}/SABnzbdplus.dmg"
+dmg_file = "#{Chef::Config[:file_cache_path]}/sabnzbd.dmg"
 
 remote_file dmg_file do
-  source node[:elephant][:sabnzbdplus][:url]
-  checksum node[:elephant][:sabnzbdplus][:checksum]
+  source node[:elephant][:sabnzbd][:url]
+  checksum node[:elephant][:sabnzbd][:checksum]
   not_if { ::File.directory? app_path }
 end
 
