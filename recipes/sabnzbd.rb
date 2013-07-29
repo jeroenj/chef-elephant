@@ -37,3 +37,13 @@ end
 execute "hdiutil detach '#{volumes_dir}'" do
   only_if { ::File.directory? volumes_dir }
 end
+
+# dmg_package replacement ends here
+
+if node[:elephant][:sabnzbd][:preferences]
+  directory "#{ENV['HOME']}/Library/Application Support/SABnzbd"
+
+  template "#{ENV['HOME']}/Library/Application Support/SABnzbd/sabnzbd.ini" do
+    source 'sabnzbd/sabnzbd.ini.erb'
+  end
+end
