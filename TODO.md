@@ -133,7 +133,6 @@
 * Plex Media Server
 * Preen
 * Rowmote Helper
-* SABnzbd+
 * Sketch
 * TeamViewer
 * TotalFinder
