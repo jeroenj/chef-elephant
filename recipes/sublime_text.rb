@@ -1,6 +1,6 @@
 dmg_package 'Sublime Text 2' do
   dmg_name "Sublime Text #{node[:elephant][:sublime_text][:version]}"
-  source "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node[:elephant][:sublime_text][:version]}.dmg"
+  source node[:elephant][:sublime_text][:url]
   checksum node[:elephant][:sublime_text][:checksum]
 end
 

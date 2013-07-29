@@ -1,4 +1,5 @@
 default[:elephant][:sublime_text][:version] = '2.0.1'
+default[:elephant][:sublime_text][:url] = "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node[:elephant][:sublime_text][:version]}.dmg"
 default[:elephant][:sublime_text][:checksum] = 'b5f91ee4f62d36c0490c021d5fb134b9e7cb3936'
 
 default[:elephant][:sublime_text][:packages] = [
