@@ -111,10 +111,6 @@
 ### VLC
 * Preferences
 
-## Configs
-### oh-my-zsh
-* Only try to set default shell to zsh if it isn't already
-
 ## Various
 * Notification settings
 

@@ -23,4 +23,5 @@ end
 
 execute 'Set default shell to zsh' do
   command 'chsh -s /bin/zsh'
+  not_if { `printf $SHELL` == "/bin/zsh" }
 end
