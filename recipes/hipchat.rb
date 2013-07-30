@@ -2,7 +2,7 @@
 
 remote_file "#{Chef::Config[:file_cache_path]}/hipchat_#{node[:elephant][:hipchat][:version]}.zip" do
   checksum node[:elephant][:hipchat][:checksum]
-  source default[:elephant][:hipchat][:url]
+  source node[:elephant][:hipchat][:url]
   not_if { ::File.directory?('/Applications/HipChat.app') }
 end
 
