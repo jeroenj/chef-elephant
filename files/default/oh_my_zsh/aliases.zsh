@@ -19,3 +19,6 @@ alias mysql_stop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.pl
 
 # dig
 alias dog='dig +short'
+
+# knife
+alias knife='nocorrect knife'
