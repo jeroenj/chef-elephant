@@ -1,0 +1,10 @@
+<array>
+  <dict>
+    <key>attributeSetting</key>
+    <integer>1</integer>
+    <key>choiceAttribute</key>
+    <string>selected</string>
+    <key>choiceIdentifier</key>
+    <string>kbcoption</string>
+  </dict>
+</array>
