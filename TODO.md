@@ -122,7 +122,6 @@
 * iDentify
 * iPhone Explorer
 * iStat Server
-* KBC online 4 Business
 * Mou
 * Plex
 * Plex Media Server
