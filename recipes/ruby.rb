@@ -8,7 +8,8 @@ node[:elephant][:ruby][:rubies].each do |ruby|
   cmd = "ruby-install --install-dir #{path} --src-dir /tmp ruby #{ruby}"
   cmd += " -- --without-tk" if ruby =~ /.*1\.8\.7.*/
 
-  execute cmd do
+  execute "Install ruby #{ruby}" do
+    command cmd
     not_if{::File.exists? path}
   end
 end
