@@ -3,11 +3,11 @@
 remote_file "#{Chef::Config[:file_cache_path]}/max_#{node[:elephant][:max][:version]}.zip" do
   checksum node[:elephant][:max][:checksum]
   source node[:elephant][:max][:url]
-  not_if { ::File.directory?('/Applications/Max.app') }
+  not_if { ::File.directory?("/Applications/Max-#{node[:elephant][:max][:version]}/Max.app") }
 end
 
 execute 'Install Max' do
   command "tar -jxf #{Chef::Config[:file_cache_path]}/max_#{node[:elephant][:max][:version]}.zip"
   cwd '/Applications'
-  not_if { ::File.directory?('/Applications/Max.app') }
+  not_if { ::File.directory?("/Applications/Max-#{node[:elephant][:max][:version]}/Max.app") }
 end
