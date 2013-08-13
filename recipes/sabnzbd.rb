@@ -13,7 +13,7 @@
 volumes_dir = "/Volumes/SABnzbd-#{node[:elephant][:sabnzbd][:version]}"
 app_path = '/Applications/SABnzbd.app'
 
-dmg_file = "#{Chef::Config[:file_cache_path]}/sabnzbd.dmg"
+dmg_file = "#{Chef::Config[:file_cache_path]}/SABnzbd-#{node[:elephant][:sabnzbd][:version]}.dmg"
 
 remote_file dmg_file do
   source node[:elephant][:sabnzbd][:url]
