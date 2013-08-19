@@ -7,8 +7,8 @@ cookbook_file "#{ENV['HOME']}/.zshrc" do
   source 'oh_my_zsh/zshrc'
 end
 
-cookbook_file "#{ENV['HOME']}/.oh-my-zsh/themes/jeroen.zsh-theme" do
-  source 'oh_my_zsh/jeroen.zsh-theme'
+template "#{ENV['HOME']}/.oh-my-zsh/themes/jeroen.zsh-theme" do
+  source 'oh_my_zsh/jeroen.zsh-theme.erb'
 end
 
 %w[aliases exports rails ruby].each do |file|
