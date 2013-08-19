@@ -117,7 +117,6 @@
 * Audio Hijack Pro
 * Color Picker Pro
 * Cyberduck
-* Firefox
 * Fission
 * iDentify
 * iPhone Explorer
