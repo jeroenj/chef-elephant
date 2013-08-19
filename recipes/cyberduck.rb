@@ -12,6 +12,10 @@ execute 'Install Cyberduck' do
   not_if { ::File.directory?('/Applications/Cyberduck.app') }
 end
 
+directory "#{ENV['HOME']}/Library/Application Support/Cyberduck/Bookmarks" do
+  recursive true
+end
+
 node[:elephant][:cyberduck][:bookmarks].each do |bookmark|
   template "#{ENV['HOME']}/Library/Application Support/Cyberduck/Bookmarks/#{bookmark[:nickname]}.duck" do
     source 'cyberduck/bookmark.duck.erb'
