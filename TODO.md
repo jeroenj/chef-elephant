@@ -128,7 +128,6 @@
 * Rowmote Helper
 * Sketch
 * TeamViewer
-* TotalFinder
 
 * Growl
 * Osfoora
