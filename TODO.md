@@ -76,6 +76,10 @@
 ### AppCleaner
 * SmartDelete
 
+### Charles
+* Accept eula during install (issue in dmg cookbook)
+* License
+
 ### Cheatsheet
 * enable access for assistive devices in System Preferences - Accessibility
 * enable as login item
