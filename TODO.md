@@ -120,7 +120,6 @@
 * iDentify
 * iPhone Explorer
 * iStat Server
-* Plex
 * Plex Media Server
 * Preen
 * Rowmote Helper
