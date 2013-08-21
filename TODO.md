@@ -32,6 +32,9 @@
 * Add Mail shortcuts:
   * Send: CMD + enter
   * Archive: CMD + shift + S
+* Add HipChat shortcuts:
+  * Close Window: CMD+W
+  * Close Tab: CMD+SHIFT+W
 
 ### Preferences
 * Click in the scrollbar to: Jump to the spot that's clicked
@@ -106,6 +109,21 @@
 * Disable "Enable Dropbox camera import"
 
 ### Google Chrome
+* Preferences
+
+### Max
+* Output preferences
+
+### Plex Media Center
+* Preferences
+
+### SABnzbd
+* Use dmg_resource instead of custom implementation
+
+### Sublime Text
+* Enhance package installing with new package control (if possible?)
+
+### Tranmission
 * Preferences
 
 ### Tunnelblick
