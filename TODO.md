@@ -120,6 +120,9 @@
 ### SABnzbd
 * Use dmg_resource instead of custom implementation
 
+### Spotify
+* Disable launch on login
+
 ### Sublime Text
 * Enhance package installing with new package control (if possible?)
 
