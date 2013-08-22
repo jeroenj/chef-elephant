@@ -117,6 +117,9 @@
 ### Plex Media Center
 * Preferences
 
+### Plex Media Server
+* Preferences
+
 ### SABnzbd
 * Use dmg_resource instead of custom implementation
 
@@ -145,7 +148,6 @@
 * iDentify
 * iPhone Explorer
 * iStat Server
-* Plex Media Server
 * Preen
 * Rowmote Helper
 * Sketch
