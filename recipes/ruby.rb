@@ -13,11 +13,10 @@ node[:elephant][:ruby][:rubies].each do |ruby|
     not_if{::File.exists? path}
   end
 
-  gem_command = "/usr/local/var/rubies/#{name}/bin/gem"
   node[:elephant][:ruby][:gems].each do |gem_name|
     gem_package "#{gem_name} (#{name})}" do
       package_name gem_name
-      gem_binary gem_command
+      gem_binary ::File.join(node[:elephant][:ruby][:path], name, '/bin/gem')
     end
   end
 end
