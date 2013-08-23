@@ -12,6 +12,14 @@ node[:elephant][:ruby][:rubies].each do |ruby|
     command cmd
     not_if{::File.exists? path}
   end
+
+  gem_command = "/usr/local/var/rubies/#{name}/bin/gem"
+  node[:elephant][:ruby][:gems].each do |gem_name|
+    gem_package "#{gem_name} (#{name})}" do
+      package_name gem_name
+      gem_binary gem_command
+    end
+  end
 end
 
 if node[:recipes].include?('elephant::oh_my_zsh')

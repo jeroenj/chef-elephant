@@ -39,6 +39,9 @@
 ### Preferences
 * Click in the scrollbar to: Jump to the spot that's clicked
 
+### Ruby
+* Make it possible to use gem_package when running a ruby managed by chruby: https://github.com/Atalanta/chef-chruby/issues/5#issuecomment-23155795
+
 ## System apps
 
 ### Finder
