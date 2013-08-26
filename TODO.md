@@ -154,7 +154,6 @@
 * Preen
 * Rowmote Helper
 * Sketch
-* TeamViewer
 
 * Growl
 * Osfoora
