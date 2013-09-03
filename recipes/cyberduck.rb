@@ -20,11 +20,11 @@ node[:elephant][:cyberduck][:bookmarks].each do |bookmark|
   template "#{ENV['HOME']}/Library/Application Support/Cyberduck/Bookmarks/#{bookmark[:nickname]}.duck" do
     source 'cyberduck/bookmark.duck.erb'
     variables({
-      hostname: bookmark[:hostname],
-      nickname: bookmark[:nickname],
-      port: bookmark[:port],
-      protocol: bookmark[:protocol],
-      username: bookmark[:username]
+      :hostname => bookmark[:hostname],
+      :nickname => bookmark[:nickname],
+      :port => bookmark[:port],
+      :protocol => bookmark[:protocol],
+      :username => bookmark[:username]
     })
   end
 end
