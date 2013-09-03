@@ -1,8 +1,10 @@
 default[:elephant][:sublime_text][:version] = '2.0.2'
 default[:elephant][:sublime_text][:url] = "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20#{node[:elephant][:sublime_text][:version]}.dmg"
 default[:elephant][:sublime_text][:checksum] = '14fba173566d4415f1881a38ad98cf22144f1f63'
+
 default[:elephant][:sublime_text] = {
   :extensions => {
+    'Ruby' => %w[Cheffile],
     'XML' => %w[xml xsd xslt svg terminal]
   },
   :packages => [
