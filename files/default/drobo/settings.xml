@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Settings>
+  <EnableAnonymousReports>0</EnableAnonymousReports>
+  <EmailSettings/>
+  <Language/>
+  <SkipVersionCheck/>
+  <SortDevicesBy/>
+  <ReverseDeviceSorting/>
+  <AllDevicesSelView/>
+  <FirstTimeRun>0</FirstTimeRun>
+  <FirstTimeRunVersion>2.5.2 [64171]</FirstTimeRunVersion>
+</Settings>
