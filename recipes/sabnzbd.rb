@@ -60,8 +60,8 @@ if node[:elephant][:sabnzbd][:preferences]
       :osx_speed => node[:elephant][:sabnzbd][:preferences][:osx_speed],
       :schedule => node[:elephant][:sabnzbd][:preferences][:schedule],
       :servers => node[:elephant][:sabnzbd][:preferences][:servers],
-      :tv => node[:elephant][:sabnzbd][:preferences][:tv],
-      :movies => node[:elephant][:sabnzbd][:preferences][:movies]
+      :tv => node[:elephant][:sabnzbd][:tv],
+      :movies => node[:elephant][:sabnzbd][:movies]
     })
   end
 
