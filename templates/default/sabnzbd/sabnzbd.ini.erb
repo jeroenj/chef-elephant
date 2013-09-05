@@ -35,7 +35,7 @@ email_account = ""
 email_pwd = ""
 email_endjob = 0
 email_full = 0
-schedlines = ,
+schedlines = <%= @schedule.any? ? @schedule.join("\", \"") : ',' %>
 dirscan_opts = 3
 dirscan_script = ""
 top_only = 1

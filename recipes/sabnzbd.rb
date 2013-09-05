@@ -58,6 +58,7 @@ if node[:elephant][:sabnzbd][:preferences]
       :https_key => node[:elephant][:sabnzbd][:preferences][:https_key],
       :https_cert => node[:elephant][:sabnzbd][:preferences][:https_cert],
       :osx_speed => node[:elephant][:sabnzbd][:preferences][:osx_speed],
+      :schedule => node[:elephant][:sabnzbd][:preferences][:schedule],
       :servers => node[:elephant][:sabnzbd][:preferences][:servers],
       :tv => node[:elephant][:sabnzbd][:preferences][:tv],
       :movies => node[:elephant][:sabnzbd][:preferences][:movies]
