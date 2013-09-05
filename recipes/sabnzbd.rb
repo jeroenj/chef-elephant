@@ -55,6 +55,7 @@ if node[:elephant][:sabnzbd][:preferences]
       :password => node[:elephant][:sabnzbd][:preferences][:password],
       :api_key => node[:elephant][:sabnzbd][:preferences][:api_key],
       :https => node[:elephant][:sabnzbd][:preferences][:https],
+      :https_port => node[:elephant][:sabnzbd][:preferences][:https_port],
       :https_key => node[:elephant][:sabnzbd][:preferences][:https_key],
       :https_cert => node[:elephant][:sabnzbd][:preferences][:https_cert],
       :osx_speed => node[:elephant][:sabnzbd][:preferences][:osx_speed],
