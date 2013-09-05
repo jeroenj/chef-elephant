@@ -48,13 +48,13 @@ host = 0.0.0.0
 port = 8088
 web_dir = Plush
 web_dir2 = ""
-username = <%= node[:elephant][:sabnzbd][:preferences][:username] %>
-password = <%= node[:elephant][:sabnzbd][:preferences][:password] %>
+username = <%= @username %>
+password = <%= @password %>
 replace_illegal = 1
 auto_disconnect = 1
 no_dupes = 0
 ionice = ""
-api_key = <%= node[:elephant][:sabnzbd][:preferences][:api_key] %>
+api_key = <%= @api_key %>
 disable_api_key = 0
 bandwidth_limit = 1000
 par2_multicore = 0
@@ -80,7 +80,7 @@ dirscan_priority = 0
 size_limit = ""
 warned_old_queue = 0
 language = en
-enable_https = <%= node[:elephant][:sabnzbd][:preferences][:https] %>
+enable_https = <%= @https %>
 quick_check = 1
 movie_sort_string = ""
 movie_extra_folder = 0
@@ -147,7 +147,7 @@ max_log_size = 5M
 log_backups = 5
 log_new = 0
 [servers]
-<% node[:elephant][:sabnzbd][:preferences][:servers].each do |server| %>
+<% @servers.each do |server| %>
 [[<%= server[:hostname] %>]]
 username = <%= server[:username] %>
 enable = 1
@@ -177,7 +177,7 @@ name = *
 script = None
 newzbin = ""
 dir = ""
-<% if node[:elephant][:sabnzbd][:tv] %>
+<% if @tv %>
 [[tv]]
 priority = -100
 pp = ""
@@ -186,12 +186,12 @@ script = sabToSickBeard.py
 newzbin = ""
 dir = ""
 <% end %>
-<% if node[:elephant][:sabnzbd][:movies] %>
+<% if @movies %>
 [[movie]]
 priority = -100
 pp = ""
 name = movie
 script = update_plex_movies.sh
 newzbin = ""
-dir = <%= node[:elephant][:sabnzbd][:movies][:directory] %>
+dir = <%= @movies[:directory] %>
 <% end %>

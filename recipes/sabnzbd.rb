@@ -50,6 +50,15 @@ if node[:elephant][:sabnzbd][:preferences]
 
   template ::File.expand_path('sabnzbd.ini', settings_path) do
     source 'sabnzbd/sabnzbd.ini.erb'
+    variables({
+      :username => node[:elephant][:sabnzbd][:preferences][:username],
+      :password => node[:elephant][:sabnzbd][:preferences][:password],
+      :api_key => node[:elephant][:sabnzbd][:preferences][:api_key],
+      :https => node[:elephant][:sabnzbd][:preferences][:https],
+      :servers => node[:elephant][:sabnzbd][:preferences][:servers],
+      :tv => node[:elephant][:sabnzbd][:preferences][:tv],
+      :movies => node[:elephant][:sabnzbd][:preferences][:movies]
+    })
   end
 
   if node[:elephant][:sabnzbd][:tv] || node[:elephant][:sabnzbd][:movies]
