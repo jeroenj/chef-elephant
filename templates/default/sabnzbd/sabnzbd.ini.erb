@@ -169,3 +169,29 @@ growl_password = ""
 growl_server = ""
 notify_classes = startup, download, pp, complete, other
 ncenter_enable = 0
+[categories]
+[[*]]
+priority = 0
+pp = 3
+name = *
+script = None
+newzbin = ""
+dir = ""
+<% if node[:elephant][:sabnzbd][:tv] %>
+[[tv]]
+priority = -100
+pp = ""
+name = tv
+script = sabToSickBeard.py
+newzbin = ""
+dir = ""
+<% end %>
+<% if node[:elephant][:sabnzbd][:movies] %>
+[[movie]]
+priority = -100
+pp = ""
+name = movie
+script = update_plex_movies.sh
+newzbin = ""
+dir = <%= node[:elephant][:sabnzbd][:movies][:directory] %>
+<% end %>

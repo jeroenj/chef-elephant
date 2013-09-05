@@ -51,4 +51,34 @@ if node[:elephant][:sabnzbd][:preferences]
   template ::File.expand_path('sabnzbd.ini', settings_path) do
     source 'sabnzbd/sabnzbd.ini.erb'
   end
+
+  if node[:elephant][:sabnzbd][:tv] || node[:elephant][:sabnzbd][:movies]
+    if node[:elephant][:sabnzbd][:tv]
+      %w[autoProcessTV.py sabToSickBeard.py].each do |file|
+        cookbook_file ::File.expand_path(file, scripts_path) do
+          source "sabnzbd/#{file}"
+        end
+      end
+
+      template ::File.expand_path('autoProcessTV.cfg', scripts_path) do
+        source 'sabnzbd/autoProcessTV.cfg.erb'
+        variables({
+          :host => node[:elephant][:sabnzbd][:tv][:sickbeard][:host],
+          :port => node[:elephant][:sabnzbd][:tv][:sickbeard][:port],
+          :username => node[:elephant][:sabnzbd][:tv][:sickbeard][:username],
+          :password => node[:elephant][:sabnzbd][:tv][:sickbeard][:password],
+          :ssl => node[:elephant][:sabnzbd][:tv][:sickbeard][:ssl]
+        })
+      end
+    end
+
+    if node[:elephant][:sabnzbd][:movies]
+      template ::File.expand_path('update_plex_movies.sh', scripts_path) do
+        source 'sabnzbd/update_plex_movies.sh.erb'
+        variables({
+          :plex_movies_id => node[:elephant][:sabnzbd][:movies][:plex_movies_id]
+        })
+      end
+    end
+  end
 end
