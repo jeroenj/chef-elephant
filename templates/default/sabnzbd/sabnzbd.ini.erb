@@ -115,7 +115,7 @@ req_completion_rate = 100.2
 rss_filenames = 0
 rss_rate = 60
 safe_postproc = 0
-schedlines = <%= @schedule.any? ? @schedule.map{|l| "\"#{l}\""}.join('", "') : ',' %>
+schedlines = <%= @schedule.any? ? @schedule.map{|l| "\"#{l}\""}.join(', ') : ',' %>
 script_dir = Library/Application Support/SABnzbd/scripts
 send_group = 0
 sfv_check = 1
