@@ -4,3 +4,5 @@ default[:elephant][:sabnzbd][:shasum] = '06b2cc099e78b8c70ff606867064f3fd60b22dc
 
 default[:elephant][:sabnzbd][:preferences][:https] = 0
 default[:elephant][:sabnzbd][:preferences][:https_port] = 9090
+default[:elephant][:sabnzbd][:preferences][:https_key] = '""'
+default[:elephant][:sabnzbd][:preferences][:https_cert] = '""'
