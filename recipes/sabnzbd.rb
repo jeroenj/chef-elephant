@@ -41,9 +41,14 @@ end
 # dmg_package replacement ends here
 
 if node[:elephant][:sabnzbd][:preferences]
-  directory "#{ENV['HOME']}/Library/Application Support/SABnzbd"
+  settings_path = "#{ENV['HOME']}/Library/Application Support/SABnzbd"
+  scripts_path = ::File.expand_path 'scripts', settings_path
 
-  template "#{ENV['HOME']}/Library/Application Support/SABnzbd/sabnzbd.ini" do
+  directory scripts_path do
+    recursive true
+  end
+
+  template ::File.expand_path('sabnzbd.ini', settings_path) do
     source 'sabnzbd/sabnzbd.ini.erb'
   end
 end
