@@ -1,10 +1,12 @@
 # Ruby
 export RUBYOPT="rubygems"
 
+<% if !`which subl`.empty? || node[:recipes].include?('elephant::sublime_text') %>
 # Sublime Text as default text editor
 export EDITOR="subl -w"
 export VISUAL="subl"
 
+<% end %>
 # In order to prefer homebrew's bin dir
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
