@@ -44,9 +44,30 @@ default[:mac_os_x][:settings][:time_machine] = {
 }
 
 default[:mac_os_x][:settings][:trackpad] = {
-  'domain' => 'com.apple.driver.AppleBluetoothMultitouch.trackpad',
+  'domain' => 'com.apple.AppleMultitouchTrackpad',
   'Clicking' => true,
+  'Dragging' => 0,
+  'DragLock' => false,
+  'TrackpadCornerSecondaryClick' => 0,
+  'TrackpadFiveFingerPinchGesture' => 2,
+  'TrackpadFourFingerHorizSwipeGesture' => 2,
   'TrackpadFourFingerPinchGesture' => 2,
+  'TrackpadFourFingerVertSwipeGesture' => 2,
+  'TrackpadHorizScroll' => 1,
+  'TrackpadMomentumScroll' => true,
+  'TrackpadPinch' => 1,
+  'TrackpadRightClick' => true,
+  'TrackpadRotate' => 1,
+  'TrackpadScroll' => true,
+  'TrackpadThreeFingerDrag' => false,
   'TrackpadThreeFingerHorizSwipeGesture' => 0,
-  'TrackpadThreeFingerVertSwipeGesture' => 0
+  'TrackpadThreeFingerTapGesture' => 2,
+  'TrackpadThreeFingerVertSwipeGesture' => 0,
+  'TrackpadTwoFingerDoubleTapGesture' => 1,
+  'TrackpadTwoFingerFromRightEdgeSwipeGesture' => 3,
+  'UserPreferences' => true
 }
+
+default[:mac_os_x][:settings][:wireless_trackpad] = node[:mac_os_x][:settings][:trackpad].merge({
+  'domain' => 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
+})
