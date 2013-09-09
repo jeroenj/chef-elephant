@@ -1,3 +1,5 @@
+# killall Dock is already defined in the mac_os_x cookbook
+
 execute 'killall Finder' do
   action :nothing
 end
