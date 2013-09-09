@@ -1,5 +1,6 @@
 default[:mac_os_x][:settings][:global] = {
   'domain' => 'NSGlobalDomain',
+  'NSAllowContinuousSpellChecking' => false,
   'NSDocumentSaveNewDocumentsToCloud' => false
 }
 
