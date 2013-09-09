@@ -6,6 +6,7 @@ node[:elephant][:settings].select{|recipe, values| node.run_context.loaded_recip
   settings.each do |key, value|
     next if key == 'domain'
     notify = case settings['domain']
+    when /^com.apple.dock$/   then 'execute[killall Dock]'
     when /^com.apple.finder$/ then 'execute[killall Finder]'
     end
 
