@@ -19,6 +19,9 @@
   'type': 0`
 ```
 
+### Keyboard
+* Disable autocorrect
+
 ### Keyboard Shortcuts
 * Disable F11/F12
 * Disable ^ up/down
@@ -39,13 +42,32 @@
 ### Preferences
 * Click in the scrollbar to: Jump to the spot that's clicked
 
+### Print
+* Always show extended print dialog
+
 ### Ruby
 * Make it possible to use gem_package when running a ruby managed by chruby: https://github.com/Atalanta/chef-chruby/issues/5#issuecomment-23155795
 
+### Services
+* Screen sharing
+* Remote login (ssh)
+
+### Text formatting
+* Change region settings (decimal point, etc.)
+
 ## System apps
+
+### Calendar
+* Hide new events count in Dock
+
+### Contacts
+* Sorting
 
 ### Finder
 * Only restart Finder if actual changes happened in Finder settings
+
+### Image Capture
+* Connecting an iPhone does not open any apps
 
 ### Mail
 * `'DefaultViewState': {'FavoritesBarVisible' => false}`
