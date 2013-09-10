@@ -1,5 +1,5 @@
 #! /bin/bash
 
 if [ "$7"  = "0" ]; then
-  wget -q --delete-after "http://localhost:32400/library/sections/<%= @plex_movies_id %>/refresh" > /dev/null
+  /usr/bin/curl "http://localhost:32400/library/sections/<%= @plex_movies_id %>/refresh" > /dev/null
 fi
