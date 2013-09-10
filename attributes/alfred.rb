@@ -16,5 +16,5 @@ default[:elephant][:settings][:alfred] = {
     '~/Library/Mobile Documents/',
     '~/Library/PreferencePanes'
   ],
-  'syncfolder' =>'~/Dropbox/Preferences'
+  'syncfolder' => '~/Dropbox/Preferences'
 }
