@@ -50,7 +50,6 @@
 
 ### Services
 * Screen sharing
-* Remote login (ssh)
 
 ### Text formatting
 * Change region settings (decimal point, etc.)
