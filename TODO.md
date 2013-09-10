@@ -5,6 +5,9 @@
 ### Dock
 * Only restart Dock if actual changes happened in Dock settings
 
+### Firewall
+* Allow DDService64d (Drobo Dashboard)
+
 ### Language & Text
 * Languages order
 * Region: change Numbers (decimal point and comma separator)
