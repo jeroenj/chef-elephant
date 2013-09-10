@@ -1,0 +1,19 @@
+[General]
+optionalDesktopNotifications=true
+CaCertificates=@ByteArray(<%= @certificate %>)
+monoIcons=true
+
+[ownCloud]
+url=<%= @url %>
+user=<%= @user %>
+nostoredpassword=false
+authType=http
+
+[proxy]
+type=0
+
+[BWLimit]
+useDownloadLimit=false
+useUploadLimit=-1
+downloadLimit=1024
+uploadLimit=256
