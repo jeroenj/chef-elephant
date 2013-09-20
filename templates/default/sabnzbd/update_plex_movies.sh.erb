@@ -1,5 +1,5 @@
 #! /bin/bash
 
 if [ "$7"  = "0" ]; then
-  /usr/bin/curl "http://localhost:32400/library/sections/<%= @plex_movies_id %>/refresh" > /dev/null
+  /usr/bin/curl -sS "http://localhost:32400/library/sections/<%= @plex_movies_id %>/refresh" > /dev/null
 fi
