@@ -6,7 +6,7 @@ remote_file "#{Chef::Config[:file_cache_path]}/hipchat_#{node[:elephant][:hipcha
   not_if { ::File.directory?('/Applications/HipChat.app') }
 end
 
-execute 'Install 1Password' do
+execute 'Install Hipchat' do
   command "unzip #{Chef::Config[:file_cache_path]}/hipchat_#{node[:elephant][:hipchat][:version]}.zip"
   cwd '/Applications'
   not_if { ::File.directory?('/Applications/HipChat.app') }
