@@ -11,6 +11,7 @@ default[:elephant][:ruby] = {
     bundler-audit
     cheat
     colorful_json
+    explain_shell
     gem-open
     mysql2
     powder
