@@ -71,6 +71,9 @@
 ### Image Capture
 * Connecting an iPhone does not open any apps
 
+### iTunes
+* Disable song notifications
+
 ### Mail
 * `'DefaultViewState': {'FavoritesBarVisible' => false}`
 * Enable rules
@@ -125,6 +128,7 @@
 
 ### Divvy
 * Set "Enable access for assistive devices" in Universal Access in System Preferences
+* Shortcuts
 
 ### Drobo Dashboard
 * remove `~/.Drobo_Dashboard_installer_os_version_check_log.txt`
