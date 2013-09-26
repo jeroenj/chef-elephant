@@ -85,6 +85,15 @@
 * Dock count: VIP Inbox
 * Customize toolbar
 
+### Notes
+* Change default font:
+```ruby
+default[:elephant][:settings][:notes] = {
+  'domain' => "#{ENV['HOME']}/Library/Containers/com.apple.Notes/Data/Library/Preferences/com.apple.Notes.plist",
+  'NoteFont' => "<62706c69 73743030 d4010203 04050618 19582476 65727369 6f6e5824 6f626a65 63747359 24617263 68697665 72542474 6f701200 0186a0a4 07081112 55246e75 6c6cd409 0a0b0c0d 0e0f1056 4e535369 7a65584e 5366466c 61677356 4e534e61 6d655624 636c6173 7323402c 00000000 00001010 80028003 5948656c 76657469 6361d213 1415165a 24636c61 73736e61 6d655824 636c6173 73657356 4e53466f 6e74a215 17584e53 4f626a65 63745f10 0f4e534b 65796564 41726368 69766572 d11a1b54 726f6f74 80010811 1a232d32 373c424b 525b6269 72747678 8287929b a2a5aec0 c3c80000 00000000 01010000 00000000 001c0000 00000000 00000000 00000000 00ca>" # type: data
+}
+```
+
 ### Safari
 * Hide bookmarks bar
 * Customize toolbar
@@ -105,9 +114,47 @@
 * Install Safari Extension
 * Install Chrome Extension
 * Extension preferences
+```ruby
+remote_file "#{ENV['HOME']}/Library/Safari/Extensions/1Password.safariextz" do
+  action :create_if_missing
+  backup false
+  source "http://aws.cachefly.net/dist/1P/ext/1Password.safariextz"
+end
+
+mac_os_x_userdefaults "Install 1Password Safari extension" do
+  domain "#{ENV['HOME']}/Library/Safari/Extensions/Extensions.plist"
+  sudo false
+  key "Installed Extensions"
+  value [{
+    "Archive File Name" => "!Password-1.safariextz",
+    "Bundle Directory Name" => "1Password.safariextension",
+    "Enabled" => true
+  }]
+end
+
+# In attributes:
+
+default[:mac_os_x][:settings][:'1password_extension'] = {
+  'domain' => "#{ENV['HOME']}/Library/Safari/Extensions/Extensions.plist",
+  "Installed Extensions" => [
+    {
+      "Archive File Name" => "!Password-1.safariextz",
+      "Bundle Directory Name" => "1Password.safariextension",
+      "Enabled" => true
+    }
+  ]
+}
+```
 
 ### Alfred
 * change keyboard shortcut to CMD + space
+```ruby
+'hotkey.default' => {
+  'key' => 49,
+  'mod' => 1048576,
+  'string' => 'Space'
+}
+```
 
 ### AppCleaner
 * SmartDelete
@@ -146,6 +193,26 @@
 
 ### Max
 * Output preferences
+```ruby
+'outputFormats' => [
+  {
+    'component' => 0,
+    'name' => 'Apple MPEG-4 Audio (Apple Lossless)',
+    'selected' => true,
+    'settings' => {
+      'fileType' => 1832149350,
+      'formatID' => 1634492771,
+      'extensionsForType' => [
+        'm4a',
+        'm4r'
+      ],
+      'sampleRate' => 0, # type: real
+      'bitsPerChannel' => 0,
+      'formatFlags' => 0
+    }
+  }
+]
+```
 
 ### Plex Media Center
 * Preferences
@@ -161,6 +228,30 @@
 
 ### Sublime Text
 * Enhance package installing with new package control (if possible?)
+
+### TeamViewer
+* Preferences
+```ruby
+mac_os_x_userdefaults 'com.teamviewer.teamviewer' do
+  key 'Always_Online'
+  value 0
+end
+
+%w[teamviewer teamviwer_desktop].each do |type|
+  plist = "/Library/LaunchAgents/com.teamviewer.#{type}.plist"
+
+  # execute "Unload #{plist}" do
+  #   command "sudo launchctl unload #{plist}"
+  #   ignore_failure true
+  # end
+
+  mac_os_x_userdefaults plist do
+    key 'Disabled'
+    value true
+    sudo true
+  end
+end
+```
 
 ### Tranmission
 * Preferences
