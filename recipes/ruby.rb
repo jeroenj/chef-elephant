@@ -10,7 +10,7 @@ node[:elephant][:ruby][:rubies].each do |ruby|
 
   execute "Install ruby #{ruby}" do
     command cmd
-    not_if{::File.exists? path}
+    not_if { ::File.exists? path }
   end
 
   node[:elephant][:ruby][:gems].each do |gem_name|
