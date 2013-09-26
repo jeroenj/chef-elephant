@@ -50,6 +50,9 @@
 
 ### Ruby
 * Make it possible to use gem_package when running a ruby managed by chruby: https://github.com/Atalanta/chef-chruby/issues/5#issuecomment-23155795
+* OpenSSL issues. Quick workaround:
+  * Issue: SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed
+  * curl http://curl.haxx.se/ca/cacert.pem -o /usr/local/etc/openssl/cert.pem
 
 ### Services
 * Screen sharing
