@@ -14,9 +14,13 @@ node[:elephant][:ruby][:rubies].each do |ruby|
   end
 
   node[:elephant][:ruby][:gems].each do |gem_name|
-    gem_package "#{gem_name} (#{name})}" do
-      package_name gem_name
-      gem_binary ::File.join(node[:elephant][:ruby][:path], name, '/bin/gem')
+    pre = "source /usr/local/opt/chruby/share/chruby/chruby.sh && RUBIES=(/usr/local/var/rubies/*) && chruby #{ruby}"
+    gem_binary = ::File.join node[:elephant][:ruby][:path], name, '/bin/gem'
+    gem_exec = "#{pre} && #{gem_binary}"
+
+    execute "Install #{gem_name} on ruby #{ruby}" do
+      command "#{gem_exec} install #{gem_name}"
+      not_if { `#{gem_exec} list #{gem_name}` =~ /#{gem_name}/ }
     end
   end
 end
