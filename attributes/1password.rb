@@ -1,24 +1,19 @@
 default[:elephant][:settings][:'1password'] = {
   'domain' => "#{ENV['HOME']}/Library/Containers/com.agilebits.onepassword-osx/Data/Library/Preferences/com.agilebits.onepassword-osx.plist",
-  'DisplaySidebarPasswords' => true,
-  'EnableUniversalUnlock' => true,
+  'CompletedEssentialSettings' => true,
+  'Enable3rdPartyIntegration' => true,
+  'HashSectionIsSortedFirst' => true,
   'KeepHelperRunning' => true,
-  'LockTimeout' => 5,
-  'NSOutlineView Items AWSsourceListOutlineView' => %w[tags vault folders],
-  'PassGenAllowRepeats' => false,
-  'PassGenAvoidAmbiguous' => true,
-  'PassGenDisplayAdvancedOptions' => true,
-  'PassGenLength' => 20,
-  'PassGenMinNumbers' => 2,
-  'PassGenMinSymbols' => 2,
-  'PassType' => 'Random'
-}
-
-default[:elephant][:settings][:'1password_helper'] = {
-  'domain' => "#{ENV['HOME']}/Library/Containers/com.agilebits.onepassword-osx-helper/Data/Library/Preferences/com.agilebits.onepassword-osx-helper.plist",
   'LockOnIdle' => true,
-  'LockOnScreenSaver' => true,
-  'LockOnSleep' => true,
   'LockTimeout' => 5,
-  'ShowStatusItem' => false
+  'PasswordAllowRepeats' => false,
+  'PasswordAvoidAmbiguous' => true,
+  'PasswordDigits' => 2,
+  'PasswordLength' => 24,
+  'PasswordPronounceable' => false
+  'PasswordSymbols' => 2,
+  'ShowItemCounts' => true,
+  'ShowRichIcons' => true,
+  'ShowStatusItem' => true,
+  'WelcomeWindowShown' => true
 }
