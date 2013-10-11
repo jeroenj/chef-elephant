@@ -1,0 +1,4 @@
+# logfilename                                      [owner:group] mode count size when flags [/pid_file] [sig_num]
+<% @files.each do |file| %>
+<%= file[:filename].ljust 50 %> <%= file[:owner_group].to_s.ljust 13 %> <%= file[:mode].to_s.ljust 4 %> <%= file[:count].to_s.ljust 5 %> <%= file[:size].to_s.ljust 4 %> <%= file[:when].ljust 4 %> <%= file[:flags] %>
+<% end %>
