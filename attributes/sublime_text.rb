@@ -12,7 +12,6 @@ default[:elephant][:sublime_text] = {
   :packages => [
     {'name' => 'CoffeeScript', 'source' => 'https://github.com/Xavura/CoffeeScript-Sublime-Plugin'},
     {'name' => 'CoffeeCompile', 'source' => 'https://github.com/surjikal/sublime-coffee-compile'},
-    {'name' => 'CSV', 'source' => 'https://github.com/ericmartel/Sublime-Text-2-CSV-Plugin'},
     {'name' => 'ERB Insert and Toggle Commands', 'source' => 'https://github.com/eddorre/SublimeERB'},
     {'name' => 'FileDiffs', 'source' => 'https://github.com/spape/SublimeFileDiffs'},
     {'name' => 'Git', 'source' => 'https://github.com/kemayo/sublime-text-2-git'},
