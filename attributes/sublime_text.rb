@@ -27,7 +27,6 @@ default[:elephant][:sublime_text] = {
     {'name' => 'Rails Related Files', 'source' => 'https://github.com/luqman/SublimeText2RailsRelatedFiles'},
     {'name' => 'RSpec', 'source' => 'https://github.com/SublimeText/RSpec'},
     {'name' => 'Ruby 1.9 Hash Converter', 'source' => 'https://github.com/iltempo/sublime-text-2-hash-syntax'},
-    {'name' => 'RubyMotion Autocomplete', 'source' => 'https://github.com/diemer/RubyMotionSublimeCompletions'},
     {'name' => 'RubyMotionBuilder', 'source' => 'https://github.com/haraken3/SublimeRubyMotionBuilder'},
     {'name' => 'RubyTest', 'source' => 'https://github.com/maltize/sublime-text-2-ruby-tests'},
     {'name' => 'Sass', 'source' => 'https://github.com/nathos/sass-textmate-bundle'},
