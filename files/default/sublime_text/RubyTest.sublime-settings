@@ -1,29 +1,29 @@
 {
-  "erb_verify_command": "erb -xT - {file_name} | ruby -c",
-  "ruby_verify_command": "ruby -c {file_name}",
+	"erb_verify_command": "erb -xT - {file_name} | ruby -c",
+	"ruby_verify_command": "ruby -c {file_name}",
 
-  "run_ruby_unit_command": "ruby -Itest {relative_path}",
-  "run_single_ruby_unit_command": "ruby -Itest {relative_path} -n '{test_name}'",
+	"run_ruby_unit_command": "ruby -Itest {relative_path}",
+	"run_single_ruby_unit_command": "ruby -Itest {relative_path} -n '{test_name}'",
 
-  "run_cucumber_command": "cucumber {relative_path} -f pretty",
-  "run_single_cucumber_command": "cucumber {relative_path} -l{line_number}",
+	"run_cucumber_command": "cucumber {relative_path} -f pretty",
+	"run_single_cucumber_command": "cucumber {relative_path} -l{line_number}",
 
-  "run_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}; else rspec {relative_path}; fi",
-  "run_single_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}:{line_number}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}:{line_number}; else rspec {relative_path}:{line_number}; fi",
+	"run_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}; else rspec {relative_path}; fi",
+	"run_single_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}:{line_number}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}:{line_number}; else rspec {relative_path}:{line_number}; fi",
 
-  "ruby_unit_folder": "test",
-  "ruby_cucumber_folder": "features",
-  "ruby_rspec_folder": "spec",
+	"ruby_unit_folder": "test",
+	"ruby_cucumber_folder": "features",
+	"ruby_rspec_folder": "spec",
 
-  "check_for_rbenv": false,
-  "check_for_rvm": true,
+	"check_for_rbenv": false,
+	"check_for_rvm": true,
 
-  "ruby_use_scratch" : false,
-  "save_on_run": true,
-  "ignored_directories": [".git", "vendor", "tmp"],
+	"ruby_use_scratch" : false,
+	"save_on_run": true,
+	"ignored_directories": [".git", "vendor", "tmp"],
 
-  "hide_panel": false,
+	"hide_panel": false,
 
-  "before_callback": "",
-  "after_callback": ""
+	"before_callback": "",
+	"after_callback": ""
 }
