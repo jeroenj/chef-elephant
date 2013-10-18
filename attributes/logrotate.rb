@@ -4,7 +4,7 @@ default[:elephant][:logrotate][:files] = [
     :owner_group => "#{node[:elephant][:username]}:staff",
     :mode => 644,
     :count => 0,
-    :size => 2960,
+    :size => 4096,
     :when => '*',
     :flags => 'G'
   }
