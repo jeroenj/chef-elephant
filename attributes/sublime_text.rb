@@ -22,7 +22,6 @@ default[:elephant][:sublime_text] = {
     {'name' => 'LESS', 'source' => 'https://github.com/danro/LESS-sublime'},
     {'name' => 'Markdown Preview', 'source' => 'https://github.com/revolunet/sublimetext-markdown-preview'},
     {'name' => 'Pretty JSON', 'source' => 'https://github.com/dzhibas/SublimePrettyJson'},
-    {'name' => 'Rails Related Files', 'source' => 'https://github.com/luqman/SublimeText2RailsRelatedFiles'},
     {'name' => 'RSpec', 'source' => 'https://github.com/SublimeText/RSpec'},
     {'name' => 'Ruby 1.9 Hash Converter', 'source' => 'https://github.com/iltempo/sublime-text-2-hash-syntax'},
     {'name' => 'RubyMotionBuilder', 'source' => 'https://github.com/RubyMotionJP/SublimeRubyMotionBuilder'},
