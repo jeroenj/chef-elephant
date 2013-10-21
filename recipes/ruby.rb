@@ -25,6 +25,10 @@ node[:elephant][:ruby][:rubies].each do |ruby|
   end
 end
 
+file "#{ENV['HOME']}/.ruby-version" do
+  content node[:elephant][:ruby][:default]
+end
+
 if node[:recipes].include?('elephant::oh_my_zsh')
   template "#{ENV['HOME']}/.oh-my-zsh/custom/chruby.zsh" do
     source 'ruby/chruby.zsh.erb'
