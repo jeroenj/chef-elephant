@@ -28,7 +28,6 @@ default[:elephant][:sublime_text] = {
     {'name' => 'RubyTest', 'source' => 'https://github.com/maltize/sublime-text-2-ruby-tests'},
     {'name' => 'Sass', 'source' => 'https://github.com/nathos/sass-textmate-bundle'},
     {'name' => 'SCSS', 'source' => 'https://github.com/kuroir/SCSS.tmbundle'},
-    {'name' => 'Simple Rails Navigator', 'source' => 'https://github.com/noklesta/SublimeRailsNav'},
     {'name' => 'sublime_text_alternative_autocompletion', 'source' => 'https://github.com/alexstaubo/sublime_text_alternative_autocompletion'},
     {'name' => 'Toggle Symbol to String', 'source' => 'https://github.com/zoomix/SublimeToggleSymbol'},
     {'name' => 'ToggleQuotes', 'source' => 'https://github.com/spadgos/sublime-ToggleQuotes'}
