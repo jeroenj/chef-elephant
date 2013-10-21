@@ -15,7 +15,6 @@ default[:elephant][:sublime_text] = {
     {'name' => 'FileDiffs', 'source' => 'https://github.com/spape/SublimeFileDiffs'},
     {'name' => 'Git', 'source' => 'https://github.com/kemayo/sublime-text-2-git'},
     {'name' => 'GitGutter', 'source' => 'https://github.com/jisaacks/GitGutter'},
-    {'name' => 'Haml', 'source' => 'https://github.com/phuibonhoa/handcrafted-haml-textmate-bundle'},
     {'name' => 'HTML2HAML', 'source' => 'https://github.com/pavelpachkovskij/sublime-html-to-haml'},
     {'name' => 'Indent XML', 'source' => 'https://github.com/alek-sys/sublimetext_indentxml'},
     {'name' => 'JS2Coffee', 'source' => 'https://github.com/nibblebot/sublime-js2coffee'},
