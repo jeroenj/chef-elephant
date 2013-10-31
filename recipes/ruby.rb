@@ -32,6 +32,7 @@ end
 if node[:recipes].include?('elephant::oh_my_zsh')
   template "#{ENV['HOME']}/.oh-my-zsh/custom/chruby.zsh" do
     source 'ruby/chruby.zsh.erb'
+    only_if { Dir.exists? "#{ENV['HOME']}/.oh-my-zsh/custom" }
   end
 
   if node[:recipes].include?('elephant::pow')
