@@ -7,7 +7,7 @@ default[:elephant][:sublime_text] = {
     'Ruby' => %w[Cheffile Vagrantfile Procfile.dev rabl],
     'Sass' => %w[sass],
     'SCSS' => %w[scss],
-    'XML' => %w[xml xsd xslt svg terminal]
+    'XML' => %w[xml xsd xslt svg terminal plist]
   },
   :packages => [
     {'name' => 'CoffeeScript', 'source' => 'https://github.com/Xavura/CoffeeScript-Sublime-Plugin'},
