@@ -273,7 +273,6 @@ end
 * iPhone Explorer
 * iStat Server
 * Preen
-* Rowmote Helper
 * Sketch
 
 * Growl
