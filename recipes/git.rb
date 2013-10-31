@@ -2,10 +2,9 @@ cookbook_file "#{ENV['HOME']}/.gitignore" do
   source 'git/gitignore'
 end
 
-if node[:recipes].include?('elephant::oh_my_zsh')
-  cookbook_file "#{ENV['HOME']}/.oh-my-zsh/custom/git.zsh" do
-    source 'git/git.zsh'
-  end
+cookbook_file "#{ENV['HOME']}/.oh-my-zsh/custom/git.zsh" do
+  source 'git/git.zsh'
+  only_if { Dir.exists? "#{ENV['HOME']}/.oh-my-zsh/custom" }
 end
 
 template "#{ENV['HOME']}/.gitconfig" do
