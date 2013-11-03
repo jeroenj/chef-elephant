@@ -17,4 +17,9 @@ if private_key && public_key
     content public_key
     mode 00644
   end
+
+  file "#{ENV['HOME']}/.ssh/authorized_keys" do
+    content public_key
+    mode 00644
+  end
 end
