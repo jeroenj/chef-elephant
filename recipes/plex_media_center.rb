@@ -11,3 +11,15 @@ execute 'Install Plex Media Center' do
   cwd '/Applications'
   not_if { ::File.directory?('/Applications/Plex.app') }
 end
+
+directory "#{ENV['HOME']}/Library/Application Support/Plex/userdata" do
+  recursive true
+end
+
+template "#{ENV['HOME']}/Library/Application Support/Plex/userdata/guisettings.xml" do
+  source 'plex_media_center/guisettings.xml.erb'
+  variables(
+    :myplex => node[:elephant][:plex_media_center][:preferences][:myplex],
+    :lastfm => node[:elephant][:plex_media_center][:preferences][:lastfm]
+  )
+end
