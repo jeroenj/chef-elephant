@@ -6,16 +6,16 @@ default[:elephant][:ruby] = {
     1.8.7-p374
   ],
   :default => '2.0.0',
-  :gems => %w[
-    bundler
-    bundler-audit
-    cheat
-    colorful_json
-    explain_shell
-    gem-open
-    mysql2
-    powder
-    pry
-    zeus
-  ]
+  :gems => {
+    'bundler' => nil,
+    'bundler-audit' => '0.3.0',
+    'cheat' => nil,
+    'colorful_json' => nil,
+    'explain_shell' => nil,
+    'gem-open' => nil,
+    'mysql2' => nil,
+    'powder' => nil,
+    'pry' => nil,
+    'zeus' => nil
+  }
 }
