@@ -7,7 +7,7 @@ default[:elephant][:ruby] = {
   ],
   :default => '2.0.0',
   :gems => {
-    'bundler' => nil,
+    'bundler' => '1.3.5',
     'bundler-audit' => '0.3.0',
     'cheat' => nil,
     'colorful_json' => nil,
