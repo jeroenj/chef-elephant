@@ -1,0 +1,3 @@
+<% @accounts.each do |account| %>
+<%= account[:login] %>:_...<%= account[:password] %>:<%= account[:uid] %>:<%= account[:gid] %>::<%= account[:path] %>::::::::::::
+<% end %>

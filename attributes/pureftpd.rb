@@ -1,0 +1,1 @@
+default[:elephant][:pureftpd][:accounts] = []
