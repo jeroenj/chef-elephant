@@ -1,2 +1,5 @@
 syntax on
 set number
+
+" Save files with sudo
+cmap w!! w !sudo tee > /dev/null %
