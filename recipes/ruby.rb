@@ -13,16 +13,16 @@ node[:elephant][:ruby][:rubies].each do |ruby|
     not_if { ::File.exists? path }
   end
 
-  node[:elephant][:ruby][:gems].each do |gem_name, gem_version|
+  node[:elephant][:ruby][:gems].each do |ruby_gem|
     pre = "source /usr/local/opt/chruby/share/chruby/chruby.sh && RUBIES=(/usr/local/var/rubies/*) && chruby #{ruby}"
     gem_binary = ::File.join node[:elephant][:ruby][:path], name, '/bin/gem'
     gem_exec = "#{pre} && #{gem_binary}"
-    version = "--version #{gem_version}" if gem_version
-    description_version = " #{gem_version}" if gem_version
+    version = "--version #{ruby_gem[:version]}" if ruby_gem[:version]
+    description_version = " #{ruby_gem[:version]}" if ruby_gem[:version]
 
-    execute "Install #{gem_name}#{description_version} on ruby #{ruby}" do
-      command "#{gem_exec} install #{gem_name} #{version}"
-      not_if { `#{gem_exec} list #{gem_name}` =~ /#{gem_name}.*#{gem_version}/ }
+    execute "Install #{ruby_gem[:name]}#{description_version} on ruby #{ruby}" do
+      command "#{gem_exec} install #{ruby_gem[:name]} #{version}"
+      not_if { `#{gem_exec} list #{ruby_gem[:name]}` =~ /#{ruby_gem[:name]}.*#{ruby_gem[:version]}/ }
     end
   end
 end
