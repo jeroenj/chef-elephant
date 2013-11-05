@@ -6,7 +6,7 @@ remote_file file do
   not_if { ::File.directory?('/Applications/Plex Media Server.app') }
 end
 
-execute 'Install Plex Media Center' do
+execute 'Install Plex Media Server' do
   command "unzip #{file}"
   cwd '/Applications'
   not_if { ::File.directory?('/Applications/Plex Media Server.app') }
