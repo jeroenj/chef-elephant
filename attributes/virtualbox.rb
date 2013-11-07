@@ -1,6 +1,6 @@
-default[:elephant][:virtualbox][:version] = '4.2.16-86992'
+default[:elephant][:virtualbox][:version] = '4.3.2-90405'
 default[:elephant][:virtualbox][:url] = "http://download.virtualbox.org/virtualbox/#{node[:elephant][:virtualbox][:version].split('-').first}/VirtualBox-#{node[:elephant][:virtualbox][:version]}-OSX.dmg"
-default[:elephant][:virtualbox][:checksum] = 'be67d3b62aea6734f6003ea3e25e07c05d267e8289df379c27493dd0320ac7bb'
+default[:elephant][:virtualbox][:checksum] = 'de6d2c433b259162ba68156531954cf4c7fd192e8b47e72ea486988e4fe5939e'
 
 default[:elephant][:settings][:virtualbox] = {
   'domain' => 'org.virtualbox.app.VirtualBox',
