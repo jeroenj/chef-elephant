@@ -8,6 +8,16 @@ dmg_package 'Drobo Dashboard' do
   type 'pkg'
 end
 
+installation_log_file = "#{ENV['HOME']}/.Drobo_Dashboard_installer_os_version_check_log.txt"
+
+execute "sudo chown #{node[:elephant][:username]}:staff #{installation_log_file}" do
+  only_if { ::File.exists? installation_log_file }
+end
+
+file installation_log_file do
+  action :delete
+end
+
 settings_path = "#{ENV['HOME']}/Library/Application Support/Drobo Dashboard"
 
 directory ::File.expand_path('Appclicks', settings_path) do
