@@ -20,6 +20,10 @@ end
 
 settings_path = "#{ENV['HOME']}/Library/Application Support/Drobo Dashboard"
 
+execute "sudo chown -R #{node[:elephant][:username]}:staff \"#{settings_path}\"" do
+  only_if { ::File.exists?(settings_path) && ::File.stat(settings_path).uid == 0 }
+end
+
 directory ::File.expand_path('Appclicks', settings_path) do
   recursive true
 end
