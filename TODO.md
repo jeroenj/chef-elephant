@@ -215,7 +215,7 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ```
 
 ### Plex Media Server
-* Preferences
+* Library settings
 
 ### SABnzbd
 * Use dmg_resource instead of custom implementation
