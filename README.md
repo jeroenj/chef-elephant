@@ -6,6 +6,9 @@ This cookbook includes a list of apps used at [Mr. Elephant](http://mrelephant.b
 
 This cookbook has been built to work on Mac OSX and is only tested on Mountain Lion (10.8.x). Xcode (Development Tools) need to be installed upfront.
 
+### gems
+* plist
+
 ### cookbooks
 - `dmg`
 - `homebrew`
