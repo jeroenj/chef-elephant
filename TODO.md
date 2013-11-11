@@ -214,9 +214,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ]
 ```
 
-### Plex Media Center
-* Preferences
-
 ### Plex Media Server
 * Preferences
 
