@@ -250,8 +250,8 @@ end
 end
 ```
 
-### Tranmission
-* Preferences
+### Transmission
+* RPC password (keychain)
 
 ### Tunnelblick
 * Preferences
