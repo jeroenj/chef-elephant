@@ -2,7 +2,7 @@
 gem: --no-ri --no-rdoc
 :sources:
 - https://rubygems.org
-- http://private.gems.openminds.be
+- http://gems.openminds.be
 :backtrace: false
 :benchmark: false
 :verbose: true
