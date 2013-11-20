@@ -1,0 +1,17 @@
+diff --git a/lib/tvdb_api/tvdb_api.py b/lib/tvdb_api/tvdb_api.py
+index 96db6a9..c8a735f 100755
+--- a/lib/tvdb_api/tvdb_api.py
++++ b/lib/tvdb_api/tvdb_api.py
+@@ -816,6 +816,12 @@ class Tvdb:
+         for cur_ep in epsEt.findall("Episode"):
+             seas_no = int(cur_ep.find('SeasonNumber').text)
+             ep_no = int(cur_ep.find('EpisodeNumber').text)
++            if sid == 73141:
++                if seas_no == 2:
++                    seas_no = 1
++                    ep_no = ep_no + 7
++                if seas_no > 2:
++                    seas_no = seas_no - 1
+             for cur_item in cur_ep.getchildren():
+                 tag = cur_item.tag.lower()
+                 value = cur_item.text
