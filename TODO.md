@@ -260,6 +260,9 @@ end
 ### VLC
 * Preferences
 
+### VPN
+* output for keychain password check
+
 ## Various
 * Notification settings
 

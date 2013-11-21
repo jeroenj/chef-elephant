@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ActiveServers</key>
+	<array>
+		<% if @pptp_enabled %><string>com.apple.ppp.pptp</string><% end %>
+		<% if @l2tp_enabled %><string>com.apple.ppp.l2tp</string><% end %>
+	</array>
+	<key>Servers</key>
+	<dict>
+		<% if @l2tp_enabled %>
+		<key>com.apple.ppp.l2tp</key>
+		<dict>
+			<key>DNS</key>
+			<dict>
+				<key>OfferedSearchDomains</key>
+				<array/>
+				<key>OfferedServerAddresses</key>
+				<array>
+					<% @dns_servers.each do |dns_server| %>
+					<string><%= dns_server %></string>
+					<% end %>
+				</array>
+			</dict>
+			<key>IPSec</key>
+			<dict>
+				<key>AuthenticationMethod</key>
+				<string>SharedSecret</string>
+				<key>IdentifierVerification</key>
+				<string>None</string>
+				<key>LocalIdentifier</key>
+				<string></string>
+				<key>RemoteIdentifier</key>
+				<string></string>
+				<key>SharedSecret</key>
+				<string>com.apple.ppp.l2tp</string>
+				<key>SharedSecretEncryption</key>
+				<string>Keychain</string>
+			</dict>
+			<key>IPv4</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>Manual</string>
+				<key>DestAddressRanges</key>
+				<array>
+					<% @ip_range.each do |ip| %>
+					<string><%= ip %></string>
+					<% end %>
+				</array>
+				<key>OfferedRouteAddresses</key>
+				<array/>
+				<key>OfferedRouteMasks</key>
+				<array/>
+				<key>OfferedRouteTypes</key>
+				<array/>
+			</dict>
+			<key>Interface</key>
+			<dict>
+				<key>SubType</key>
+				<string>L2TP</string>
+				<key>Type</key>
+				<string>PPP</string>
+			</dict>
+			<key>L2TP</key>
+			<dict>
+				<key>Transport</key>
+				<string>IPSec</string>
+			</dict>
+			<key>PPP</key>
+			<dict>
+				<key>ACSPEnabled</key>
+				<integer>1</integer>
+				<key>AuthenticatorProtocol</key>
+				<array>
+					<string>MSCHAP2</string>
+				</array>
+				<key>DisconnectOnIdle</key>
+				<integer>1</integer>
+				<key>DisconnectOnIdleTimer</key>
+				<integer>7200</integer>
+				<key>IPCPCompressionVJ</key>
+				<integer>0</integer>
+				<key>LCPEchoEnabled</key>
+				<integer>1</integer>
+				<key>LCPEchoFailure</key>
+				<integer>5</integer>
+				<key>LCPEchoInterval</key>
+				<integer>60</integer>
+				<key>Logfile</key>
+				<string><%= @log_file %></string>
+				<key>VerboseLogging</key>
+				<integer>1</integer>
+			</dict>
+			<key>Server</key>
+			<dict>
+				<key>Logfile</key>
+				<string><%= @log_file %></string>
+				<key>MaximumSessions</key>
+				<integer>128</integer>
+				<key>VerboseLogging</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<% end %>
+		<% if @pptp_enabled %>
+		<key>com.apple.ppp.pptp</key>
+		<dict>
+			<key>DNS</key>
+			<dict>
+				<key>OfferedSearchDomains</key>
+				<array/>
+				<key>OfferedServerAddresses</key>
+				<array>
+					<% @dns_servers.each do |dns_server| %>
+					<string><%= dns_server %></string>
+					<% end %>
+				</array>
+			</dict>
+			<key>IPv4</key>
+			<dict>
+				<key>ConfigMethod</key>
+				<string>Manual</string>
+				<key>DestAddressRanges</key>
+				<array>
+					<% @ip_range.each do |ip| %>
+					<string><%= ip %></string>
+					<% end %>
+				</array>
+				<key>OfferedRouteAddresses</key>
+				<array/>
+				<key>OfferedRouteMasks</key>
+				<array/>
+				<key>OfferedRouteTypes</key>
+				<array/>
+			</dict>
+			<key>Interface</key>
+			<dict>
+				<key>SubType</key>
+				<string>PPTP</string>
+				<key>Type</key>
+				<string>PPP</string>
+			</dict>
+			<key>PPP</key>
+			<dict>
+				<key>ACSPEnabled</key>
+				<integer>1</integer>
+				<key>AuthenticatorProtocol</key>
+				<array>
+					<string>MSCHAP2</string>
+				</array>
+				<key>CCPEnabled</key>
+				<integer>1</integer>
+				<key>CCPProtocols</key>
+				<array>
+					<string>MPPE</string>
+				</array>
+				<key>DisconnectOnIdle</key>
+				<integer>1</integer>
+				<key>DisconnectOnIdleTimer</key>
+				<integer>7200</integer>
+				<key>IPCPCompressionVJ</key>
+				<integer>0</integer>
+				<key>LCPEchoEnabled</key>
+				<integer>1</integer>
+				<key>LCPEchoFailure</key>
+				<integer>5</integer>
+				<key>LCPEchoInterval</key>
+				<integer>60</integer>
+				<key>Logfile</key>
+				<string><%= @log_file %></string>
+				<key>MPPEKeySize128</key>
+				<integer>1</integer>
+				<key>MPPEKeySize40</key>
+				<integer>0</integer>
+				<key>VerboseLogging</key>
+				<integer>1</integer>
+			</dict>
+			<key>Server</key>
+			<dict>
+				<key>Logfile</key>
+				<string><%= @log_file %></string>
+				<key>MaximumSessions</key>
+				<integer>128</integer>
+				<key>VerboseLogging</key>
+				<integer>1</integer>
+			</dict>
+		</dict>
+		<% end %>
+	</dict>
+</dict>
+</plist>
