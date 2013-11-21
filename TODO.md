@@ -263,6 +263,10 @@ end
 ### VLC
 * Preferences
 
+### VMware Fusion
+* License key
+* Preferences
+
 ### VPN
 * output for keychain password check
 
