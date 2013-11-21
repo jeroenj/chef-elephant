@@ -1,3 +1,5 @@
+include_recipe 'elephant::python'
+
 elephant_pip 'pyOpenSSL'
 elephant_pip 'cheetah'
 
