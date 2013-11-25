@@ -14,4 +14,6 @@ end
 
 link '/usr/local/bin/gitx' do
   to '/Applications/Gitx.app/Contents/resources/gitx'
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end

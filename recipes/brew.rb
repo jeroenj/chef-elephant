@@ -8,4 +8,6 @@ end
 
 directory '/usr/local/var/log' do
   recursive true
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end

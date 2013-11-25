@@ -7,12 +7,16 @@ app_path = ::File.join node[:elephant][:apps_path], 'sickbeard'
 
 directory app_path do
   recursive true
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end
 
 git app_path do
   repository 'git@github.com:midgetspy/Sick-Beard.git'
   reference 'master'
   action :checkout
+  user node[:elephant][:username]
+  group node[:elephant][:group]
 end
 
 file_path = File.join app_path, 'lib/tvdb_api/tvdb_api.py'
@@ -20,11 +24,15 @@ patch_path = File.expand_path File.join(__FILE__, '../../files/default/sickbeard
 
 execute 'Apply Sick Beard tvdb api patch' do
   command "patch \"#{file_path}\" \"#{patch_path}\""
+  user node[:elephant][:username]
+  group node[:elephant][:group]
   only_if { system "patch --silent --forward --dry-run \"#{file_path}\" \"#{patch_path}\" > /dev/null" }
 end
 
 template ::File.join(node[:elephant][:apps_path], 'sickbeard/config.ini') do
   source 'sickbeard/config.ini.erb'
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
   variables(
     :web_port => node[:elephant][:sickbeard][:settings][:web_port],
     :username => node[:elephant][:sickbeard][:settings][:username],
@@ -50,4 +58,6 @@ end
 
 elephant_plist "#{ENV['HOME']}/Library/LaunchAgents/sickbeard.plist" do
   content node[:elephant][:sickbeard][:launch_agent]
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end

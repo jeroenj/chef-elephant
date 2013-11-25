@@ -14,6 +14,8 @@ end
 
 directory "#{ENV['HOME']}/Library/Application Support/Cyberduck/Bookmarks" do
   recursive true
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end
 
 node[:elephant][:cyberduck][:bookmarks].each do |bookmark|
@@ -26,5 +28,7 @@ node[:elephant][:cyberduck][:bookmarks].each do |bookmark|
       :protocol => bookmark[:protocol],
       :username => bookmark[:username]
     })
+    owner node[:elephant][:username]
+    group node[:elephant][:group]
   end
 end

@@ -14,6 +14,8 @@ end
 
 directory "#{ENV['HOME']}/Library/Application Support/Plex/userdata" do
   recursive true
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end
 
 template "#{ENV['HOME']}/Library/Application Support/Plex/userdata/guisettings.xml" do
@@ -22,4 +24,6 @@ template "#{ENV['HOME']}/Library/Application Support/Plex/userdata/guisettings.x
     :myplex => node[:elephant][:plex_media_center][:preferences][:myplex],
     :lastfm => node[:elephant][:plex_media_center][:preferences][:lastfm]
   )
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end

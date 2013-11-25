@@ -16,6 +16,7 @@ node[:elephant][:settings].select{|recipe, values| node.run_context.loaded_recip
       domain settings['domain']
       key key
       value value
+      user node[:elephant][:username]
       sudo true if settings['domain'] =~ /^\/Library\/Preferences/
       global true if settings['domain'] =~ /^NSGlobalDomain$/
       notifies :run, notify if notify

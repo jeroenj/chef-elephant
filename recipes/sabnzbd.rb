@@ -64,6 +64,8 @@ if node[:elephant][:sabnzbd][:preferences]
       :tv => node[:elephant][:sabnzbd][:tv],
       :movies => node[:elephant][:sabnzbd][:movies]
     })
+    owner node[:elephant][:username]
+    group node[:elephant][:group]
   end
 
   if node[:elephant][:sabnzbd][:tv] || node[:elephant][:sabnzbd][:movies]
@@ -71,6 +73,8 @@ if node[:elephant][:sabnzbd][:preferences]
       %w[autoProcessTV.py sabToSickBeard.py].each do |file|
         cookbook_file ::File.expand_path(file, scripts_path) do
           source "sabnzbd/#{file}"
+          owner node[:elephant][:username]
+          group node[:elephant][:group]
         end
       end
 
@@ -83,6 +87,8 @@ if node[:elephant][:sabnzbd][:preferences]
           :password => node[:elephant][:sabnzbd][:tv][:sickbeard][:password],
           :ssl => node[:elephant][:sabnzbd][:tv][:sickbeard][:ssl]
         })
+        owner node[:elephant][:username]
+        group node[:elephant][:group]
       end
     end
 
@@ -92,6 +98,8 @@ if node[:elephant][:sabnzbd][:preferences]
         variables({
           :plex_movies_id => node[:elephant][:sabnzbd][:movies][:plex_movies_id]
         })
+        owner node[:elephant][:username]
+        group node[:elephant][:group]
       end
     end
   end

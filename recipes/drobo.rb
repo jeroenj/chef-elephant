@@ -10,22 +10,16 @@ end
 
 installation_log_file = "#{ENV['HOME']}/.Drobo_Dashboard_installer_os_version_check_log.txt"
 
-execute "sudo chown #{node[:elephant][:username]}:staff #{installation_log_file}" do
-  only_if { ::File.exists? installation_log_file }
-end
-
 file installation_log_file do
   action :delete
 end
 
 settings_path = "#{ENV['HOME']}/Library/Application Support/Drobo Dashboard"
 
-execute "sudo chown -R #{node[:elephant][:username]}:staff \"#{settings_path}\"" do
-  only_if { ::File.exists?(settings_path) && ::File.stat(settings_path).uid == 0 }
-end
-
 directory ::File.expand_path('Appclicks', settings_path) do
   recursive true
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end
 
 plist_preferences = {
@@ -44,5 +38,7 @@ end
 
 cookbook_file ::File.expand_path('settings.xml', settings_path) do
   source 'drobo/settings.xml'
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
   action :create_if_missing
 end

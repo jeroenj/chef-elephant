@@ -8,13 +8,23 @@ unless pow_installed
   pow_hosts = "#{ENV['HOME']}/Library/Application Support/Pow/Hosts"
   directory pow_hosts do
     recursive true
+    owner node[:elephant][:username]
+    group node[:elephant][:group]
   end
   link "#{ENV['HOME']}/.pow" do
     to pow_hosts
+    owner node[:elephant][:username]
+    group node[:elephant][:group]
   end
 
-  execute 'sudo pow --install-system'
-  execute 'pow --install-local'
-  execute 'sudo launchctl load -w /Library/LaunchDaemons/cx.pow.firewall.plist'
-  execute 'launchctl load -w ~/Library/LaunchAgents/cx.pow.powd.plist'
+  execute 'pow --install-system'
+  execute 'pow --install-local' do
+    user node[:elephant][:username]
+    group node[:elephant][:group]
+  end
+  execute 'launchctl load -w /Library/LaunchDaemons/cx.pow.firewall.plist'
+  execute 'launchctl load -w ~/Library/LaunchAgents/cx.pow.powd.plist' do
+    user node[:elephant][:username]
+    group node[:elephant][:group]
+  end
 end
