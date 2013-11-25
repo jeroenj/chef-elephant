@@ -48,9 +48,9 @@ end
 
 remote_file ::File.expand_path("Installed Packages/Package Control.sublime-package", settings_path) do
   source 'http://sublime.wbond.net/Package%20Control.sublime-package'
-  :create_if_missing
   owner node[:elephant][:username]
   group node[:elephant][:group]
+  action :create_if_missing
 end
 
 if license = node[:elephant][:sublime_text][:license]
