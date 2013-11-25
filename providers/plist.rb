@@ -1,7 +1,7 @@
 require 'plist'
 
 action :write do
-  restart = new_resource.name =~ /\/Users\/\w+\/Library\/Launch(Agents|Daemons)\/.*/
+  restart = new_resource.name =~ /.*\/Library\/Launch(Agents|Daemons)\/.*/
 
   file new_resource.name do
     content new_resource.content.to_plist
