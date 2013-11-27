@@ -33,6 +33,12 @@ template ::File.join(app_path, 'Settings.cfg') do
   group node[:elephant][:group]
 end
 
+cookbook_file ::File.join(app_path, 'ATVSettings.cfg') do
+  source 'plexconnect/ATVSettings.cfg'
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
+end
+
 elephant_plist '/Library/LaunchAgents/plexconnect.plist' do
   content node[:elephant][:plexconnect][:launch_agent]
 end
