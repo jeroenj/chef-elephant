@@ -35,6 +35,4 @@ end
 
 elephant_plist '/Library/LaunchAgents/plexconnect.plist' do
   content node[:elephant][:plexconnect][:launch_agent]
-  owner node[:elephant][:username]
-  group node[:elephant][:group]
 end
