@@ -1,2 +1,2 @@
-default[:elephant][:kbc_business][:url] = 'https://multimediafiles.kbcgroup.eu/ng/published/KBC/other/O4BMac.pkg'
-default[:elephant][:kbc_business][:shasum] = 'ab37943f97682e5aa0a9de0f2086e4a9c3995c4b'
+default[:elephant][:kbc_business][:url] = 'https://multimediafiles.kbcgroup.eu/ng/published/KBC/OTHER/O4BMac.pkg'
+default[:elephant][:kbc_business][:shasum] = '9d2bf04fa406d398d22c75e03a1baca63486672e84e7a6dc8ba657cb1bf04f7a'
