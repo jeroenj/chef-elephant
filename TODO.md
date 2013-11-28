@@ -253,9 +253,6 @@ end
 end
 ```
 
-### Transmission
-* RPC password (keychain)
-
 ### Tunnelblick
 * Preferences
 * Configs
