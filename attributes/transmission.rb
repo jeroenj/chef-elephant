@@ -17,3 +17,12 @@ default[:elephant][:settings][:transmission] = {
   'WarningDonate' => false,
   'WarningLegal' => false
 }
+
+default[:elephant][:transmission][:launch_agent] = {
+  'Label' => 'transmission',
+  'Program' => '/Applications/Transmission.app/Contents/MacOS/Transmission',
+  'RunAtLoad' => true,
+  'KeepAlive' => {
+    'SuccessfulExit' => false
+  }
+}
