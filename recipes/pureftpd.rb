@@ -1,6 +1,6 @@
 package 'pure-ftpd'
 
-elephant_plist '/Library/LaunchAgents/homebrew.mxcl.pure-ftpd.plist' do
+elephant_plist '/Library/LaunchAgents/pureftpd.plist' do
   content node[:elephant][:pureftpd][:launch_agent]
 end
 
