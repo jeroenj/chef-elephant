@@ -295,6 +295,8 @@ end
 
 * Fonts
 
+* Restart launch agents when settings change (plexconnect, sickbeard, vpn, ...)
+
 ## Chef
 * Automatically add elephant::settings at the end of the run list when needed
 * Debug timeout issues. Currently the timeout is set to 10 minutes, but sometimes compiling a package exeeds that time.
