@@ -1,8 +1,7 @@
 package 'pure-ftpd'
 
-cookbook_file '/Library/LaunchAgents/homebrew.mxcl.pure-ftpd.plist' do
-  source 'pureftpd/homebrew.mxcl.pure-ftpd.plist'
-  mode 0644
+elephant_plist '/Library/LaunchAgents/homebrew.mxcl.pure-ftpd.plist' do
+  content node[:elephant][:pureftpd][:launch_agent]
 end
 
 template '/usr/local/etc/pureftpd.passwd' do
