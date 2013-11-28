@@ -305,5 +305,8 @@ end
 
 ## Data
 
+### couchpotato
+* couchpotato.db
+
 ### sickbeard
 * sickbeard.db
