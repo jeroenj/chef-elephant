@@ -1,6 +1,6 @@
 if node[:elephant][:vpn][:l2tp_enabled]
   execute 'Set L2TP VPN secret in keychain' do
-    command "security add-generic-password -a com.apple.ppp.l2tp -s com.apple.net.racoon -T /usr/sbin/racoon -p #{node[:elephant][:vpn][:l2tp_secret]} /Library/Keychains/System.keychain"
+    command "security add-generic-password -a com.apple.ppp.l2tp -s com.apple.net.racoon -T /usr/sbin/racoon -w #{node[:elephant][:vpn][:l2tp_secret]} /Library/Keychains/System.keychain"
     not_if { system 'security find-generic-password -a com.apple.ppp.l2tp' }
   end
 end
