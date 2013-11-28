@@ -302,3 +302,8 @@ end
 * Debug timeout issues. Currently the timeout is set to 10 minutes, but sometimes compiling a package exeeds that time.
 * Debug why installing a lot of packages after each other takes such a long time. Note: during that time Dropbox was syncing and using 100% CPU.
 * create keychain lwrp instead of doing custom calls. This way STDOUT output can easily be ignored and we could to ask to unlock the keychain if it is locked instead of always doing that.
+
+## Data
+
+### sickbeard
+* sickbeard.db
