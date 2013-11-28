@@ -4,7 +4,3 @@ dmg_package "Java #{node[:elephant][:java][:version]}" do
   type 'pkg'
   package_id 'com.oracle.jre'
 end
-
-link '/usr/local/bin/java' do
-  to '/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java'
-end
