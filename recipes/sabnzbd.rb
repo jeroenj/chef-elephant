@@ -104,3 +104,11 @@ if node[:elephant][:sabnzbd][:preferences]
     end
   end
 end
+
+if node[:elephant][:sabnzbd][:launch_agent]
+  elephant_plist "#{ENV['HOME']}/Library/LaunchAgents/sabnzbd.plist" do
+    content node[:elephant][:sabnzbd][:launch_agent]
+    owner node[:elephant][:username]
+    group node[:elephant][:group]
+  end
+end
