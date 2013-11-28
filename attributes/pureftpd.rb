@@ -6,7 +6,7 @@ default[:elephant][:pureftpd][:launch_agent] = {
     '/usr/local/sbin/pure-ftpd',
     '--chrooteveryon',
     '--login',
-    'puredb:/usr/local/etc/pureftpd.pd'
+    'puredb:/usr/local/etc/pureftpd.pdb'
   ],
   'RunAtLoad' => true,
   'KeepAlive' => true,
