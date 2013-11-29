@@ -1,5 +1,5 @@
 ---
-gem: --no-document
+gem: --no-document --env-shebang
 :sources:
 - https://rubygems.org
 - https://gems.openminds.be
