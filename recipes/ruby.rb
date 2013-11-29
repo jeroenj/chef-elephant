@@ -26,7 +26,7 @@ node[:elephant][:ruby][:rubies].each do |ruby|
       command "#{gem_exec} install #{ruby_gem[:name]} #{version}"
       user node[:elephant][:username]
       group node[:elephant][:group]
-      not_if { `#{gem_exec} list #{ruby_gem[:name]}` =~ /#{ruby_gem[:name]}.*#{ruby_gem[:version]}/ }
+      not_if { system({'UID' => node[:elephant][:uid]}, "#{gem_exec} list #{ruby_gem[:name]} | grep '#{ruby_gem[:name]}.*#{ruby_gem[:version]}' > /dev/null") }
     end
   end
 end
