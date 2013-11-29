@@ -1,3 +1,4 @@
+default[:elephant][:uid] = `id -u #{node[:elephant][:username]}`
 default[:homebrew][:owner] = node[:elephant][:username]
 default[:elephant][:group] = 'staff'
 default[:elephant][:homebrew][:packages] = []
