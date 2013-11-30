@@ -16,7 +16,11 @@ node[:elephant][:ruby][:rubies].each do |ruby|
   end
 
   node[:elephant][:ruby][:gems].each do |ruby_gem|
-    elephant_gem ruby_gem[:name] do
+    description_version = " #{ruby_gem[:version]}" if ruby_gem[:version]
+    description = "#{ruby_gem[:name]}#{description_version} on ruby #{ruby}"
+
+    elephant_gem description do
+      name ruby_gem[:name]
       version ruby_gem[:version]
       ruby_version ruby
     end
