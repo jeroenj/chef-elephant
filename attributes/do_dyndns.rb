@@ -5,7 +5,7 @@ default[:elephant][:do_dyndns] = {
       '/usr/bin/ruby',
       "#{ENV['HOME']}/apps/do-dyndns/dns.rb",
       'jeroenj.be',
-      'bender'
+      node[:elephant][:hostname].downcase
     ],
     'StartCalendarInterval' => {
       'Minute' => 0
