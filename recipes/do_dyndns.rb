@@ -26,6 +26,6 @@ file_path = ::File.join app_path, 'dns.rb'
   end
 end
 
-elephant_plist "/Library/LaunchAgents/#{node[:elephant][:do_dyndns][:launch_agent][:Label]}.plist" do
-  content node[:elephant][:do_dyndns][:launch_agent]
+elephant_plist "/Library/LaunchDaemons/#{node[:elephant][:do_dyndns][:launch_daemon][:Label]}.plist" do
+  content node[:elephant][:do_dyndns][:launch_daemon]
 end

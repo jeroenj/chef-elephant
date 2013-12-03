@@ -1,5 +1,5 @@
 default[:elephant][:do_dyndns] = {
-  :launch_agent => {
+  :launch_daemon => {
     'Label' => 'do-dyndns',
     'ProgramArguments' => [
       '/usr/bin/ruby',
