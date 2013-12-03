@@ -11,3 +11,9 @@ execute 'Install Plex Media Server' do
   cwd '/Applications'
   not_if { ::File.directory?('/Applications/Plex Media Server.app') }
 end
+
+elephant_plist "#{ENV['HOME']}/Library/LaunchAgents/plex-media-server.plist" do
+  content node[:elephant][:plex_media_server][:launch_agent]
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
+end

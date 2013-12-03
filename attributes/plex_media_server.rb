@@ -20,3 +20,15 @@ default[:elephant][:settings][:plex_media_server] = {
   'SUEnableAutomaticChecks' => true,
   'SUSendProfileInfo' => true
 }
+
+default[:elephant][:plex_media_server][:launch_agent] = {
+  'Label' => 'plex-media-server',
+  'ProgramArguments' => [
+    '/Applications/Plex Media Server.app/Contents/MacOS/Plex Media Server',
+    '-start'
+  ],
+  'RunAtLoad' => true,
+  'KeepAlive' => {
+    'SuccessfulExit' => false
+  }
+}
