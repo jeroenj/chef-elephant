@@ -39,6 +39,6 @@ cookbook_file ::File.join(app_path, 'ATVSettings.cfg') do
   group node[:elephant][:group]
 end
 
-elephant_plist '/Library/LaunchAgents/plexconnect.plist' do
-  content node[:elephant][:plexconnect][:launch_agent]
+elephant_plist '/Library/LaunchDaemons/plexconnect.plist' do
+  content node[:elephant][:plexconnect][:launch_daemon]
 end

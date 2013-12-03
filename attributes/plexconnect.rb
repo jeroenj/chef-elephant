@@ -1,7 +1,7 @@
 default[:elephant][:plexconnect][:revision] = 'v0.2'
 default[:elephant][:plexconnect][:path] = ::File.join node[:elephant][:apps_path], 'plexconnect'
 
-default[:elephant][:plexconnect][:launch_agent] = {
+default[:elephant][:plexconnect][:launch_daemon] = {
   'Label' => 'plexconnect',
   'ProgramArguments' => [
     '/usr/local/bin/python',
