@@ -24,11 +24,11 @@ template '/etc/ppp/chap-secrets' do
   mode 0600
 end
 
-node[:elephant][:vpn][:launch_agents].each do |type, content|
+node[:elephant][:vpn][:launch_daemons].each do |type, content|
   if node[:elephant][:vpn][:"#{type}_enabled"]
-    launch_agent = "/Library/LaunchAgents/#{content[:Label]}.plist"
+    launch_daemon = "/Library/LaunchDaemons/#{content[:Label]}.plist"
 
-    elephant_plist launch_agent do
+    elephant_plist launch_daemon do
       content content
     end
   end
