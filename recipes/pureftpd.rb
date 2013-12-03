@@ -1,7 +1,7 @@
 package 'pure-ftpd'
 
-elephant_plist '/Library/LaunchAgents/pureftpd.plist' do
-  content node[:elephant][:pureftpd][:launch_agent]
+elephant_plist '/Library/LaunchDaemons/pureftpd.plist' do
+  content node[:elephant][:pureftpd][:launch_daemon]
 end
 
 template '/usr/local/etc/pureftpd.passwd' do

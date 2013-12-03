@@ -1,6 +1,6 @@
 default[:elephant][:pureftpd][:accounts] = []
 
-default[:elephant][:pureftpd][:launch_agent] = {
+default[:elephant][:pureftpd][:launch_daemon] = {
   'Label' => 'pureftpd',
   'ProgramArguments' => [
     '/usr/local/sbin/pure-ftpd',
