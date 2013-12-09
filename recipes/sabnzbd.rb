@@ -46,6 +46,8 @@ if node[:elephant][:sabnzbd][:preferences]
 
   directory scripts_path do
     recursive true
+    owner node[:elephant][:username]
+    group node[:elephant][:group]
   end
 
   template ::File.expand_path('sabnzbd.ini', settings_path) do
