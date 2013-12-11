@@ -11,6 +11,12 @@ sites_available = '/usr/local/etc/nginx/sites-available'
   end
 end
 
+cookbook_file '/usr/local/etc/nginx/nginx.conf' do
+  source 'nginx/nginx.conf'
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
+end
+
 execute 'Reload nginx' do
   command '/usr/local/bin/nginx -s reload'
   user node[:elephant][:username]
