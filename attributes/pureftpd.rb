@@ -4,7 +4,7 @@ default[:elephant][:pureftpd][:launch_daemon] = {
   'Label' => 'pureftpd',
   'ProgramArguments' => [
     '/usr/local/sbin/pure-ftpd',
-    '--chrooteveryon',
+    '--chrooteveryone',
     '--login',
     'puredb:/usr/local/etc/pureftpd.pdb'
   ],
