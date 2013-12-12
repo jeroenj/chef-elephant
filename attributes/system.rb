@@ -32,6 +32,11 @@ default[:mac_os_x][:settings][:light_sensor] = {
   'Automatic Display Enabled' => false
 }
 
+default[:mac_os_x][:settings][:ir_controller] = {
+  'domain' => '/Library/Preferences/com.apple.driver.AppleIRController',
+  'DeviceEnabled' => false
+}
+
 default[:mac_os_x][:settings][:login] = {
   'domain' => '/Library/Preferences/com.apple.loginwindow',
   'GuestEnabled' => true
