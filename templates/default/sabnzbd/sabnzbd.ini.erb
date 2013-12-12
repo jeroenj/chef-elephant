@@ -84,6 +84,7 @@ no_ipv6 = 0
 no_penalties = 0
 nomedia_marker = ""
 nzb_backup_dir = ""
+nzb_key = none
 osx_menu = 1
 osx_speed = <%= @osx_speed %>
 overwrite_files = 0
@@ -113,8 +114,10 @@ replace_illegal = 1
 replace_spaces = 0
 req_completion_rate = 100.2
 rss_filenames = 0
+rss_odd_titles = nzbindex.nl/, nzbindex.com/, nzbclub.com/
 rss_rate = 60
 safe_postproc = 0
+sanitize_safe = 0
 schedlines = <%= @schedule.any? ? @schedule.map{|l| "\"#{l}\""}.join(', ') : ',' %>
 script_dir = Library/Application Support/SABnzbd/scripts
 send_group = 0
@@ -196,3 +199,17 @@ script = update_plex_movies.sh
 newzbin = ""
 dir = <%= @movies[:directory] %>
 <% end %>
+[nzbmatrix]
+username = ""
+apikey = ""
+del_bookmark = 1
+[newzbin]
+username = ""
+url = www.newzbin2.es
+bookmark_rate = 60
+bookmarks = 0
+password = ""
+unbookmark = 1
+[nzbxxx]
+username = ""
+apikey = ""
