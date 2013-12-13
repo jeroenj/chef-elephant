@@ -100,6 +100,7 @@ if node[:elephant][:sabnzbd][:preferences]
         variables({
           :plex_movies_id => node[:elephant][:sabnzbd][:movies][:plex_movies_id]
         })
+        mode 0755
         owner node[:elephant][:username]
         group node[:elephant][:group]
       end
