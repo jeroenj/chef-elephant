@@ -1,3 +1,3 @@
-default[:xquartz][:version] = '2.7.4'
-default[:xquartz][:url] = "http://xquartz.macosforge.org/downloads/SL/XQuartz-#{node['xquartz']['version']}.dmg"
-default[:xquartz][:checksum] = '3f7c156fc4b13e3f0d0e44523ef2bd3cf7ea736126616dd2da28abb31840923c'
+default[:xquartz][:version] = '2.7.5'
+default[:xquartz][:url] = "http://xquartz-dl.macosforge.org/SL/XQuartz-#{node['xquartz']['version']}.dmg"
+default[:xquartz][:checksum] = '4382ff78cef5630fb6b8cc982da2e5a577d8cc5dddd35a493b50bad2fcf5e34a'
