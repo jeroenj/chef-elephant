@@ -1,7 +1,6 @@
 package 'pure-ftpd'
 
 elephant_recursive_directory node[:elephant][:pureftpd][:log_file] do
-  recursive true
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
