@@ -1,5 +1,11 @@
 package 'pure-ftpd'
 
+elephant_recursive_directory node[:elephant][:pureftpd][:log_file] do
+  recursive true
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
+end
+
 elephant_plist '/Library/LaunchDaemons/pureftpd.plist' do
   content node[:elephant][:pureftpd][:launch_daemon]
 end
