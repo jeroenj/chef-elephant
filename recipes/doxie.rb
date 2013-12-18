@@ -5,8 +5,7 @@ end
 
 preferences_directory = "#{ENV['HOME']}/Library/Preferences/Apparent/Doxie"
 
-directory preferences_directory do
-  recursive true
+elephant_recursive_directory preferences_directory do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end

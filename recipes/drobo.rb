@@ -16,8 +16,7 @@ end
 
 settings_path = "#{ENV['HOME']}/Library/Application Support/Drobo Dashboard"
 
-directory ::File.expand_path('Appclicks', settings_path) do
-  recursive true
+elephant_recursive_directory ::File.expand_path('Appclicks', settings_path) do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end

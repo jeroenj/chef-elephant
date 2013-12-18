@@ -44,8 +44,7 @@ if node[:elephant][:sabnzbd][:preferences]
   settings_path = "#{ENV['HOME']}/Library/Application Support/SABnzbd"
   scripts_path = ::File.expand_path 'scripts', settings_path
 
-  directory scripts_path do
-    recursive true
+  elephant_recursive_directory scripts_path do
     owner node[:elephant][:username]
     group node[:elephant][:group]
   end

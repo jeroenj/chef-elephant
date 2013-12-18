@@ -12,8 +12,7 @@ execute 'Install Plex Home Theater' do
   not_if { ::File.directory?('/Applications/Plex Home Theater.app') }
 end
 
-directory "#{ENV['HOME']}/Library/Application Support/Plex Home Theater/userdata" do
-  recursive true
+elephant_recursive_directory "#{ENV['HOME']}/Library/Application Support/Plex Home Theater/userdata" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end

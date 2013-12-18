@@ -10,23 +10,19 @@ link '/usr/bin/subl' do
   to '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'
 end
 
-directory settings_path do
-  recursive true
+elephant_recursive_directory settings_path do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
-directory "#{settings_path}/Packages/User" do
-  recursive true
+elephant_recursive_directory "#{settings_path}/Packages/User" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
-directory "#{settings_path}/Settings" do
-  recursive true
+elephant_recursive_directory "#{settings_path}/Settings" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
-directory "#{settings_path}/Installed Packages" do
-  recursive true
+elephant_recursive_directory "#{settings_path}/Installed Packages" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end

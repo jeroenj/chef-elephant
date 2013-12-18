@@ -6,8 +6,7 @@ unless pow_installed
   # Homebrew does not take care of this (yet)
   # https://github.com/37signals/pow/issues/298
   pow_hosts = "#{ENV['HOME']}/Library/Application Support/Pow/Hosts"
-  directory pow_hosts do
-    recursive true
+  elephant_recursive_directory pow_hosts do
     owner node[:elephant][:username]
     group node[:elephant][:group]
   end

@@ -12,8 +12,7 @@ execute 'Install Cyberduck' do
   not_if { ::File.directory?('/Applications/Cyberduck.app') }
 end
 
-directory "#{ENV['HOME']}/Library/Application Support/Cyberduck/Bookmarks" do
-  recursive true
+elephant_recursive_directory "#{ENV['HOME']}/Library/Application Support/Cyberduck/Bookmarks" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end

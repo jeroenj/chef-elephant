@@ -4,8 +4,7 @@ cookbook_file "#{ENV['HOME']}/.vimrc" do
   group node[:elephant][:group]
 end
 
-directory "#{ENV['HOME']}/.vim/ftdetect" do
-  recursive true
+elephant_recursive_directory "#{ENV['HOME']}/.vim/ftdetect" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
@@ -16,8 +15,7 @@ cookbook_file "#{ENV['HOME']}/.vim/ftdetect/srt.vim" do
   group node[:elephant][:group]
 end
 
-directory "#{ENV['HOME']}/.vim/syntax" do
-  recursive true
+elephant_recursive_directory "#{ENV['HOME']}/.vim/syntax" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end

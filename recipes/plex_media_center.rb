@@ -12,8 +12,7 @@ execute 'Install Plex Media Center' do
   not_if { ::File.directory?('/Applications/Plex.app') }
 end
 
-directory "#{ENV['HOME']}/Library/Application Support/Plex/userdata" do
-  recursive true
+elephant_recursive_directory "#{ENV['HOME']}/Library/Application Support/Plex/userdata" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end

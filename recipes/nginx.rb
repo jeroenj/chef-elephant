@@ -4,8 +4,7 @@ sites_enabled = '/usr/local/etc/nginx/sites-enabled'
 sites_available = '/usr/local/etc/nginx/sites-available'
 
 [sites_enabled, sites_available].each do |path|
-  directory path do
-    recursive true
+  elephant_recursive_directory path do
     owner node[:elephant][:username]
     group node[:elephant][:group]
   end

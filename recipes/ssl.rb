@@ -1,5 +1,4 @@
-directory node[:elephant][:ssl][:path] do
-  recursive true
+elephant_recursive_directory node[:elephant][:ssl][:path] do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
