@@ -7,6 +7,12 @@ attribute :parent, :kind_of => String
 
 def initialize(name, run_context = nil)
   super
+  @parent ||= case path
+  when /\/usr.*/ then '/usr'
+  when /#{ENV['HOME']}\/Library\/Application Support\/.*/ then "#{ENV['HOME']}/Library/Application Support"
+  when /#{ENV['HOME']}\/Library\/Preferences\/.*/ then "#{ENV['HOME']}/Library/Preferences"
+  when /#{ENV['HOME']}\/.*/ then ENV['HOME']
+  end
   @parent ||= '/usr' if path =~ /\/usr.*/
   @action = :create
 end
