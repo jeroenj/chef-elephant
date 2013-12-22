@@ -160,7 +160,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 * SmartDelete
 
 ### Charles
-* Accept eula during install (issue in dmg cookbook)
 * License
 
 ### Cheatsheet
