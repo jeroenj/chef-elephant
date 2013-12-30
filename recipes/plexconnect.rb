@@ -33,8 +33,12 @@ template ::File.join(app_path, 'Settings.cfg') do
   group node[:elephant][:group]
 end
 
-cookbook_file ::File.join(app_path, 'ATVSettings.cfg') do
-  source 'plexconnect/ATVSettings.cfg'
+template ::File.join(app_path, 'ATVSettings.cfg') do
+  source 'plexconnect/ATVSettings.cfg.erb'
+  variables(
+    :myplex_user => node[:elephant][:plexconnect][:settings][:myplex_user],
+    :myplex_auth => node[:elephant][:plexconnect][:settings][:myplex_auth]
+  )
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
