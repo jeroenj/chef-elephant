@@ -1,3 +1,2 @@
-default[:elephant][:logitech_harmony][:version] = '7.8.1'
-default[:elephant][:logitech_harmony][:url] = "http://logitech-viva.navisite.net/web/ftp/pub/techsupport/harmony/LogitechHarmonyRemoteSoftware#{node[:elephant][:logitech_harmony][:version]}-OSX.dmg"
-default[:elephant][:logitech_harmony][:checksum] = '13a100211fb18569563c9d9bbe6c231cbfaa50989df0b471703ec942be2ecafb'
+default[:elephant][:logitech_harmony][:url] = 'https://files.myharmony.com/Assets/Plugins/MacOSX10.8/LogitechHarmonySoftware.dmg'
+default[:elephant][:logitech_harmony][:checksum] = 'c55a9d6cee8bd10e8a2308ac43ff626458bf6299764059026f08a2e482864840'
