@@ -4,5 +4,5 @@ dmg_package 'TeamViewer' do
   app 'Install TeamViewer'
   volumes_dir 'TeamViewer'
   type 'pkg'
-  package_id 'com.teamviewer.teamviewer8'
+  package_id 'com.teamviewer.teamviewer9'
 end
