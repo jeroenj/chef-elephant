@@ -1,4 +1,4 @@
-default[:elephant][:plexconnect][:revision] = 'v0.2'
+default[:elephant][:plexconnect][:revision] = 'v0.3.1'
 default[:elephant][:plexconnect][:path] = ::File.join node[:elephant][:apps_path], 'plexconnect'
 
 default[:elephant][:plexconnect][:launch_daemon] = {
