@@ -26,6 +26,7 @@ template ::File.join(app_path, 'Settings.cfg') do
   source 'plexconnect/Settings.cfg.erb'
   variables(
     :certfile => node[:elephant][:plexconnect][:settings][:certfile],
+    :hosttointercept => node[:elephant][:plexconnect][:settings][:hosttointercept],
     :ip_pms => node[:elephant][:plexconnect][:settings][:ip_pms],
     :logpath => node[:elephant][:plexconnect][:settings][:logpath]
   )
