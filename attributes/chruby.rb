@@ -1,4 +1,4 @@
-default[:elephant][:ruby] = {
+default[:elephant][:chruby] = {
   :path => '/usr/local/var/rubies',
   :rubies => %w[
     2.0.0-p353
