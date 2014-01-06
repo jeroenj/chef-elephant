@@ -16,7 +16,7 @@ git app_path do
   group node[:elephant][:group]
 end
 
-file ::File.join(app_path, 'assets/certificates/trailers.pem') do
+file ::File.expand_path(::File.join(app_path, node[:elephant][:plexconnect][:settings][:certfile])) do
   content node[:elephant][:plexconnect][:certificate]
   owner node[:elephant][:username]
   group node[:elephant][:group]
