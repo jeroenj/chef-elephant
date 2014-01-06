@@ -16,13 +16,15 @@ node[:elephant][:chruby][:rubies].each do |ruby|
   end
 
   node[:elephant][:chruby][:gems].each do |ruby_gem|
+    gem_exec = "source /usr/local/opt/chruby/share/chruby/chruby.sh && RUBIES=(/usr/local/var/rubies/ruby-#{ruby}) && chruby #{ruby} && /usr/local/var/rubies/ruby-#{ruby}/bin/gem"
+    version = " --version #{ruby_gem[:version]}" if ruby_gem[:version]
     description_version = " #{ruby_gem[:version]}" if ruby_gem[:version]
-    description = "#{ruby_gem[:name]}#{description_version} on ruby #{ruby}"
 
-    elephant_gem description do
-      name ruby_gem[:name]
-      version ruby_gem[:version]
-      ruby_version ruby
+    execute "Install #{ruby_gem[:name]}#{description_version} on ruby #{ruby}" do
+      command "#{gem_exec} install #{ruby_gem[:name]}#{version}"
+      user node[:elephant][:username]
+      group node[:elephant][:group]
+      not_if { system({'UID' => node[:elephant][:uid]}, "#{gem_exec} list #{ruby_gem[:name]} --installed#{version} > /dev/null") }
     end
   end
 end
