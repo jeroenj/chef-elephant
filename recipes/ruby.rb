@@ -5,3 +5,9 @@
     group node[:elephant][:group]
   end
 end
+
+node[:elephant][:ruby][:gems].each do |gem|
+  gem_package gem[:name] do
+    version gem[:version]
+  end
+end
