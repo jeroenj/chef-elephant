@@ -1,5 +1,5 @@
 %w[json rest-client].each do |name|
-  elephant_gem name
+  gem_package name
 end
 
 app_path = ::File.join node[:elephant][:apps_path], 'do-dyndns'
