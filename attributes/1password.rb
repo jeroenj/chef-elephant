@@ -5,6 +5,7 @@ default[:elephant][:settings][:'1password'] = {
   'HashSectionIsSortedFirst' => true,
   'KeepHelperRunning' => true,
   'LockOnIdle' => true,
+  'LockOnUserSwitch' => true,
   'LockTimeout' => 5,
   'PasswordAllowRepeats' => false,
   'PasswordAvoidAmbiguous' => true,
