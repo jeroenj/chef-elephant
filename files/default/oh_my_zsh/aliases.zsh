@@ -4,6 +4,8 @@ alias logt='tail -f log/test.log'
 
 alias rst='touch tmp/restart.txt'
 
+alias dbm='bin/rake db:migrate db:test:prepare'
+
 alias uninstall_all_gems='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
 
 # Zeus
