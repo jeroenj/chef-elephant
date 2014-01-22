@@ -20,5 +20,11 @@ alias mysql_stop='launchctl unload -w ~/Library/LaunchAgents/com.mysql.mysqld.pl
 # dig
 alias dog='dig +short'
 
+# git
+alias gf='git fetch -p origin'
+
+# tig
+alias ts='tig status'
+
 # knife
 alias knife='nocorrect knife'
