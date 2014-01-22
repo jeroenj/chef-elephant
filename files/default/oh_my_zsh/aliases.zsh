@@ -1,7 +1,6 @@
 # Ruby (on Rails)
 alias logd='tail -f log/development.log'
 alias logt='tail -f log/test.log'
-alias loge='tail -f /var/log/apache2/error_log'
 
 alias rst='touch tmp/restart.txt'
 
