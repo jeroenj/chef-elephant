@@ -1,5 +1,5 @@
 default[:elephant][:ruby][:gems] = [
-  { :name => 'bundler', :version => '~> 1.5.1' },
+  { :name => 'bundler', :version => '~> 1.5.2' },
   { :name => 'bundler-audit', :version => '~> 0.3.0' },
   { :name => 'cheat' },
   { :name => 'colorful_json' },
