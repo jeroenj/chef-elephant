@@ -4,7 +4,8 @@ default[:elephant][:sublime_text][:checksum] = '14fba173566d4415f1881a38ad98cf22
 
 default[:elephant][:sublime_text] = {
   :extensions => {
-    'Ruby' => %w[Cheffile Vagrantfile Procfile.dev rabl ru],
+    'JSON' => %w[Berksfile.lock],
+    'Ruby' => %w[Berksfile Cheffile Vagrantfile Procfile.dev rabl ru],
     'Sass' => %w[sass],
     'SCSS' => %w[scss],
     'XML' => %w[xml xsd xslt svg terminal plist],
