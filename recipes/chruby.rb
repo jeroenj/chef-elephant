@@ -17,7 +17,7 @@ node[:elephant][:chruby][:rubies].each do |ruby|
 
   node[:elephant][:chruby][:gems].each do |ruby_gem|
     gem_exec = "source /usr/local/opt/chruby/share/chruby/chruby.sh && RUBIES=(/usr/local/var/rubies/ruby-#{ruby}) && chruby #{ruby} && /usr/local/var/rubies/ruby-#{ruby}/bin/gem"
-    version = " --version #{ruby_gem[:version]}" if ruby_gem[:version]
+    version = " --version '#{ruby_gem[:version]}'" if ruby_gem[:version]
     description_version = " #{ruby_gem[:version]}" if ruby_gem[:version]
 
     execute "Install #{ruby_gem[:name]}#{description_version} on ruby #{ruby}" do
