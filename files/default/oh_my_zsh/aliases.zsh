@@ -32,3 +32,4 @@ alias knife='nocorrect knife'
 
 # ifconfig
 alias ip='ifconfig | grep "inet " | grep -v 127.0.0.1 | cut -d\  -f2'
+alias rip='curl ipecho.net/plain ; echo'
