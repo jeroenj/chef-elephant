@@ -16,7 +16,14 @@ git app_path do
   group node[:elephant][:group]
 end
 
-file ::File.expand_path(::File.join(app_path, node[:elephant][:plexconnect][:settings][:certfile])) do
+pem_path = ::File.expand_path(::File.join(app_path, node[:elephant][:plexconnect][:settings][:certfile]))
+file pem_path do
+  content node[:elephant][:plexconnect][:certificate] + node[:elephant][:plexconnect][:key]
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
+end
+
+file pem_path.gsub(/pem\z/, 'cer') do
   content node[:elephant][:plexconnect][:certificate]
   owner node[:elephant][:username]
   group node[:elephant][:group]
