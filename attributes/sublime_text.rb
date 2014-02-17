@@ -20,7 +20,6 @@ default[:elephant][:sublime_text] = {
     {'name' => 'HTML2HAML', 'source' => 'https://github.com/pavelpachkovskij/sublime-html-to-haml'},
     {'name' => 'Indent XML', 'source' => 'https://github.com/alek-sys/sublimetext_indentxml'},
     {'name' => 'JS2Coffee', 'source' => 'https://github.com/nibblebot/sublime-js2coffee'},
-    {'name' => 'LESS', 'source' => 'https://github.com/danro/LESS-sublime'},
     {'name' => 'Markdown Preview', 'source' => 'https://github.com/revolunet/sublimetext-markdown-preview'},
     {'name' => 'Pretty JSON', 'source' => 'https://github.com/dzhibas/SublimePrettyJson'},
     {'name' => 'RSpec', 'source' => 'https://github.com/SublimeText/RSpec'},
