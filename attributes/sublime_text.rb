@@ -19,6 +19,7 @@ default[:elephant][:sublime_text] = {
     {'name' => 'GitGutter', 'source' => 'https://github.com/jisaacks/GitGutter'},
     {'name' => 'HTML2HAML', 'source' => 'https://github.com/Tinmonkey/sublime-html-to-haml'},
     {'name' => 'Indent XML', 'source' => 'https://github.com/alek-sys/sublimetext_indentxml'},
+    {'name' => 'INI', 'source' => 'https://github.com/clintberry/sublime-text-2-ini'},
     {'name' => 'JS2Coffee', 'source' => 'https://github.com/nibblebot/sublime-js2coffee'},
     {'name' => 'Markdown Preview', 'source' => 'https://github.com/revolunet/sublimetext-markdown-preview'},
     {'name' => 'Pretty JSON', 'source' => 'https://github.com/dzhibas/SublimePrettyJson'},
