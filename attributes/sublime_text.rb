@@ -30,6 +30,7 @@ default[:elephant][:sublime_text] = {
     {'name' => 'Sass', 'source' => 'https://github.com/nathos/sass-textmate-bundle'},
     {'name' => 'SCSS', 'source' => 'https://github.com/kuroir/SCSS.tmbundle'},
     {'name' => 'sublime_text_alternative_autocompletion', 'source' => 'https://github.com/alexstaubo/sublime_text_alternative_autocompletion'},
+    {'name' => 'SublimeLinter', 'source' => 'https://github.com/SublimeLinter/SublimeLinter-for-ST2'},
     {'name' => 'Toggle Symbol to String', 'source' => 'https://github.com/zoomix/SublimeToggleSymbol'},
     {'name' => 'ToggleQuotes', 'source' => 'https://github.com/spadgos/sublime-ToggleQuotes'}
   ]
