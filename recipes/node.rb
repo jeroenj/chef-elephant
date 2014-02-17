@@ -5,6 +5,8 @@ node[:elephant][:node][:packages].each do |package|
   executable = package.split('-').first
 
   execute "npm install -g #{package}" do
+    user node[:elephant][:username]
+    group node[:elephant][:group]
     not_if { ::File.exists? "/usr/local/share/npm/bin/#{executable}" }
   end
 end
