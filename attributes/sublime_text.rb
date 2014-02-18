@@ -5,11 +5,11 @@ default[:elephant][:sublime_text][:checksum] = '14fba173566d4415f1881a38ad98cf22
 default[:elephant][:sublime_text] = {
   :extensions => {
     'JSON' => %w[Berksfile.lock],
-    'Ruby' => %w[Berksfile Cheffile Vagrantfile Procfile.dev rabl ru],
+    'Ruby' => %w[Berksfile Cheffile Vagrantfile rabl ru],
     'Sass' => %w[sass],
     'SCSS' => %w[scss],
     'XML' => %w[xml xsd xslt svg terminal plist],
-    'YAML' => %w[yml.example]
+    'YAML' => %w[Procfile.dev yml.example]
   },
   :packages => [
     {'name' => 'CoffeeScript', 'source' => 'https://github.com/Xavura/CoffeeScript-Sublime-Plugin'},
