@@ -8,9 +8,6 @@ alias dbm='bin/rake db:migrate db:test:prepare'
 
 alias uninstall_all_gems='gem list | cut -d" " -f1 | xargs gem uninstall -aIx'
 
-# Zeus
-alias zrake='zeus rake'
-
 # Foreman
 alias fm='foreman start -f Procfile.dev'
 
