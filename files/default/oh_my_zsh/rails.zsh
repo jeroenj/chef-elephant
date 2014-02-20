@@ -1,16 +1,8 @@
 function sc() {
   if [ -e script/rails ]; then
-    if [ -e .zeus.sock ]; then
-      zeus console
-    else;
-      ruby script/rails console $*
-    fi
+    ruby script/rails console $*
   elif [ -e bin/rails ]; then
-    if [ -e .zeus.sock ]; then
-      zeus console
-    else;
-      ruby bin/rails console $*
-    fi
+    ruby bin/rails console $*
   elif [ -e script/console ]; then
     ruby script/console $*
   else;
