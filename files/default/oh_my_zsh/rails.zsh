@@ -1,8 +1,8 @@
 function sc() {
-  if [ -e script/rails ]; then
-    ruby script/rails console $*
-  elif [ -e bin/rails ]; then
+  if [ -e bin/rails ]; then
     ruby bin/rails console $*
+  elif [ -e script/rails ]; then
+    ruby script/rails console $*
   elif [ -e script/console ]; then
     ruby script/console $*
   else;
