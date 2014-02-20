@@ -33,5 +33,39 @@ default[:elephant][:sublime_text] = {
     {'name' => 'SublimeLinter', 'source' => 'https://github.com/SublimeLinter/SublimeLinter-for-ST2'},
     {'name' => 'Toggle Symbol to String', 'source' => 'https://github.com/zoomix/SublimeToggleSymbol'},
     {'name' => 'ToggleQuotes', 'source' => 'https://github.com/spadgos/sublime-ToggleQuotes'}
-  ]
+  ],
+  :settings => {
+    'FileDiffs' => {
+      'cmd' => %w[opendiff $file1 $file2]
+    },
+    'Git' => {
+      'statusbar_branch' => false,
+      'statusbar_status' => false
+    },
+    'RubyTest' => {
+      'run_rspec_command' => 'if [ -e .zeus.sock ]; then zeus rspec {relative_path}; elif [ -e bin/rspec ]; then bin/rspec {relative_path}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}; else rspec {relative_path}; fi',
+      'run_single_rspec_command' => 'if [ -e .zeus.sock ]; then zeus rspec {relative_path}:{line_number}; elif [ -e bin/rspec ]; then bin/rspec {relative_path}:{line_number}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}:{line_number}; else rspec {relative_path}:{line_number}; fi'
+    },
+    'Preferences' => {
+      "auto_complete_delay" => 500,
+      "binary_file_patterns" => %w[*.dds *.eot *.gif *.ico *.jar *.jpeg *.jpg *.pdf *.png *.swf *.tga *.ttf *.zip],
+      "detect_indentation" => false,
+      "ensure_newline_at_eof_on_save" => true,
+      "file_exclude_patterns" => %w[*.a *.class *.db *.dll *.dylib *.exe *.idb *.lib *.ncb *.o *.obj *.pdb *.psd *.pyc *.pyo *.sdf *.so *.suo .DS_Store],
+      "folder_exclude_patterns" => %w[.svn .git .hg CVS .sass-cache tmp log .zeus.*],
+      "font_size" => 11.0,
+      "highlight_line" => true,
+      "highlight_modified_tabs" => true,
+      "hot_exit" => false,
+      "ignored_packages" => %w[Vintage],
+      "margin" => 4,
+      "match_brackets_angle" => true,
+      "remember_open_files" => false,
+      "scroll_past_end" => true,
+      "tab_size" => 2,
+      "translate_tabs_to_spaces" => true,
+      "trim_trailing_white_space_on_save" => true,
+      "word_wrap" => false
+    }
+  }
 }

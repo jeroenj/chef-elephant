@@ -1,4 +1,0 @@
-{
-	"run_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}; elif [ -e bin/rspec ]; then bin/rspec {relative_path}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}; else rspec {relative_path}; fi",
-	"run_single_rspec_command": "if [ -e .zeus.sock ]; then zeus rspec {relative_path}:{line_number}; elif [ -e bin/rspec ]; then bin/rspec {relative_path}:{line_number}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}:{line_number}; else rspec {relative_path}:{line_number}; fi"
-}

@@ -27,13 +27,18 @@ elephant_recursive_directory "#{settings_path}/Installed Packages" do
   group node[:elephant][:group]
 end
 
-files_path = File.expand_path '../../files/default/sublime_text/*.sublime-{settings,keymap}', __FILE__
-Dir[files_path].map { |file| File.basename file }.each do |file|
-  cookbook_file ::File.expand_path("Packages/User/#{file}", settings_path) do
-    source "sublime_text/#{file}"
-    owner node[:elephant][:username]
+node[:elephant][:sublime_text][:settings].each do |name, settings|
+  file ::File.expand_path("Packages/User/#{name}.sublime-settings", settings_path) do
+    content JSON.pretty_generate(settings, :indent => "\t")
+    user node[:elephant][:username]
     group node[:elephant][:group]
   end
+end
+
+cookbook_file ::File.expand_path("Packages/User/Default (OSX).sublime-keymap", settings_path) do
+  source "sublime_text/Default (OSX).sublime-keymap"
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
 end
 
 cookbook_file ::File.expand_path('Settings/Session.sublime_session', settings_path) do

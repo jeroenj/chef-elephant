@@ -1,3 +1,0 @@
-{
-	"cmd": ["opendiff", "$file1", "$file2"]
-}
