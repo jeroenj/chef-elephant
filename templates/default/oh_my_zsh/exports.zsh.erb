@@ -11,7 +11,7 @@ export VISUAL="subl"
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 <% if !`which node`.empty? || node[:recipes].include?('elephant::node') %>
-export PATH=$PATH:/usr/local/share/npm/bin
+export PATH=$PATH:/usr/local/share/npm/bin:./node_modules/.bin
 
 <% end %>
 # Make sure it is set to UTF-8
