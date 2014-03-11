@@ -1,1 +1,1 @@
-default[:elephant][:node][:packages] = %w[coffee-script js2coffee]
+default[:elephant][:node][:packages] = %w[bower coffee-script js2coffee tldr]
