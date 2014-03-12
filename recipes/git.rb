@@ -1,7 +1,9 @@
-cookbook_file "#{ENV['HOME']}/.gitignore" do
-  source 'git/gitignore'
-  owner node[:elephant][:username]
-  group node[:elephant][:group]
+%w[gitignore tigrc].each do |name|
+  cookbook_file "#{ENV['HOME']}/.#{name}" do
+    source "git/#{name}"
+    owner node[:elephant][:username]
+    group node[:elephant][:group]
+  end
 end
 
 cookbook_file "#{ENV['HOME']}/.oh-my-zsh/custom/git.zsh" do
