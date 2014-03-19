@@ -17,7 +17,7 @@ template "#{ENV['HOME']}/.oh-my-zsh/themes/jeroen.zsh-theme" do
   group node[:elephant][:group]
 end
 
-%w[aliases rails ruby].each do |file|
+%w[rails ruby].each do |file|
   cookbook_file "#{ENV['HOME']}/.oh-my-zsh/custom/#{file}.zsh" do
     source "oh_my_zsh/#{file}.zsh"
     owner node[:elephant][:username]
@@ -25,7 +25,7 @@ end
   end
 end
 
-%w[projects exports].each do |file|
+%w[aliases projects exports].each do |file|
   template "#{ENV['HOME']}/.oh-my-zsh/custom/#{file}.zsh" do
     source "oh_my_zsh/#{file}.zsh.erb"
     owner node[:elephant][:username]
