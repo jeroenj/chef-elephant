@@ -1,13 +1,12 @@
-dmg_package 'Sublime Text 2' do
-  dmg_name "Sublime Text #{node[:elephant][:sublime_text][:version]}"
+dmg_package 'Sublime Text' do
   source node[:elephant][:sublime_text][:url]
   checksum node[:elephant][:sublime_text][:checksum]
 end
 
-settings_path = "#{ENV['HOME']}/Library/Application Support/Sublime Text 2"
+settings_path = "#{ENV['HOME']}/Library/Application Support/Sublime Text 3"
 
 link '/usr/bin/subl' do
-  to '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'
+  to '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
 end
 
 elephant_recursive_directory settings_path do
@@ -18,7 +17,7 @@ elephant_recursive_directory "#{settings_path}/Packages/User" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
-elephant_recursive_directory "#{settings_path}/Settings" do
+elephant_recursive_directory "#{settings_path}/Local" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
@@ -41,7 +40,7 @@ cookbook_file ::File.expand_path("Packages/User/Default (OSX).sublime-keymap", s
   group node[:elephant][:group]
 end
 
-cookbook_file ::File.expand_path('Settings/Session.sublime_session', settings_path) do
+cookbook_file ::File.expand_path('Local/Session.sublime_session', settings_path) do
   source "sublime_text/Session.sublime_session"
   owner node[:elephant][:username]
   group node[:elephant][:group]
@@ -55,7 +54,7 @@ remote_file ::File.expand_path("Installed Packages/Package Control.sublime-packa
 end
 
 if license = node[:elephant][:sublime_text][:license]
-  file ::File.expand_path('Settings/License.sublime_license', settings_path) do
+  file ::File.expand_path('Local/License.sublime_license', settings_path) do
     content license
     owner node[:elephant][:username]
     group node[:elephant][:group]
