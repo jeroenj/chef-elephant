@@ -1,3 +1,7 @@
+# Sublime Text
+alias st='/usr/bin/subl'
+alias stt='/usr/bin/subl .'
+
 # Ruby (on Rails)
 alias logd='tail -f log/development.log'
 alias logt='tail -f log/test.log'
