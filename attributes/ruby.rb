@@ -7,3 +7,18 @@ default[:elephant][:ruby][:gems] = [
   { :name => 'gem-open' },
   { :name => 'pry' }
 ]
+
+default[:elephant][:ruby][:rubocop][:config] = {
+  :LineLength => {
+    :Max => 2000
+  },
+  :MethodDefParentheses => {
+    :EnforcedStyle => 'require_no_parentheses'
+  },
+  :AccessModifierIndentation => {
+    :EnforcedStyle => 'outdent'
+  },
+  :Documentation => {
+    :Enabled => false
+  }
+}
