@@ -9,16 +9,16 @@ default[:elephant][:ruby][:gems] = [
 ]
 
 default[:elephant][:ruby][:rubocop][:config] = {
-  :LineLength => {
-    :Max => 2000
-  },
-  :MethodDefParentheses => {
-    :EnforcedStyle => 'require_no_parentheses'
-  },
   :AccessModifierIndentation => {
     :EnforcedStyle => 'outdent'
   },
   :Documentation => {
     :Enabled => false
+  },
+  :LineLength => {
+    :Max => 2000
+  },
+  :MethodDefParentheses => {
+    :EnforcedStyle => 'require_no_parentheses'
   }
 }
