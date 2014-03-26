@@ -12,6 +12,9 @@ default[:elephant][:ruby][:rubocop][:config] = {
   :AccessModifierIndentation => {
     :EnforcedStyle => 'outdent'
   },
+  :ClassAndModuleChildren => {
+    :Enabled => false
+  },
   :Documentation => {
     :Enabled => false
   },
