@@ -4,7 +4,7 @@ execute 'killall Finder' do
   action :nothing
 end
 
-node[:elephant][:settings].select{|recipe, values| node.run_context.loaded_recipes.include?("elephant::#{recipe}")}.each do |recipe, settings|
+node[:elephant][:settings].select { |recipe, values| node.run_context.loaded_recipes.include?("elephant::#{recipe}") }.each do |recipe, settings|
   settings.each do |key, value|
     next if key == 'domain'
     notify = case settings['domain']

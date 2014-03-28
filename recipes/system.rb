@@ -4,7 +4,7 @@ execute 'Show library' do
   command "chflags nohidden #{ENV['HOME']}/Library"
   user node[:elephant][:username]
   group node[:elephant][:group]
-  only_if { `stat #{ENV['HOME']}/Library` =~ /0x8000 #{ENV['HOME'].gsub /\//, '\/'}\/Library/}
+  only_if { `stat #{ENV['HOME']}/Library` =~ /0x8000 #{ENV['HOME'].gsub /\//, '\/'}\/Library/ }
 end
 
 directory "#{ENV['HOME']}/Downloads/About Downloads.lpdf" do

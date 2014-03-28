@@ -26,7 +26,7 @@ node[:elephant][:chruby][:rubies].each do |ruby|
         command "#{gem_exec} install #{ruby_gem[:name]}#{version}"
         user node[:elephant][:username]
         group node[:elephant][:group]
-        not_if { system({'UID' => node[:elephant][:uid], 'GEM_PATH' => ''}, "#{gem_exec} list #{ruby_gem[:name]} --installed#{version} > /dev/null") }
+        not_if { system({ 'UID' => node[:elephant][:uid], 'GEM_PATH' => '' }, "#{gem_exec} list #{ruby_gem[:name]} --installed#{version} > /dev/null") }
       end
     end
   end

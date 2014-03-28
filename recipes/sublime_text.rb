@@ -63,7 +63,7 @@ end
 
 node[:elephant][:sublime_text][:extensions].each do |type, extensions|
   file ::File.expand_path("Packages/User/#{type}.sublime-settings", settings_path) do
-    content JSON.pretty_generate({:extensions => extensions}, :indent => "\t")
+    content JSON.pretty_generate({ :extensions => extensions }, :indent => "\t")
     owner node[:elephant][:username]
     group node[:elephant][:group]
   end
