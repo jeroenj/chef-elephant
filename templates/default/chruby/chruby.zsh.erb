@@ -1,3 +1,4 @@
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+precmd_functions+=("chruby_auto")
 RUBIES=(<%= File.join node[:elephant][:chruby][:path], '*' %>)
