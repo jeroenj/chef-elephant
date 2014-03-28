@@ -34,19 +34,19 @@ node[:elephant][:sublime_text][:settings].each do |name, settings|
   end
 end
 
-cookbook_file ::File.expand_path("Packages/User/Default (OSX).sublime-keymap", settings_path) do
-  source "sublime_text/Default (OSX).sublime-keymap"
+cookbook_file ::File.expand_path('Packages/User/Default (OSX).sublime-keymap', settings_path) do
+  source 'sublime_text/Default (OSX).sublime-keymap'
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
 
 cookbook_file ::File.expand_path('Local/Session.sublime_session', settings_path) do
-  source "sublime_text/Session.sublime_session"
+  source 'sublime_text/Session.sublime_session'
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
 
-remote_file ::File.expand_path("Installed Packages/Package Control.sublime-package", settings_path) do
+remote_file ::File.expand_path('Installed Packages/Package Control.sublime-package', settings_path) do
   source 'http://sublime.wbond.net/Package%20Control.sublime-package'
   owner node[:elephant][:username]
   group node[:elephant][:group]

@@ -1,1 +1,1 @@
-default[:elephant][:spotify][:url] = "http://download.spotify.com/SpotifyLimited.dmg"
+default[:elephant][:spotify][:url] = 'http://download.spotify.com/SpotifyLimited.dmg'

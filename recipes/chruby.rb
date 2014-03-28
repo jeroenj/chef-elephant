@@ -7,7 +7,7 @@ node[:elephant][:chruby][:rubies].each do |ruby|
   path = ::File.join node[:elephant][:chruby][:path], name
 
   cmd = "ruby-install --install-dir #{path} --src-dir /tmp ruby #{ruby}"
-  cmd += " -- --without-tk" if old_ruby
+  cmd += ' -- --without-tk' if old_ruby
 
   execute "Install ruby #{ruby}" do
     command cmd
