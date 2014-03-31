@@ -45,6 +45,10 @@ default[:elephant][:sublime_text][:settings] = {
     'run_rspec_command' => 'if [ -e bin/rspec ]; then bin/rspec {relative_path}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}; else rspec {relative_path}; fi',
     'run_single_rspec_command' => 'if [ -e bin/rspec ]; then bin/rspec {relative_path}:{line_number}; elif [ -e Gemfile ]; then bundle exec rspec {relative_path}:{line_number}; else rspec {relative_path}:{line_number}; fi'
   },
+  'Package Control' => {
+    'auto_upgrade' => false,
+    'install_missing' => false
+  },
   'Preferences' => {
     'auto_complete_delay' => 500,
     'binary_file_patterns' => %w(*.dds *.eot *.gif *.ico *.jar *.jpeg *.jpg *.pdf *.png *.swf *.tga *.ttf *.zip),
