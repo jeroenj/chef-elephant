@@ -69,5 +69,17 @@ default[:elephant][:sublime_text][:settings] = {
     'translate_tabs_to_spaces' => true,
     'trim_trailing_white_space_on_save' => true,
     'word_wrap' => false
+  },
+  'SublimeLinter' => {
+    'user' => {
+      'linters' => {
+        'rubocop' => {
+          '@disable' => false,
+          'args' => [],
+          'excludes' => []
+        }
+      },
+      'mark_style' => 'stippled underline'
+    }
   }
 }
