@@ -1,4 +1,7 @@
 homebrew_tap 'homebrew/dupes'
+homebrew_tap 'phinze/cask'
+
+package 'brew-cask'
 
 packages = node[:elephant][:homebrew][:packages]
 
