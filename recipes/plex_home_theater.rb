@@ -1,16 +1,4 @@
-file = "#{Chef::Config[:file_cache_path]}/plex_home_theater_#{node[:elephant][:plex_home_theater][:version]}.zip"
-
-remote_file file do
-  source node[:elephant][:plex_home_theater][:url]
-  checksum node[:elephant][:plex_home_theater][:checksum]
-  not_if { ::File.directory?('/Applications/Plex Home Theater.app') }
-end
-
-execute 'Install Plex Home Theater' do
-  command "unzip #{file}"
-  cwd '/Applications'
-  not_if { ::File.directory?('/Applications/Plex Home Theater.app') }
-end
+homebrew_cask 'plex-home-theater'
 
 elephant_recursive_directory "#{ENV['HOME']}/Library/Application Support/Plex Home Theater/userdata" do
   owner node[:elephant][:username]

@@ -216,6 +216,9 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ### Plex Media Server
 * Library settings
 
+### Plex Home Theater
+* Don't hardcode version
+
 ### Rowmote
 * LaunchAgent
 
