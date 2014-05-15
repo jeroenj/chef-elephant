@@ -72,8 +72,8 @@ if node[:elephant][:sabnzbd][:preferences]
   if node[:elephant][:sabnzbd][:tv] || node[:elephant][:sabnzbd][:movies]
     if node[:elephant][:sabnzbd][:tv]
       %w[autoProcessTV.py sabToSickBeard.py].each do |file|
-        cookbook_file ::File.expand_path(file, scripts_path) do
-          source "sabnzbd/#{file}"
+        link ::File.expand_path(file, scripts_path) do
+          to ::File.join(node[:elephant][:apps_path], 'sickbeard/autoProcessTV', file)
           owner node[:elephant][:username]
           group node[:elephant][:group]
         end
