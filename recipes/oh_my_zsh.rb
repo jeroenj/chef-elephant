@@ -1,3 +1,5 @@
+include_recipe 'elephant::zsh'
+
 git "#{ENV['HOME']}/.oh-my-zsh" do
   repository 'https://github.com/robbyrussell/oh-my-zsh.git'
   action :sync
@@ -31,11 +33,4 @@ end
     owner node[:elephant][:username]
     group node[:elephant][:group]
   end
-end
-
-execute 'Set default shell to zsh' do
-  command 'chsh -s /bin/zsh'
-  user node[:elephant][:username]
-  group node[:elephant][:group]
-  not_if { `printf $SHELL` == '/bin/zsh' }
 end
