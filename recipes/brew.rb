@@ -1,5 +1,5 @@
 homebrew_tap 'homebrew/dupes'
-homebrew_tap 'phinze/cask'
+homebrew_tap 'caskroom/cask'
 
 package 'brew-cask'
 
