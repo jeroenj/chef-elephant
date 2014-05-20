@@ -3,6 +3,7 @@ include_recipe 'elephant::zsh'
 git "#{ENV['HOME']}/.zprezto" do
   repository node[:elephant][:prezto][:url]
   action :sync
+  enable_submodules true
   user node[:elephant][:username]
   group node[:elephant][:group]
 end
