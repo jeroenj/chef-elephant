@@ -1,7 +1,4 @@
-dmg_package 'Doxie' do
-  source node[:elephant][:doxie][:url]
-  checksum node[:elephant][:doxie][:checksum]
-end
+homebrew_cask 'doxie'
 
 preferences_directory = "#{ENV['HOME']}/Library/Preferences/Apparent/Doxie"
 
