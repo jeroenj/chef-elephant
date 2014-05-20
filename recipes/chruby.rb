@@ -38,19 +38,10 @@ file "#{ENV['HOME']}/.ruby-version" do
   group node[:elephant][:group]
 end
 
-if node[:recipes].include?('elephant::oh_my_zsh')
-  template "#{ENV['HOME']}/.oh-my-zsh/custom/chruby.zsh" do
-    source 'chruby/chruby.zsh.erb'
+if node[:recipes].include?('elephant::pow')
+  template "#{ENV['HOME']}/.powconfig" do
+    source 'chruby/powconfig'
     owner node[:elephant][:username]
     group node[:elephant][:group]
-    only_if { Dir.exists? "#{ENV['HOME']}/.oh-my-zsh/custom" }
-  end
-
-  if node[:recipes].include?('elephant::pow')
-    cookbook_file "#{ENV['HOME']}/.powconfig" do
-      source 'chruby/powconfig'
-      owner node[:elephant][:username]
-      group node[:elephant][:group]
-    end
   end
 end
