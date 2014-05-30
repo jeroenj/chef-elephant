@@ -1,7 +1,4 @@
-dmg_package 'Transmission' do
-  source node[:elephant][:transmission][:url]
-  checksum node[:elephant][:transmission][:checksum]
-end
+homebrew_cask 'transmission'
 
 execute 'Set remote access password' do
   command "security unlock #{ENV['HOME']}/Library/Keychains/login.keychain && security add-generic-password -a Remote -s Transmission:Remote -T /Applications/Transmission.app -w #{node[:elephant][:transmission][:remote_access_password]} #{ENV['HOME']}/Library/Keychains/login.keychain"
