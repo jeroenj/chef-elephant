@@ -1,5 +1,6 @@
 homebrew_tap 'homebrew/dupes'
 homebrew_tap 'caskroom/cask'
+homebrew_tap 'caskroom/versions'
 
 package 'brew-cask'
 
