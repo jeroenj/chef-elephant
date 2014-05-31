@@ -1,13 +1,6 @@
-dmg_package 'Sublime Text' do
-  source node[:elephant][:sublime_text][:url]
-  checksum node[:elephant][:sublime_text][:checksum]
-end
+homebrew_cask 'sublime-text3'
 
 settings_path = "#{ENV['HOME']}/Library/Application Support/Sublime Text 3"
-
-link '/usr/bin/subl' do
-  to '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'
-end
 
 elephant_recursive_directory settings_path do
   owner node[:elephant][:username]
