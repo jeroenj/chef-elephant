@@ -177,7 +177,7 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 
 ### Divvy
 * Set "Enable access for assistive devices" in Universal Access in System Preferences
-* Shortcuts
+* Shortcuts: http://mizage.clarify-it.com/d/nxr9qg
 
 ### Drobo Dashboard
 * remove `~/.Drobo_Dashboard_installer_os_version_check_log.txt`
