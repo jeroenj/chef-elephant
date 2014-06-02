@@ -5,6 +5,5 @@ default[:elephant][:settings][:cyberduck] = {
   'bookmark.icon.size' => 32,
   'browser.alternatingRows' => true,
   'browser.horizontalLines' => false,
-  'connection.protocol.default' => 'sftp',
-  'donate.reminder' => node[:elephant][:cyberduck][:version]
+  'connection.protocol.default' => 'sftp'
 }
