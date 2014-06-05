@@ -1,0 +1,12 @@
+AccessModifierIndentation:
+  EnforcedStyle: outdent
+ClassAndModuleChildren:
+  Enabled: false
+Documentation:
+  Enabled: false
+HashSyntax:
+  EnforcedStyle: hash_rockets
+LineLength:
+  Max: 2000
+MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
