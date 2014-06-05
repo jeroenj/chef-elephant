@@ -2,7 +2,6 @@
 .DS_Store
 .powrc
 .repl_history
-.rubocop.yml
 .ruby-gemset
 .ruby-version
 build
