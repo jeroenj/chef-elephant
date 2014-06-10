@@ -31,11 +31,13 @@ template ::File.join(settings_path, 'settings.conf') do
   variables(
     :api_key => node[:elephant][:couchpotato][:settings][:api_key],
     :directory => node[:elephant][:couchpotato][:settings][:directory],
+    :ignored_words => node[:elephant][:couchpotato][:settings][:ignored_words],
     :imdb_watchlist => node[:elephant][:couchpotato][:settings][:imdb_watchlist],
     :library => node[:elephant][:couchpotato][:settings][:library],
     :nzbs_api_key => node[:elephant][:couchpotato][:settings][:nzbs_api_key],
     :password => node[:elephant][:couchpotato][:settings][:password],
     :port => node[:elephant][:couchpotato][:settings][:port],
+    :preferred_words => node[:elephant][:couchpotato][:settings][:preferred_words],
     :sabnzbd_api_key => node[:elephant][:couchpotato][:settings][:sabnzbd_api_key],
     :sabnzbd_url => node[:elephant][:couchpotato][:settings][:sabnzbd_url],
     :ssl_cert => node[:elephant][:couchpotato][:settings][:ssl_cert],
