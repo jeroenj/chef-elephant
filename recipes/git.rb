@@ -16,3 +16,5 @@ template "#{ENV['HOME']}/.gitconfig" do
   owner node[:elephant][:username]
   group node[:elephant][:group]
 end
+
+include_recipe 'elephant::tig'
