@@ -4,5 +4,5 @@ default[:elephant][:ruby][:gems] = [
   { :name => 'cheat' },
   { :name => 'explain_shell' },
   { :name => 'gem-open' },
-  { :name => 'pry' }
+  { :name => 'pry', :version => '~> 0.10.0' }
 ]
