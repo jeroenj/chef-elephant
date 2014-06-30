@@ -24,6 +24,7 @@ node[:elephant][:sublime_text][:settings].each do |name, settings|
     content JSON.pretty_generate(settings, :indent => "\t")
     user node[:elephant][:username]
     group node[:elephant][:group]
+    sensitive true
   end
 end
 
