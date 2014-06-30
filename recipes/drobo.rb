@@ -1,16 +1,6 @@
-dmg_package 'Drobo Dashboard' do
-  source node[:elephant][:drobo][:url]
-  checksum node[:elephant][:drobo][:checksum]
-  volumes_dir 'Drobo Dashboard Installer'
-  dmg_name 'Drobo Dashboard Installer'
-  app "Install.app/Contents/Drobo_Dashboard_Installer_#{node[:elephant][:drobo][:version]}"
-  package_id 'com.datarobotics.drobodashboard'
-  type 'pkg'
-end
+homebrew_cask 'drobo-dashboard'
 
-installation_log_file = "#{ENV['HOME']}/.Drobo_Dashboard_installer_os_version_check_log.txt"
-
-file installation_log_file do
+file "#{ENV['HOME']}/.Drobo_Dashboard_installer_os_version_check_log.txt" do
   action :delete
 end
 
