@@ -219,9 +219,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ### Plex Home Theater
 * Don't hardcode version
 
-### Rowmote
-* LaunchAgent
-
 ### SABnzbd
 * Use dmg_resource instead of custom implementation
 
