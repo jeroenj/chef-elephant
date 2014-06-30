@@ -42,6 +42,11 @@ default[:mac_os_x][:settings][:login] = {
   'GuestEnabled' => true
 }
 
+default[:mac_os_x][:settings][:network_storage] = {
+  'domain' => '/Library/Preferences/com.apple.desktopservices',
+  'DSDontWriteNetworkStores' => true
+}
+
 default[:mac_os_x][:settings][:screensaver] = {
   'domain' => 'com.apple.screensaver',
   'askForPasswordDelay' => 3600
