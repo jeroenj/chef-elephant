@@ -190,6 +190,14 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ### Google Chrome
 * Preferences
 
+### Java
+* Uses homebrew-cask formula
+  * Waits for Jubler.app and KBC Online 4 Business to be compatible with Java 8
+
+### KBC Online 4 Business
+* Write homebrew-cask formula
+  * Waits for https://github.com/caskroom/homebrew-cask/issues/2751 to be fixed
+
 ### Max
 * Output preferences
 ```ruby
