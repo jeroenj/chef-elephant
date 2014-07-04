@@ -12,5 +12,5 @@ end
 
 elephant_recursive_directory '/usr/local/var/log' do
   owner node[:elephant][:username]
-  group node[:elephant][:group]
+  group 'admin'
 end
