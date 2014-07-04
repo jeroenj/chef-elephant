@@ -12,7 +12,7 @@ node[:elephant][:chruby][:rubies].each do |ruby|
   execute "Install ruby #{ruby}" do
     command cmd
     user node[:elephant][:username]
-    group node[:elephant][:group]
+    group 'admin'
     not_if { ::File.exists? path }
   end
 
