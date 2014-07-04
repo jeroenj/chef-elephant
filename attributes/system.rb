@@ -1,5 +1,6 @@
 default[:elephant][:system][:remote_login] = true
 default[:elephant][:system][:wake_on_network_access] = true
+default[:elephant][:system][:restart_power_failure] = false
 
 default[:mac_os_x][:settings][:global] = {
   'domain' => 'NSGlobalDomain',

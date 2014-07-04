@@ -16,7 +16,8 @@ end
 
 services = {
   :remote_login => 'remotelogin',
-  :wake_on_network_access => 'wakeonnetworkaccess'
+  :wake_on_network_access => 'wakeonnetworkaccess',
+  :restart_power_failure => 'restartpowerfailure'
 }
 
 services.each do |key, value|
