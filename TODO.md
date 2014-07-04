@@ -146,6 +146,14 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 }
 ```
 
+### Adobe Reader
+* Create recipe
+* disable updates
+* do not set as default reader
+* Remove browser plugin
+  * rm /Library/Internet Plug-Ins/AdobePDFViewer.plugin
+  * rm /Library/Internet Plug-Ins/AdobePDFViewerNPAPI.plugin
+
 ### Alfred
 * change keyboard shortcut to CMD + space
 ```ruby
