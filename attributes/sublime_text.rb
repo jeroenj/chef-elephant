@@ -10,7 +10,6 @@ default[:elephant][:sublime_text][:packages] = [
   { 'name' => 'CoffeeScript', 'source' => 'https://github.com/Xavura/CoffeeScript-Sublime-Plugin' },
   { 'name' => 'CoffeeCompile', 'source' => 'https://github.com/surjikal/sublime-coffee-compile' },
   { 'name' => 'FileDiffs', 'source' => 'https://github.com/colinta/SublimeFileDiffs' },
-  { 'name' => 'Git', 'source' => 'https://github.com/kemayo/sublime-text-git' },
   { 'name' => 'GitGutter', 'source' => 'https://github.com/jisaacks/GitGutter' },
   { 'name' => 'HTML2HAML', 'source' => 'https://github.com/pavelpachkovskij/sublime-html-to-haml' },
   { 'name' => 'Indent XML', 'source' => 'https://github.com/alek-sys/sublimetext_indentxml' },
