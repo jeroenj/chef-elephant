@@ -235,9 +235,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ### Plex Home Theater
 * Don't hardcode version
 
-### SABnzbd
-* Use dmg_resource instead of custom implementation
-
 ### Sequel Pro
 * Favorites
 
