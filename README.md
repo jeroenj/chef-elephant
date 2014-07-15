@@ -10,7 +10,6 @@ This cookbook has been built to work on Mac OSX and is only tested on Mountain L
 * plist
 
 ### cookbooks
-- `dmg`
 - `homebrew`
 - `mac_os_x`
 
