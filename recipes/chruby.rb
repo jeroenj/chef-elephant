@@ -17,7 +17,7 @@ node[:elephant][:chruby][:rubies].each do |ruby|
   end
 
   node[:elephant][:chruby][:gems].each do |ruby_gem|
-    unless old_ruby && %w[pry-debugger rubocop].include?(ruby_gem[:name])
+    unless old_ruby && %w[pry-byebug rubocop].include?(ruby_gem[:name])
       gem_exec = "source /usr/local/opt/chruby/share/chruby/chruby.sh && RUBIES=(/usr/local/var/rubies/ruby-#{ruby}) && chruby #{ruby} && /usr/local/var/rubies/ruby-#{ruby}/bin/gem"
       version = " --version '#{ruby_gem[:version]}'" if ruby_gem[:version]
       description_version = " #{ruby_gem[:version]}" if ruby_gem[:version]

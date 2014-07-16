@@ -14,7 +14,7 @@ default[:elephant][:chruby] = {
     { :name => 'mysql2' },
     { :name => 'powder' },
     { :name => 'pry', :version => '~> 0.10.0' },
-    { :name => 'pry-debugger' },
+    { :name => 'pry-byebug' },
     { :name => 'rubocop' }
   ]
 }
