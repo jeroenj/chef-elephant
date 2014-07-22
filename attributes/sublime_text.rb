@@ -26,6 +26,7 @@ default[:elephant][:sublime_text][:packages] = [
   { 'name' => 'SCSS', 'source' => 'https://github.com/kuroir/SCSS.tmbundle' },
   { 'name' => 'sublime_text_alternative_autocompletion', 'source' => 'https://github.com/alexstaubo/sublime_text_alternative_autocompletion' },
   { 'name' => 'SublimeLinter', 'source' => 'https://github.com/SublimeLinter/SublimeLinter3' },
+  { 'name' => 'SublimeLinter-haml-lint', 'source' => 'https://github.com/jeroenj/SublimeLinter-contrib-haml-lint' },
   { 'name' => 'SublimeLinter-rubocop', 'source' => 'https://github.com/SublimeLinter/SublimeLinter-rubocop' },
   { 'name' => 'Toggle Symbol to String', 'source' => 'https://github.com/zoomix/SublimeToggleSymbol' },
   { 'name' => 'ToggleQuotes', 'source' => 'https://github.com/spadgos/sublime-ToggleQuotes' }
