@@ -7,6 +7,7 @@ default[:elephant][:sublime_text][:extensions] = {
   'YAML' => %w[Procfile.dev yml.example]
 }
 default[:elephant][:sublime_text][:packages] = [
+  { 'name' => 'AdvancedNewFile', 'source' => 'https://github.com/skuroda/Sublime-AdvancedNewFile' },
   { 'name' => 'CoffeeScript', 'source' => 'https://github.com/Xavura/CoffeeScript-Sublime-Plugin' },
   { 'name' => 'CoffeeCompile', 'source' => 'https://github.com/surjikal/sublime-coffee-compile' },
   { 'name' => 'FileDiffs', 'source' => 'https://github.com/colinta/SublimeFileDiffs' },
