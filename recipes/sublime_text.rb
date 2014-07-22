@@ -38,6 +38,7 @@ cookbook_file ::File.expand_path('Local/Session.sublime_session', settings_path)
   source 'sublime_text/Session.sublime_session'
   owner node[:elephant][:username]
   group node[:elephant][:group]
+  sensitive true
 end
 
 remote_file ::File.expand_path('Installed Packages/Package Control.sublime-package', settings_path) do
