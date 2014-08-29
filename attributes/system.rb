@@ -5,7 +5,9 @@ default[:elephant][:system][:restart_power_failure] = false
 default[:mac_os_x][:settings][:global] = {
   'domain' => 'NSGlobalDomain',
   'NSAllowContinuousSpellChecking' => false,
-  'NSDocumentSaveNewDocumentsToCloud' => false
+  'NSDocumentSaveNewDocumentsToCloud' => false,
+  'NSNavPanelExpandedStateForSaveMode' => true,
+  'NSNavPanelExpandedStateForSaveMode2' => true
 }
 
 default[:mac_os_x][:settings][:clock] = {
