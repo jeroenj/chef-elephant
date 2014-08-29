@@ -284,10 +284,6 @@ end
 * Audio Hijack Pro
 * Color Picker Pro
 * Fission
-* iDentify
-* iPhone Explorer
-* iStat Server
-* Preen
 * Sketch
 
 * Growl
@@ -296,7 +292,6 @@ end
 * Renamer
 * Skitch
 * SoundCloud
-* SpriteRight
 * The Unarchiver
 
 * TextEdit
