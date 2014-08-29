@@ -7,7 +7,9 @@ default[:mac_os_x][:settings][:global] = {
   'NSAllowContinuousSpellChecking' => false,
   'NSDocumentSaveNewDocumentsToCloud' => false,
   'NSNavPanelExpandedStateForSaveMode' => true,
-  'NSNavPanelExpandedStateForSaveMode2' => true
+  'NSNavPanelExpandedStateForSaveMode2' => true,
+  'PMPrintingExpandedStateForPrint' => true,
+  'PMPrintingExpandedStateForPrint2' => true
 }
 
 default[:mac_os_x][:settings][:clock] = {
