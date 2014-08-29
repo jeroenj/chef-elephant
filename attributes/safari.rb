@@ -8,5 +8,6 @@ default[:elephant][:settings][:safari] = {
   'IncludeDevelopMenu' => true,
   'NewWindowBehavior' => 4,
   'SendDoNotTrackHTTPHeader' => true,
+  'ShowFavoritesBar' => false,
   'TabCreationPolicy' => 2
 }
