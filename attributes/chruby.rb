@@ -1,11 +1,11 @@
 default[:elephant][:chruby] = {
   :path => '/opt/rubies',
   :rubies => %w[
-    2.1.2
+    2.1.3
     2.0.0-p576
     1.8.7-p374
   ],
-  :default => '2.1.2',
+  :default => '2.1.3',
   :gems => [
     { :name => 'bundler', :version => '~> 1.7.2' },
     { :name => 'bundler-audit', :version => '~> 0.3.1' },
