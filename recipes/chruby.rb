@@ -1,6 +1,11 @@
 package 'chruby'
 package 'ruby-install'
 
+directory node[:elephant][:chruby][:path] do
+  owner node[:elephant][:username]
+  group node[:elephant][:group]
+end
+
 node[:elephant][:chruby][:rubies].each do |ruby|
   old_ruby = ruby =~ /.*1\.8\.7.*/
   name = "ruby-#{ruby}"
@@ -18,7 +23,7 @@ node[:elephant][:chruby][:rubies].each do |ruby|
 
   node[:elephant][:chruby][:gems].each do |ruby_gem|
     unless old_ruby && %w[haml-lint pry-byebug rubocop].include?(ruby_gem[:name])
-      gem_exec = "source /usr/local/opt/chruby/share/chruby/chruby.sh && RUBIES=(/usr/local/var/rubies/ruby-#{ruby}) && chruby #{ruby} && /usr/local/var/rubies/ruby-#{ruby}/bin/gem"
+      gem_exec = "source /usr/local/opt/chruby/share/chruby/chruby.sh && RUBIES=(#{path}) && chruby #{ruby} && #{::File.join path, 'bin/gem'}"
       version = " --version '#{ruby_gem[:version]}'" if ruby_gem[:version]
       description_version = " #{ruby_gem[:version]}" if ruby_gem[:version]
 
