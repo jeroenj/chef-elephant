@@ -16,6 +16,6 @@ default[:elephant][:chruby] = {
     { :name => 'powder' },
     { :name => 'pry', :version => '~> 0.10.0' },
     { :name => 'pry-byebug' },
-    { :name => 'rubocop' }
+    { :name => 'rubocop', :version => '~> 0.26.1' }
   ]
 }
