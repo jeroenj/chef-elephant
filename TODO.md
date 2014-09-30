@@ -236,7 +236,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 
 ### Sublime Text
 * Enhance package installing with new package control (if possible?)
-* AdvancedNewFile settings
 
 ### TeamViewer
 * Preferences

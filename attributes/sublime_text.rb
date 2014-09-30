@@ -32,6 +32,10 @@ default[:elephant][:sublime_text][:packages] = [
   { 'name' => 'ToggleQuotes', 'source' => 'https://github.com/spadgos/sublime-ToggleQuotes' }
 ]
 default[:elephant][:sublime_text][:settings] = {
+  'AdvancedNewFile' => {
+    'default_root' => 'current',
+    'rename_default' => '<filename>'
+  },
   'FileDiffs' => {
     'cmd' => %w[opendiff $file1 $file2]
   },
