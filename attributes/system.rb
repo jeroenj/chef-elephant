@@ -4,6 +4,7 @@ default[:elephant][:system][:restart_power_failure] = false
 
 default[:mac_os_x][:settings][:global] = {
   'domain' => 'NSGlobalDomain',
+  'AppleInterfaceStyle' => 'Dark',
   'com.apple.sound.beep.feedback' => 1,
   'NSAllowContinuousSpellChecking' => false,
   'NSDocumentSaveNewDocumentsToCloud' => false,
