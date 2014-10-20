@@ -152,6 +152,7 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
   * rm /Library/Internet Plug-Ins/AdobePDFViewerNPAPI.plugin
 
 ### Alfred
+* Change sync path to ~/Dropbox/Preferences: it does not want to store its preferences there
 * change keyboard shortcut to CMD + space
 ```ruby
 'hotkey.default' => {
