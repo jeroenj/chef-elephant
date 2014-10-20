@@ -10,7 +10,6 @@ default[:elephant][:settings][:skype] = {
   'SKShowSystemStatusBarItem' => false,
   'SKShowWelcomeTour' => false,
   'SKSilentUpgradeNoticeShown' => true,
-  'SKUseGrowlInsteadOfDefault' => true,
   'SourceListLayoutMode' => false,
   'UserDefinedEvents' => '{' \
                          '  Busy = {' \
