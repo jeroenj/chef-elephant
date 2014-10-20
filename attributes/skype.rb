@@ -11,6 +11,7 @@ default[:elephant][:settings][:skype] = {
   'SKShowWelcomeTour' => false,
   'SKSilentUpgradeNoticeShown' => true,
   'SKUseCompactChatStyle' => true,
+  'SKUseLargeEmoticons' => false,
   'SourceListLayoutMode' => false,
   'UserDefinedEvents' => '{' \
                          '  Busy = {' \
