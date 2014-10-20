@@ -1,6 +1,6 @@
 default[:elephant][:logrotate][:files] = [
   {
-    :filename => "#{ENV['HOME']}/Development/ruby/**/log/*.log",
+    :filename => "#{ENV['HOME']}/Development/**/log/*.log",
     :owner_group => "#{node[:elephant][:username]}:staff",
     :mode => 644,
     :count => 0,
