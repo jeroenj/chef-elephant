@@ -10,5 +10,6 @@ default[:elephant][:settings][:safari] = {
   'NewWindowBehavior' => 4,
   'SendDoNotTrackHTTPHeader' => true,
   'ShowFavoritesBar' => false,
+  'ShowFullURLInSmartSearchField' => true,
   'TabCreationPolicy' => 2
 }
