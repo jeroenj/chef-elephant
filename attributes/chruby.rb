@@ -13,7 +13,7 @@ default[:elephant][:chruby] = {
     { :name => 'explain_shell' },
     { :name => 'haml-lint' },
     { :name => 'mysql2' },
-    { :name => 'powder' },
+    { :name => 'powder', :version => '~> 0.3.0' },
     { :name => 'pry', :version => '~> 0.10.0' },
     { :name => 'pry-byebug' },
     { :name => 'rubocop', :version => '~> 0.26.1' }
