@@ -108,6 +108,7 @@ default[:elephant][:settings][:notes] = {
 ## Third party apps
 
 ### 1Password
+* Disable "Verify browser code signature" => Not implemented since this is a "secure" setting
 * Install Safari Extension
 * Install Chrome Extension
 * Extension preferences
