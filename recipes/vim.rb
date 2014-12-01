@@ -1,3 +1,5 @@
+package 'vim'
+
 cookbook_file "#{ENV['HOME']}/.vimrc" do
   source 'vim/vimrc'
   owner node[:elephant][:username]
