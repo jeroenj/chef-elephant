@@ -36,6 +36,7 @@ let g:ctrlp_cmd = 'CtrlP'
 set modifiable
 
 let g:gitgutter_realtime = 0
+set updatetime=750
 
 " Save files with sudo
 cmap w!! w !sudo tee > /dev/null %
