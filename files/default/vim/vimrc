@@ -1,5 +1,41 @@
 syntax on
 set number
 
+execute pathogen#infect()
+
+syntax on
+set number
+
+color Dracula
+set background=dark
+
+if $TERM == "xterm-256color"
+  set t_Co=256
+end
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+let mapleader=","
+
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+set modifiable
+
+let g:gitgutter_realtime = 0
+
 " Save files with sudo
 cmap w!! w !sudo tee > /dev/null %
