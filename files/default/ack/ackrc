@@ -1,0 +1,2 @@
+--ignore-directory=log
+--ignore-directory=tmp
