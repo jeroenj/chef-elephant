@@ -11,6 +11,7 @@ end
 
 private_key = node[:elephant][:ssh][:private_key]
 public_key = node[:elephant][:ssh][:public_key]
+authorized_keys = node[:elephant][:ssh][:authorized_keys]
 
 if private_key && public_key
   file "#{ENV['HOME']}/.ssh/id_rsa" do
@@ -26,9 +27,11 @@ if private_key && public_key
     owner node[:elephant][:username]
     group node[:elephant][:group]
   end
+end
 
+if authorized_keys.any?
   file "#{ENV['HOME']}/.ssh/authorized_keys" do
-    content public_key
+    content ([public_key] + authorized_keys).compact.join("\n")
     mode 00644
     owner node[:elephant][:username]
     group node[:elephant][:group]
