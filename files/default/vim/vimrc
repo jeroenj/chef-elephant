@@ -17,6 +17,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set wildignore+=*/tmp/*,*/log/*
+
 let mapleader=","
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
