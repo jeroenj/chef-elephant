@@ -1,4 +1,3 @@
-package 'reattach-to-user-namespace'
 package 'tmux'
 
 cookbook_file "#{ENV['HOME']}/.tmux.conf" do
