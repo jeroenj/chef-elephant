@@ -6,7 +6,7 @@ default[:elephant][:chruby] = {
     2.0.0-p598
     1.8.7-p374
   ],
-  :default => '2.1.5',
+  :default => '2.2.0',
   :gems => [
     { :name => 'bundler', :version => '~> 1.7.2' },
     { :name => 'bundler-audit', :version => '~> 0.3.1' },
