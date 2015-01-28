@@ -1,9 +1,6 @@
-set clipboard=unnamed
-
-syntax on
-set number
-
 execute pathogen#infect()
+
+set clipboard=unnamed
 
 syntax on
 set number
