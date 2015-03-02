@@ -23,6 +23,10 @@ let mapleader=","
 " Show trailing whitespaces
 set list listchars=tab:»·,trail:·,nbsp:·
 
+" Open new split panes to right and bottom
+set splitbelow
+set splitright
+
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 fun! <SID>StripTrailingWhitespaces()
