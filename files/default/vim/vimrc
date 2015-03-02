@@ -27,6 +27,12 @@ set list listchars=tab:»·,trail:·,nbsp:·
 set splitbelow
 set splitright
 
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 fun! <SID>StripTrailingWhitespaces()
