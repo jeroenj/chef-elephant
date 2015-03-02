@@ -20,6 +20,9 @@ set wildignore+=*/tmp/*,*/log/*
 
 let mapleader=","
 
+" Show trailing whitespaces
+set list listchars=tab:»·,trail:·,nbsp:·
+
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 fun! <SID>StripTrailingWhitespaces()
