@@ -8,7 +8,7 @@ end
 
 git "#{ENV['HOME']}/.vim" do
   repository node[:elephant][:vim][:repository]
-  action :checkout
+  action :sync
   checkout_branch 'master'
   enable_checkout false
   enable_submodules true
