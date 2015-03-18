@@ -18,6 +18,8 @@ set expandtab
 
 set wildignore+=*/tmp/*,*/log/*
 
+set hlsearch incsearch
+
 let mapleader=","
 
 " Show trailing whitespaces
