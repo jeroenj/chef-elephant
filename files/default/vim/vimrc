@@ -16,6 +16,10 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+set nobackup
+set nowritebackup
+set noswapfile
+
 set wildignore+=*/tmp/*,*/log/*
 
 set hlsearch incsearch
