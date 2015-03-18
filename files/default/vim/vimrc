@@ -22,6 +22,10 @@ set hlsearch incsearch
 
 let mapleader=","
 
+" Use ack instead of grep
+set grepprg=ack
+let g:grep_cmd_opts = '--noheading'
+
 " Show trailing whitespaces
 set list listchars=tab:»·,trail:·,nbsp:·
 
