@@ -20,6 +20,10 @@ set nobackup
 set nowritebackup
 set noswapfile
 
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Wq wq
+
 set wildignore+=*/tmp/*,*/log/*
 
 set hlsearch incsearch
