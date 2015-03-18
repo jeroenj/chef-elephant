@@ -92,3 +92,12 @@ function! QuickfixFilenames()
   endfor
   return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
+
+" Vim tmux runner
+let g:VtrUseVtrMaps = 1
+
+" Vim spec runner
+let g:spec_runner_dispatcher = 'VtrSendCommand! {command}'
+map <Leader>tf <Plug>RunCurrentSpecFile
+map <Leader>tt <Plug>RunFocusedSpec
+map <Leader>tl <Plug>RunMostRecentSpec
