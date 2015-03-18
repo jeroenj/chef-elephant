@@ -76,7 +76,7 @@ let g:ackpreview = 1
 cmap w!! w !sudo tee > /dev/null %
 
 " Allow files to be modified when hidden
-:set hidden
+set hidden
 
 " Sets files referenced by quickfix list to the arglist
 command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
