@@ -1,3 +1,4 @@
 --ignore-directory=log
+--ignore-directory=logs
 --ignore-directory=tmp
 --type-set=haml=.haml
