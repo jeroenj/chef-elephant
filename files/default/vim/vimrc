@@ -4,6 +4,7 @@ set clipboard=unnamed
 
 syntax on
 set number
+set relativenumber
 
 color Dracula
 set background=dark
