@@ -5,6 +5,8 @@ set clipboard=unnamed
 syntax on
 set number
 set relativenumber
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
 
 color Dracula
 set background=dark
