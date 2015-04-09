@@ -67,9 +67,21 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
+
+command! Syn call CustomSyn()
+function! CustomSyn()
+  let g:syntastic_haml_checkers = ['haml']
+  let g:syntastic_ruby_checkers = ['mri']
+  :SyntasticCheck
+endfunction
+command! SynS call CustomSynS()
+function! CustomSynS()
+  let g:syntastic_haml_checkers = ['haml', 'haml_lint']
+  let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+  :SyntasticCheck
+endfunction
 
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
