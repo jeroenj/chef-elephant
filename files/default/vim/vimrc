@@ -68,6 +68,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <S-Tab> <c-n>
 
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+let g:syntastic_aggregate_errors = 1
 
 fun! <SID>StripTrailingWhitespaces()
   let l = line(".")
