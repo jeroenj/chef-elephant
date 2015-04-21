@@ -2,6 +2,9 @@ set shell=bash
 
 execute pathogen#infect()
 
+" This fixes focus events in tmux in Terminal.app
+let g:vitality_always_assume_iterm = 1
+
 set clipboard=unnamed
 
 syntax on
@@ -9,6 +12,8 @@ set number
 set relativenumber
 autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
+au FocusLost * :set norelativenumber
+au FocusGained * :set relativenumber
 
 color Dracula
 set background=dark
