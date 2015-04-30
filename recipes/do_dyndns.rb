@@ -1,6 +1,4 @@
-%w[json rest-client].each do |name|
-  gem_package name
-end
+gem_package 'httparty'
 
 app_path = ::File.join node[:elephant][:apps_path], 'do-dyndns'
 
@@ -19,11 +17,9 @@ git app_path do
 end
 
 file_path = ::File.join app_path, 'dns.rb'
-%w[CLIENT_ID API_KEY].each do |secret|
-  execute "Set do-dyndns #{secret}" do
-    command "sed -ibak \"s/#{secret} = ''/#{secret} = '#{node[:elephant][:do_dyndns][secret.downcase]}'/g\" #{file_path}"
-    only_if { system("grep \"#{secret} = ''\" #{file_path}") }
-  end
+execute "Set do-dyndns TOKEN" do
+  command "sed -ibak \"s/TOKEN = ''/TOKEN = '#{node[:elephant][:do_dyndns][:token]}'/g\" #{file_path}"
+  only_if { system("grep \"TOKEN = ''\" #{file_path}") }
 end
 
 elephant_plist "/Library/LaunchDaemons/#{node[:elephant][:do_dyndns][:launch_daemon][:Label]}.plist" do
