@@ -3,7 +3,7 @@ default[:elephant][:chruby] = {
   :rubies => %w[
     2.2.2
     2.2.0
-    2.1.5
+    2.1.6
     2.0.0-p598
     1.8.7-p374
   ],
