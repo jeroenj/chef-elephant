@@ -2,7 +2,6 @@
 gem: --no-ri --no-rdoc --no-document --env-shebang
 :sources:
 - https://rubygems.org
-- https://gems.openminds.be
 :backtrace: false
 :benchmark: false
 :verbose: true
