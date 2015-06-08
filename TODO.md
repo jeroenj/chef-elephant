@@ -44,6 +44,12 @@
 
 ### Preferences
 * Click in the scrollbar to: Jump to the spot that's clicked
+* OSX Dark theme
+* Show bluetooth icon
+* Show speaker icon
+* Show battery percentage
+* Enable screen sharing
+* Require password after 15 minutes of sleep
 
 ### Ruby
 * Make it possible to use gem_package when running a ruby managed by chruby: https://github.com/Atalanta/chef-chruby/issues/5#issuecomment-23155795
@@ -73,6 +79,7 @@
 
 ### iTunes
 * Disable song notifications
+* Show status bar
 
 ### Mail
 * `'DefaultViewState': {'FavoritesBarVisible' => false}`
@@ -98,7 +105,6 @@ default[:elephant][:settings][:notes] = {
   * Invisible Status Bar
   * AdBlock
   * Pocket
-  * Delicious
 * Set list of allowed java applets
 
 ### Terminal
@@ -258,6 +264,9 @@ end
   end
 end
 ```
+
+### Transmission
+* Keychain asks for password if it's not set
 
 ### Tunnelblick
 * Preferences
