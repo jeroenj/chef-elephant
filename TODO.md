@@ -197,10 +197,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ### Google Chrome
 * Preferences
 
-### KBC Online 4 Business
-* Write homebrew-cask formula
-  * Waits for https://github.com/caskroom/homebrew-cask/issues/2751 to be fixed
-
 ### Max
 * Output preferences
 ```ruby
