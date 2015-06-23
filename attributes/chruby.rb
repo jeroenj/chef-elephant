@@ -2,7 +2,7 @@ default[:elephant][:chruby] = {
   :path => '/opt/rubies',
   :rubies => %w[
     2.2.2
-    2.0.0-p598
+    2.0.0-p645
   ],
   :default => '2.2.2',
   :gems => [
