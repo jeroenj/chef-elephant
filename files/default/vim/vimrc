@@ -99,6 +99,7 @@ autocmd FileType c,coffee,cpp,java,json,php,ruby,python,yaml autocmd BufWritePre
 
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_open_new_file = 'h'
 
 set modifiable
 
