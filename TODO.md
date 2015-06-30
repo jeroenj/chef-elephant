@@ -53,9 +53,6 @@
 
 ### Ruby
 * Make it possible to use gem_package when running a ruby managed by chruby: https://github.com/Atalanta/chef-chruby/issues/5#issuecomment-23155795
-* OpenSSL issues. Quick workaround:
-  * Issue: SSL_connect returned=1 errno=0 state=SSLv3 read server certificate B: certificate verify failed
-  * curl http://curl.haxx.se/ca/cacert.pem -o /usr/local/etc/openssl/cert.pem
 
 ### Services
 * Screen sharing
@@ -226,9 +223,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ]
 ```
 
-### Plex Media Server
-* Library settings
-
 ### Plex Home Theater
 * Don't hardcode version
 
@@ -237,9 +231,6 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 
 ### Spotify
 * Disable launch on login
-
-### Sublime Text
-* Enhance package installing with new package control (if possible?)
 
 ### TeamViewer
 * Preferences
@@ -275,10 +266,6 @@ end
 ### VLC
 * Preferences
 
-### VMware Fusion
-* License key
-* Preferences
-
 ### VPN
 * output for keychain password check
 
@@ -290,33 +277,18 @@ end
 * Fission
 * Sketch
 
-* Growl
-* Osfoora
 * Pixelmator
 * Renamer
 * Skitch
-* SoundCloud
 * The Unarchiver
 
 * TextEdit
 * Time Machine
 
-* Google Sketchup
-
 * Fonts
-
-* Restart launch agents when settings change (plexconnect, sickbeard, vpn, ...)
 
 ## Chef
 * Automatically add elephant::settings at the end of the run list when needed
 * Debug timeout issues. Currently the timeout is set to 10 minutes, but sometimes compiling a package exeeds that time.
 * Debug why installing a lot of packages after each other takes such a long time. Note: during that time Dropbox was syncing and using 100% CPU.
 * create keychain lwrp instead of doing custom calls. This way STDOUT output can easily be ignored and we could to ask to unlock the keychain if it is locked instead of always doing that.
-
-## Data
-
-### couchpotato
-* couchpotato.db
-
-### sickbeard
-* sickbeard.db
