@@ -1,4 +1,5 @@
 actions :create
+default_action :create
 
 attribute :path, :kind_of => String, :name_attribute => true
 attribute :owner, :kind_of => String, :default => nil
@@ -14,5 +15,4 @@ def initialize(name, run_context = nil)
   when /#{ENV['HOME']}\/.*/ then ENV['HOME']
   end
   @parent ||= '/usr' if path =~ /\/usr.*/
-  @action = :create
 end
