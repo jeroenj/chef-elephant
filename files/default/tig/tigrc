@@ -1,1 +1,3 @@
 set vertical-split = false
+bind generic C !git commit -v
+bind status C !git commit -v
