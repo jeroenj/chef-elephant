@@ -1,6 +1,7 @@
 set shell=bash
 
 execute pathogen#infect()
+Helptags
 
 " This fixes focus events in tmux in Terminal.app
 let g:vitality_always_assume_iterm = 1
