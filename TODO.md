@@ -226,6 +226,9 @@ default[:mac_os_x][:settings][:'1password_extension'] = {
 ### Plex Home Theater
 * Don't hardcode version
 
+### Reeder
+* All preferences (they are all dictionaries)
+
 ### Sequel Pro
 * Favorites
 

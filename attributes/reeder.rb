@@ -1,20 +1,3 @@
 default[:elephant][:settings][:reeder] = {
-  'domain' => "#{ENV['HOME']}/Library/Containers/com.reederapp.mac/Data/Library/Preferences/com.reederapp.mac.plist",
-  'SyncInterval' => 5,
-  'ServiceBlogDisabled' => true,
-  'ServiceBrowserShowInToolbar' => true,
-  'ServiceDeliciousShowInToolbar' => true,
-  'ServiceEvernoteDisabled' => true,
-  'ServiceGoogleMobilizerDisabled' => true,
-  'ServiceInstapaperDisabled' => true,
-  'ServiceInstapaperMobilizerDisabled' => true,
-  'ServicePinboardDisabled' => true,
-  'ServiceQuoteFmReadLaterDisabled' => true,
-  'ServiceQuoteFmReadLaterDisabled' => true,
-  'ServiceQuoteFmRecommendDisabled' => true,
-  'ServiceReadabilityDisabled' => true,
-  'ServiceReadabilityShowInToolbar' => false,
-  'ServiceReadItLaterShowInToolbar' => true,
-  'ServiceSafariReadingListDisabled' => true,
-  'ServiceZootoolDisabled' => true
+  'domain' => "#{ENV['HOME']}/Library/Containers/com.reederapp.rkit2.mac/Data/Library/Preferences.com.reederapp.rkit2.mac.plist"
 }
