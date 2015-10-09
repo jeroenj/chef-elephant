@@ -64,6 +64,7 @@
 
 ### Calendar
 * Hide new events count in Dock
+* Don't include Mail.app events
 
 ### Contacts
 * Sorting
@@ -103,6 +104,7 @@ default[:elephant][:settings][:notes] = {
   * AdBlock
   * Pocket
 * Set list of allowed java applets
+* Don't open safe files after downloading
 
 ### Terminal
 * Preferences
