@@ -1,1 +1,1 @@
-homebrew_cask 'eid-mw'
+homebrew_cask 'eid-be'
