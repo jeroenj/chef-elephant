@@ -1,6 +1,6 @@
 default[:elephant][:pureftpd] = {
-  :accounts => [],
-  :log_file => '/usr/local/var/log/pure-ftpd.log'
+  accounts: [],
+  log_file: '/usr/local/var/log/pure-ftpd.log'
 }
 
 default[:elephant][:pureftpd][:launch_daemon] = {
@@ -19,5 +19,5 @@ default[:elephant][:pureftpd][:launch_daemon] = {
   'KeepAlive' => true,
   'WorkingDirectory' => '/usr/local/var',
   'StandardErrorPath' => node[:elephant][:pureftpd][:log_file],
-  'StandardOutPath' => node[:elephant][:pureftpd][:log_file],
+  'StandardOutPath' => node[:elephant][:pureftpd][:log_file]
 }

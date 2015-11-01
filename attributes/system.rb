@@ -89,6 +89,6 @@ default[:mac_os_x][:settings][:trackpad] = {
   'UserPreferences' => true
 }
 
-default[:mac_os_x][:settings][:wireless_trackpad] = node[:mac_os_x][:settings][:trackpad].merge({
+default[:mac_os_x][:settings][:wireless_trackpad] = node[:mac_os_x][:settings][:trackpad].merge(
   'domain' => 'com.apple.driver.AppleBluetoothMultitouch.trackpad'
-})
+)

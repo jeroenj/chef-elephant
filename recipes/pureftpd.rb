@@ -11,7 +11,7 @@ end
 
 template '/usr/local/etc/pureftpd.passwd' do
   source 'pureftpd/pureftpd.passwd.erb'
-  variables :accounts => node[:elephant][:pureftpd][:accounts]
+  variables accounts: node[:elephant][:pureftpd][:accounts]
   owner node[:elephant][:username]
   group node[:elephant][:group]
   notifies :run, 'execute[Update pureftpd database]'

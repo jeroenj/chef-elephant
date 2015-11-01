@@ -3,7 +3,7 @@ class Chef
     class ImmutableMash
       def to_hash
         h = {}
-        self.each do |k, v|
+        each do |k, v|
           if v.respond_to?(:to_hash)
             h[k] = v.to_hash
           elsif v.respond_to?(:each)

@@ -32,10 +32,10 @@ end
 template ::File.join(app_path, 'Settings.cfg') do
   source 'plexconnect/Settings.cfg.erb'
   variables(
-    :certfile => node[:elephant][:plexconnect][:settings][:certfile],
-    :hosttointercept => node[:elephant][:plexconnect][:settings][:hosttointercept],
-    :ip_pms => node[:elephant][:plexconnect][:settings][:ip_pms],
-    :logpath => node[:elephant][:plexconnect][:settings][:logpath]
+    certfile: node[:elephant][:plexconnect][:settings][:certfile],
+    hosttointercept: node[:elephant][:plexconnect][:settings][:hosttointercept],
+    ip_pms: node[:elephant][:plexconnect][:settings][:ip_pms],
+    logpath: node[:elephant][:plexconnect][:settings][:logpath]
   )
   owner node[:elephant][:username]
   group node[:elephant][:group]
@@ -44,9 +44,9 @@ end
 template ::File.join(app_path, 'ATVSettings.cfg') do
   source 'plexconnect/ATVSettings.cfg.erb'
   variables(
-    :myplex_user => node[:elephant][:plexconnect][:settings][:myplex_user],
-    :myplex_auth => node[:elephant][:plexconnect][:settings][:myplex_auth],
-    :apple_tv_id => node[:elephant][:plexconnect][:settings][:apple_tv_id]
+    myplex_user: node[:elephant][:plexconnect][:settings][:myplex_user],
+    myplex_auth: node[:elephant][:plexconnect][:settings][:myplex_auth],
+    apple_tv_id: node[:elephant][:plexconnect][:settings][:apple_tv_id]
   )
   owner node[:elephant][:username]
   group node[:elephant][:group]

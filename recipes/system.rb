@@ -15,9 +15,9 @@ directory "#{ENV['HOME']}/Downloads/About Downloads.lpdf" do
 end
 
 services = {
-  :remote_login => 'remotelogin',
-  :wake_on_network_access => 'wakeonnetworkaccess',
-  :restart_power_failure => 'restartpowerfailure'
+  remote_login: 'remotelogin',
+  wake_on_network_access: 'wakeonnetworkaccess',
+  restart_power_failure: 'restartpowerfailure'
 }
 
 services.each do |key, value|

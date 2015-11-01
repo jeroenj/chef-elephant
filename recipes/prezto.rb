@@ -8,7 +8,7 @@ git "#{ENV['HOME']}/.zprezto" do
   group node[:elephant][:group]
 end
 
-%w[zlogin zlogout zpreztorc zprofile zshenv zshrc].each do |file|
+%w(zlogin zlogout zpreztorc zprofile zshenv zshrc).each do |file|
   link "#{ENV['HOME']}/.#{file}" do
     to "#{ENV['HOME']}/.zprezto/runcoms/#{file}"
     user node[:elephant][:username]

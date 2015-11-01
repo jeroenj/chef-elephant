@@ -2,10 +2,10 @@ default[:elephant][:plexconnect][:revision] = 'v0.3.1'
 default[:elephant][:plexconnect][:path] = ::File.join node[:elephant][:apps_path], 'plexconnect'
 
 default[:elephant][:plexconnect] = {
-  :settings => {
-    :hosttointercept => 'trailers.apple.com'
+  settings: {
+    hosttointercept: 'trailers.apple.com'
   },
-  :launch_daemon => {
+  launch_daemon: {
     'Label' => 'plexconnect',
     'ProgramArguments' => [
       '/usr/local/bin/python',

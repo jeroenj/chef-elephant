@@ -16,7 +16,7 @@ node[:elephant][:chruby][:rubies].each do |ruby|
     command cmd
     user node[:elephant][:username]
     group 'admin'
-    not_if { ::File.exists? path }
+    not_if { ::File.exist? path }
   end
 
   node[:elephant][:chruby][:gems].each do |ruby_gem|

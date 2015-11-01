@@ -17,7 +17,7 @@ git app_path do
 end
 
 file_path = ::File.join app_path, 'dns.rb'
-execute "Set do-dyndns TOKEN" do
+execute 'Set do-dyndns TOKEN' do
   command "sed -ibak \"s/TOKEN = ''/TOKEN = '#{node[:elephant][:do_dyndns][:token]}'/g\" #{file_path}"
   only_if { system("grep \"TOKEN = ''\" #{file_path}") }
 end

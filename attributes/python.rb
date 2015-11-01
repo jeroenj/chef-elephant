@@ -1,1 +1,1 @@
-default[:elephant][:python][:pip][:packages] = %w[httpie]
+default[:elephant][:python][:pip][:packages] = %w(httpie)

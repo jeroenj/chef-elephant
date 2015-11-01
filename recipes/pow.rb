@@ -1,4 +1,4 @@
-pow_installed = ::File.exists? '/usr/local/bin/pow'
+pow_installed = ::File.exist? '/usr/local/bin/pow'
 
 package 'pow'
 

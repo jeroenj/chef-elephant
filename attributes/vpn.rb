@@ -1,12 +1,12 @@
 default[:elephant][:vpn] = {
-  :pptp_enabled => true,
-  :l2tp_enabled => true,
-  :dns_servers => ['8.8.8.8', '8.8.4.4'],
-  :ip_range => ['10.0.0.240', '10.0.0.255'],
-  :log_file => '/var/log/ppp/vpnd.log',
-  :chap_secrets => [],
-  :launch_daemons => {
-    :pptp => {
+  pptp_enabled: true,
+  l2tp_enabled: true,
+  dns_servers: ['8.8.8.8', '8.8.4.4'],
+  ip_range: ['10.0.0.240', '10.0.0.255'],
+  log_file: '/var/log/ppp/vpnd.log',
+  chap_secrets: [],
+  launch_daemons: {
+    pptp: {
       'Label' => 'vpn.pptp',
       'ProgramArguments' => [
         '/usr/sbin/vpnd',
@@ -17,7 +17,7 @@ default[:elephant][:vpn] = {
       'RunAtLoad' => true,
       'KeepAlive' => true
     },
-    :l2tp => {
+    l2tp: {
       'Label' => 'vpn.l2tp',
       'ProgramArguments' => [
         '/usr/sbin/vpnd',
