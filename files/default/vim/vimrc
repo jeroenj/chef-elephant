@@ -35,7 +35,7 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Wq wq
 
-set wildignore+=*/tmp/*,*/log/*
+set wildignore+=*/tmp/*,*/log/*,*/rcov/*
 
 set hlsearch incsearch
 
