@@ -11,8 +11,6 @@ taps.each do |tap|
   homebrew_tap tap
 end
 
-package 'brew-cask'
-
 elephant_recursive_directory '/usr/local/var/log' do
   owner node[:elephant][:username]
   group 'admin'
