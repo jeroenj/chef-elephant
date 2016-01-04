@@ -1,10 +1,10 @@
 default[:elephant][:chruby] = {
   path: '/opt/rubies',
   rubies: %w(
-    2.2.3
-    2.2.2
-    2.1.6
-    2.0.0-p647
+    2.3.0
+    2.2.4
+    2.1.8
+    2.0.0-p648
   ),
   default: '2.2.3',
   gems: [
