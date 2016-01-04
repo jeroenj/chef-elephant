@@ -10,3 +10,4 @@ log
 Procfile.dev
 tmp/restart.txt
 *.swp
+.vagrant/
