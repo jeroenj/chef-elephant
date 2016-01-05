@@ -6,7 +6,7 @@ default[:elephant][:chruby] = {
     2.1.8
     2.0.0-p648
   ),
-  default: '2.2.3',
+  default: '2.2.4',
   gems: [
     { name: 'bundler', version: '~> 1.11.2' },
     { name: 'bundler-audit', version: '~> 0.4.0' },
