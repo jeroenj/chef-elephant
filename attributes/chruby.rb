@@ -12,6 +12,7 @@ default[:elephant][:chruby] = {
     { name: 'bundler-audit', version: '~> 0.4.0' },
     { name: 'cheat' },
     { name: 'explain_shell' },
+    { name: 'foreman' },
     { name: 'haml-lint' },
     { name: 'mysql2' },
     { name: 'powder', version: '~> 0.3.0' },
