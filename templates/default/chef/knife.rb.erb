@@ -1,0 +1,13 @@
+client_key '~/.chef/client.pem'
+validation_key '~/.chef/validation.pem'
+chef_server_cert '~/.chef/chef-server.cert'
+chef_server_url 'localhost'
+cookbook_copyright '<%= @cookbook_copyright %>'
+cookbook_email '<%= @cookbook_email %>'
+cookbook_path '<%= @cookbook_path %>'
+environment 'production'
+node_name '<%= @node_name %>'
+validation_client_name 'chef-validator'
+
+log_level :info
+log_location STDOUT
